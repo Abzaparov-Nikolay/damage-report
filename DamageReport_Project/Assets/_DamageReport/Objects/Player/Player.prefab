@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 6892082122778855038}
   - component: {fileID: 6892082122778855037}
   m_Layer: 0
-  m_Name: MainCamera
+  m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,3 +289,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputDirection: {fileID: 11400000, guid: b60fea03ba25558439c08e2a26161d53, type: 2}
   speed: 15
+  camera: {fileID: 6892082122778855036}

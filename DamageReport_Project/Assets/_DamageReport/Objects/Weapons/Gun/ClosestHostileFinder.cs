@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 [RequireComponent(typeof(SphereCollider))]
 public class ClosestHostileFinder : TargetSelector
@@ -12,7 +13,8 @@ public class ClosestHostileFinder : TargetSelector
 
     public override Transform GetTarget()
     {
-        return hostilesInRange.MinBy(hostileTransform => Vector3.Distance(transform.position, hostileTransform.position));
+        return hostilesInRange.Where(hostile => hostile.gameObject.activeInHierarchy)
+            .MinBy(hostileTransform => Vector3.Distance(transform.position, hostileTransform.position));
     }
 
     private void Awake()
@@ -39,7 +41,7 @@ public class ClosestHostileFinder : TargetSelector
     private void OnTriggerEnter(Collider other)
     {
         var otherTeamMember = other.GetComponentInParent<TeamMember>();
-        if (otherTeamMember != null && teamMember.IsHostileTo(otherTeamMember))
+        if (otherTeamMember != null && teamMember.IsHostileTo(otherTeamMember) && other.gameObject.activeInHierarchy)
         {
             hostilesInRange.Add(other.transform);
         }

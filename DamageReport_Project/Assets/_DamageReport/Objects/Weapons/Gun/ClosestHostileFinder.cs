@@ -14,7 +14,7 @@ public class ClosestHostileFinder : TargetSelector
     public override bool TryGetTarget(out Transform target)
     {
         target = hostilesInRange
-			.Where(hostile => hostile.gameObject.activeInHierarchy)
+			.Where(hostile => hostile != null && hostile.gameObject.activeInHierarchy)
 			.MinBy(hostile => Vector3.Distance(transform.position, hostile.position));
         return target != null;
     }

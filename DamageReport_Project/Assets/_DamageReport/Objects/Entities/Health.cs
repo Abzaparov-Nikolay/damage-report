@@ -5,19 +5,19 @@ public class Health : MonoBehaviour
 {
     public Reference<float> Max;
     public Reference<float> Current;
-    public UnityEvent OnDamaged;
-    public UnityEvent OnDeath;
+    [SerializeField] private UnityEvent onDamaged;
+    [SerializeField] private UnityEvent onCurrentZero;
 
     public void TakeDamage(float damage)
     {
         Current.Set(Current - damage);
         if (Current > 0)
         {
-            OnDamaged?.Invoke();
+            onDamaged?.Invoke();
         }
         else
         {
-            OnDeath.Invoke();
+            onCurrentZero.Invoke();
         }
     }
 

@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 792684765480326135}
   - component: {fileID: 862955830875553970}
   - component: {fileID: 7262938451472395467}
-  - component: {fileID: 1916968978995165094}
+  - component: {fileID: 956977773429135669}
+  - component: {fileID: 7263390039570777343}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
---- !u!114 &1916968978995165094
+--- !u!114 &956977773429135669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,4 +176,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cf9e83cdb316b45b722214e125398d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionsBeforeDestroy: 1
+  collisionsBeforeCall: 1
+  onCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7263390039570777343}
+        m_TargetAssemblyTypeName: Death, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7263390039570777343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928253359481219560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847ef026e024e3f4e9ac35dd364795ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnDeath: 1
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []

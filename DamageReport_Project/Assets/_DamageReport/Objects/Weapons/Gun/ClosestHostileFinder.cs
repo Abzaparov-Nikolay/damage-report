@@ -11,10 +11,12 @@ public class ClosestHostileFinder : TargetSelector
     private readonly HashSet<Transform> hostilesInRange = new();
     private SphereCollider sphereCollider;
 
-    public override Transform GetTarget()
+    public override bool TryGetTarget(out Transform target)
     {
-        return hostilesInRange.Where(hostile => hostile.gameObject.activeInHierarchy)
-            .MinBy(hostileTransform => Vector3.Distance(transform.position, hostileTransform.position));
+        target = hostilesInRange
+			.Where(hostile => hostile.gameObject.activeInHierarchy)
+			.MinBy(hostile => Vector3.Distance(transform.position, hostile.position));
+        return target != null;
     }
 
     private void Awake()

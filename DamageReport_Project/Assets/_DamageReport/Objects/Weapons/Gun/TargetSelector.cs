@@ -2,5 +2,5 @@ using UnityEngine;
 
 public abstract class TargetSelector : MonoBehaviour
 {
-    public abstract Transform GetTarget();
+    public abstract bool TryGetTarget(out Transform target);
 }

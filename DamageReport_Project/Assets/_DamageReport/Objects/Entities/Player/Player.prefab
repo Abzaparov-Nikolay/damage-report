@@ -254,6 +254,8 @@ GameObject:
   - component: {fileID: 9102296611959165392}
   - component: {fileID: -6838292381620383611}
   - component: {fileID: 4853843265692967513}
+  - component: {fileID: 3872955844431550833}
+  - component: {fileID: 8579187684006568236}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -277,7 +279,7 @@ Transform:
   - {fileID: 6892082122778855036}
   - {fileID: 2809523818194931468}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8700906230630883966
 MonoBehaviour:
@@ -327,16 +329,13 @@ MonoBehaviour:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: 6c1431ed24da26342a1d88230d779317, type: 2}
-  OnDamaged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeath:
+  onDamaged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6892082122906891254}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 3872955844431550833}
+        m_TargetAssemblyTypeName: Blinking, Assembly-CSharp
+        m_MethodName: StartBlinking
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -345,6 +344,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onCurrentZero:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4853843265692967513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +360,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
+--- !u!114 &3872955844431550833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6892082122906891254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6e75964276a844dba3f48f4e0ed9de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 0.5
+  duration: 3
+  color: {r: 1, g: 1, b: 1, a: 0}
+--- !u!114 &8579187684006568236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6892082122906891254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190e6a7244132da4eb63d2154cb245d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5479910114347794791
 PrefabInstance:
   m_ObjectHideFlags: 0

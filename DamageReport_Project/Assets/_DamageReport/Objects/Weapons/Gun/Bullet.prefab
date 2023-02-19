@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7262938451472395467}
   - component: {fileID: 956977773429135669}
   - component: {fileID: 7263390039570777343}
+  - component: {fileID: 1585494718672165747}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -149,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128350f623ea4f74c9dd4ead2eb30cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 0.5
   teamMember: {fileID: 7262938451472395467}
 --- !u!114 &7262938451472395467
 MonoBehaviour:
@@ -208,3 +209,17 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1585494718672165747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928253359481219560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e048d5273750c334294f109186134571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamMember: {fileID: 7262938451472395467}
+  impulse: 0

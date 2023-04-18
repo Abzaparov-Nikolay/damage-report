@@ -447,7 +447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interval: 0.5
   duration: 3
-  color: {r: 1, g: 1, b: 1, a: 0}
+  blinkingColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &8579187684006568236
 MonoBehaviour:
   m_ObjectHideFlags: 0

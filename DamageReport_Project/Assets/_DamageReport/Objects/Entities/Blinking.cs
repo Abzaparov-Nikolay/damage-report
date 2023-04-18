@@ -6,12 +6,17 @@ public class Blinking : MonoBehaviour
 {
     [SerializeField] private float interval;
     [SerializeField] private float duration;
-    [SerializeField] private Color color;
+    [SerializeField] private Color blinkingColor;
+     private bool isBlinking;
 
     [ContextMenu("Start")]
     public void StartBlinking()
     {
         var renderers = gameObject.GetComponentsInChildren<Renderer>();
+        if(isBlinking)
+            return;
+        else
+            isBlinking = true;
         foreach(var renderer in renderers)
         {
             StartCoroutine(Blink(renderer));
@@ -23,10 +28,11 @@ public class Blinking : MonoBehaviour
         var startColor = renderer.material.color;
         for (var i = 0; i < duration / interval; i++)
         {
-            renderer.material.color = color;
+            renderer.material.color = blinkingColor;
             yield return new WaitForSeconds(interval/2);
             renderer.material.color = startColor;
             yield return new WaitForSeconds(interval/2);
         }
+        isBlinking = false;
     }
 }

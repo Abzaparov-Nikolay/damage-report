@@ -3,7 +3,7 @@ using UnityEngine;
 public class JumpAtTarget : MonoBehaviour
 {
     [SerializeField] private Rigidbody body;
-    [SerializeField] private ReadVariable<Transform> target;
+    [SerializeField] private Variable<Transform> target;
     [SerializeField] private float interval;
     [SerializeField] private float impulse;
     [SerializeField] private float verticalAngle;

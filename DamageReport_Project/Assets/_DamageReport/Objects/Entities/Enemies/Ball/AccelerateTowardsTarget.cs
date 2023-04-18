@@ -3,7 +3,7 @@ using UnityEngine;
 public class AccelerateTowardsTarget : MonoBehaviour
 {
     [SerializeField] private Rigidbody body;
-    [SerializeField] private ReadVariable<Transform> target;
+    [SerializeField] private Variable<Transform> target;
     [SerializeField] private float force;
 
     private void FixedUpdate()

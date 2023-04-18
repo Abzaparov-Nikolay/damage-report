@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private ReadVariable<Vector2> inputDirection;
+    [SerializeField] private Variable<Vector2> inputDirection;
     [SerializeField] private float speed;
     [SerializeField] private new Transform camera;
 

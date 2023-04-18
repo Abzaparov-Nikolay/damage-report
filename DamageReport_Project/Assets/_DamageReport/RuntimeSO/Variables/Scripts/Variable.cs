@@ -1,14 +1,7 @@
 using System;
 using UnityEngine;
 
-public abstract class ReadVariable<T> : ScriptableObject
-{
-    public abstract T Get();
-
-    public static implicit operator T(ReadVariable<T> v) => v.Get();
-}
-
-public abstract class Variable<T> : ReadVariable<T>
+public abstract class Variable<T> : ScriptableObject
 {
     [SerializeField] protected T initialValue;
 
@@ -18,7 +11,7 @@ public abstract class Variable<T> : ReadVariable<T>
     public event Action OnChanged;
     public event Action<T> OnChangedWithOldValue;
 
-    public override T Get() => value;
+    public T Get() => value;
 
     public void Set(T newValue)
     {

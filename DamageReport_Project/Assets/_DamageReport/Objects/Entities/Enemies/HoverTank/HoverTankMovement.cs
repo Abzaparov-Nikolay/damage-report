@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class HoverTankMovement : MonoBehaviour
 {
-    [SerializeField] private ReadVariable<Transform> target;
+    [SerializeField] private Variable<Transform> target;
     [SerializeField] private Rigidbody body;
     [SerializeField] private float speed;
     [SerializeField] private float stopRadius;
@@ -14,20 +14,23 @@ public class HoverTankMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-           
+        //if(Vector3.Angle(body.transform.up, Vector3.up) > 60)
+        //{
+        //    var rotGoal = Quaternion.LookRotation(Vector3.up);
+            
+        //    transform.rotation = Quaternion.Lerp(transform.rotation, rotGoal, 0.2f);
+        //}
         var direction = (target.Get().position - body.position);
         direction.y = 0;
         direction.Normalize();
         if (Vector3.Angle(body.transform.forward ,direction) > 30)
         {
-            var rotGoal = Quaternion.LookRotation(direction);
+            var rotGoal = Quaternion.LookRotation(direction, Vector3.up);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotGoal, rotationSpeed * Time.fixedDeltaTime);
         }
-        if((body.position - target.Get().position).magnitude > stopRadius)
+        else if((body.position - target.Get().position).magnitude > stopRadius)
         {
             body.position += speed * Time.fixedDeltaTime * body.transform.forward;
         }
-
-
     }
 }

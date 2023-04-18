@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 7360546744325473184}
   - component: {fileID: 8264882989863088474}
   - component: {fileID: 7184152199673339439}
+  - component: {fileID: -6272541211277921676}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -236,7 +237,19 @@ MonoBehaviour:
   DestroyOnDeath: 1
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -6272541211277921676}
+        m_TargetAssemblyTypeName: ExperienceSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7184152199673339439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,3 +264,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teamMember: {fileID: 1158565925609422484}
   impulse: 3
+--- !u!114 &-6272541211277921676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5310842452553766981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292c1ab66fc6f5b4fa63f84a65b9bce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experienceParticlePrefab: {fileID: -9140032470162677721, guid: 3d432e644391bd341b15e42055a0d49c,
+    type: 3}
+  spawnCount: 1
+  momentum:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: 8555d9c4b43d7974c8448a3b6c107c08, type: 2}
+  minVerticalAngle:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: bab0b567cc1713549ae23613325b84ca, type: 2}

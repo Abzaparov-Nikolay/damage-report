@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 6392429250618394157}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6034582030897981253
 MonoBehaviour:
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSelector: {fileID: 0}
-  projectile: {fileID: 792684765480326135, guid: 2a5d53b82d1d80d478c2fa64dc09de34,
+  projectilePrefab: {fileID: 792684765480326135, guid: 2a5d53b82d1d80d478c2fa64dc09de34,
     type: 3}
   shootPoint: {fileID: 1987360029398659233}
   impulse:

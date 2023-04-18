@@ -47,6 +47,25 @@ public class Reference<T>
         }
     }
 
+    public T Value
+    {
+        get => useLocal ? localValue : variable;
+
+        set
+        {
+            var oldValue = Value;
+            if (useLocal)
+            {
+                localValue = value;
+                LocalOnChanged?.Invoke();
+                LocalOnChangedWithOldValue?.Invoke(oldValue);
+            }
+            else
+            {
+                variable.Value = value;
+            }
+        }
+    }
     public T Get() => useLocal ? localValue : variable;
 
     public void Set(T newValue)

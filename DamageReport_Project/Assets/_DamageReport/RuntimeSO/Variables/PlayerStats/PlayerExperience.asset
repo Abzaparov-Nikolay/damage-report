@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5c4b44f113195e40b1847f646ff946a, type: 3}
-  m_Name: PlayerGunRange
+  m_Name: PlayerExperience
   m_EditorClassIdentifier: 
-  initialValue: 7
+  initialValue: 0
   value: 0

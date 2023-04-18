@@ -11,6 +11,19 @@ public abstract class Variable<T> : ScriptableObject
     public event Action OnChanged;
     public event Action<T> OnChangedWithOldValue;
 
+    public T Value
+    {
+        get => value;
+
+        set
+        {
+            var oldValue = this.value;
+            this.value = value;
+            OnChanged?.Invoke();
+            OnChangedWithOldValue?.Invoke(oldValue);
+        }
+    }
+
     public T Get() => value;
 
     public void Set(T newValue)

@@ -3,7 +3,7 @@ using UnityEngine;
 public class ShootAtTarget : MonoBehaviour
 {
     [SerializeField] private TargetSelector targetSelector;
-    [SerializeField] private Rigidbody projectile;
+    [SerializeField] private Rigidbody projectilePrefab;
     [SerializeField] private Transform shootPoint;
     [SerializeField] private Reference<float> impulse;
     [SerializeField] private Reference<float> fireRate;
@@ -27,8 +27,8 @@ public class ShootAtTarget : MonoBehaviour
             return;
         }
         var direction = (target.position - shootPoint.position).normalized;
-        var spawnPosition = shootPoint.position + impulse / projectile.mass * elapsedTime * direction;
-        var newProjectile = Instantiate(projectile, spawnPosition, Quaternion.identity);
+        var spawnPosition = shootPoint.position + impulse / projectilePrefab.mass * elapsedTime * direction;
+        var newProjectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
         newProjectile.AddForce(impulse * direction, ForceMode.Impulse);
     }
 }

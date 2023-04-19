@@ -7,6 +7,7 @@ public class ClosestHostileFinder : TargetSelector
 {
     [SerializeField] private Reference<float> range;
     [SerializeField] private TeamMember teamMember;
+    [SerializeField] private bool shootBullets;
 
     private readonly HashSet<Transform> hostilesInRange = new();
     private SphereCollider sphereCollider;
@@ -43,7 +44,10 @@ public class ClosestHostileFinder : TargetSelector
     private void OnTriggerEnter(Collider other)
     {
         var otherTeamMember = other.GetComponentInParent<TeamMember>();
-        if (otherTeamMember != null && teamMember.IsHostileTo(otherTeamMember) && other.gameObject.activeInHierarchy)
+        if (otherTeamMember != null 
+            && teamMember.IsHostileTo(otherTeamMember)
+            && other.gameObject.activeInHierarchy
+            && (shootBullets || other.GetComponent<Projectile>() == null))
         {
             hostilesInRange.Add(other.transform);
         }

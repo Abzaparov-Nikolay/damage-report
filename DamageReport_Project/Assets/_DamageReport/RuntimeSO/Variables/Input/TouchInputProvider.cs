@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class TouchInputProvider : MonoBehaviour
 {
+    [Header(Headers.Input)]
+    [SerializeField] private Variable<Camera> mainCamera;
+
     [Header(Headers.Output)]
     [SerializeField] private Variable<Vector2> inputDirection;
 
@@ -24,6 +27,8 @@ public class TouchInputProvider : MonoBehaviour
             inputDirection.Set(default);
             return;
         }
-        inputDirection.Set((touch.position - touchStartPosition).normalized);
+        var screenInputDirection = (touch.position - touchStartPosition).normalized;
+        var worldInputDirection = screenInputDirection.Rotate(-mainCamera.Value.transform.rotation.eulerAngles.y);
+        inputDirection.Set(worldInputDirection);
     }
 }

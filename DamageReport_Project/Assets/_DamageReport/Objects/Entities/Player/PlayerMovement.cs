@@ -2,21 +2,34 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Rigidbody body;
     [SerializeField] private Variable<Vector2> inputDirection;
-    [SerializeField] private float speed;
-    [SerializeField] private new Transform camera;
+    [SerializeField] private float acceleration;
+    [SerializeField] private float maxSpeed;
+    [SerializeField] private float brakingFriction;
+    [SerializeField] private float maxRotation;
 
     private void FixedUpdate()
     {
+        var forwardVelocity = Vector3.Dot(transform.forward, body.velocity) * transform.forward;
+        forwardVelocity = Vector3.ClampMagnitude(forwardVelocity, maxSpeed);
+        var lateralVelocity = body.velocity - forwardVelocity;
+        lateralVelocity *= 1 - brakingFriction;
+        body.velocity = forwardVelocity + lateralVelocity;
+
         if (inputDirection == Vector2.zero)
         {
+            body.velocity *= 1 - brakingFriction;
             return;
         }
-        var worldUp = transform.position - camera.position;
-        worldUp.y = 0;
-        worldUp.Normalize();
-        var moveAngle = Mathf.Atan2(inputDirection.Get().y, inputDirection.Get().x) * Mathf.Rad2Deg;
-        var moveDirection = Quaternion.Euler(0, -moveAngle + 90, 0) * worldUp;
-        transform.position += speed * Time.fixedDeltaTime * moveDirection;
+
+        var directionError = Vector2.SignedAngle(inputDirection.Value, transform.forward.Xz());
+        directionError = Mathf.Clamp(directionError, -maxRotation, maxRotation);
+        transform.Rotate(0, directionError, 0);
+
+        if (body.velocity.magnitude < maxSpeed)
+        {
+            body.AddForce(acceleration * transform.forward);
+        }
     }
 }

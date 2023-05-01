@@ -161,6 +161,7 @@ MonoBehaviour:
     localValue: 0
     variable: {fileID: 11400000, guid: 7726ee5ee0cd9ce47ac248cb0327dac1, type: 2}
   body: {fileID: -9140032470162677721}
+  collider: {fileID: 673203577190797179}
 --- !u!108 &5772582588157054031
 Light:
   m_ObjectHideFlags: 0

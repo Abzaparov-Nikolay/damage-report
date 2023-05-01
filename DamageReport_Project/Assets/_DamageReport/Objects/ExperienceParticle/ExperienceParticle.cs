@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ExperienceParticle : MonoBehaviour
@@ -7,6 +8,7 @@ public class ExperienceParticle : MonoBehaviour
     [SerializeField] private Reference<float> attractionForce;
     [SerializeField] private Reference<float> startJumpImpulse;
     [SerializeField] private Rigidbody body;
+    [SerializeField] private new Collider collider;
 
     public bool IsAttracting { get; private set; }
 
@@ -16,8 +18,15 @@ public class ExperienceParticle : MonoBehaviour
     {
         body.AddForce(startJumpImpulse * Vector3.up, ForceMode.Impulse);
         body.useGravity = false;
-        IsAttracting = true;
+        StartCoroutine(StartAttracting());
+        collider.isTrigger = true;
         this.target = target;
+    }
+
+    IEnumerator StartAttracting()
+    {
+        yield return null;
+        IsAttracting = true;
     }
 
     private void FixedUpdate()

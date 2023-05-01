@@ -10,19 +10,11 @@ public class KnockbackDealer : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.TryGetComponentInParent<TeamMember>(out var otherTeamMember) 
-            && otherTeamMember.IsHostileTo(teamMember))
+            && otherTeamMember.IsHostileTo(teamMember)
+            && otherTeamMember.TryGetComponent<Rigidbody>(out var otherBody))
         {
             var impulseVector = (otherTeamMember.transform.position - transform.position).normalized * impulse;
-
-
-            if (otherTeamMember.TryGetComponent<Rigidbody>(out var otherBody))
-            {
-                otherBody.AddForce(impulseVector, ForceMode.Impulse);
-            }
-            else if(otherTeamMember.TryGetComponent<PlayerKnockbackReceiver>(out var playerKnockbackReceiver))
-            {
-                playerKnockbackReceiver.ReceiveKnockback(impulseVector);
-            }
+            otherBody.AddForce(impulseVector, ForceMode.Impulse);
         }
     }
 }

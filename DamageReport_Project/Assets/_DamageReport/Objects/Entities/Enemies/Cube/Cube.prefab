@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamMember: {fileID: 1158565925609422484}
-  impulse: 3
+  impulse: 30
 --- !u!114 &-6272541211277921676
 MonoBehaviour:
   m_ObjectHideFlags: 0

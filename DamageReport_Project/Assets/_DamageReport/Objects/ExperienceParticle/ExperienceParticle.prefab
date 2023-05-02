@@ -152,16 +152,14 @@ MonoBehaviour:
     useLocal: 1
     localValue: 5
     variable: {fileID: 0}
-  attractionForce:
-    useLocal: 0
-    localValue: 0
-    variable: {fileID: 11400000, guid: 94193cdc4374505458d726efa566bdea, type: 2}
   startJumpImpulse:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: 7726ee5ee0cd9ce47ac248cb0327dac1, type: 2}
   body: {fileID: -9140032470162677721}
   collider: {fileID: 673203577190797179}
+  relativeSpeed: 10
+  acceleration: 10
 --- !u!108 &5772582588157054031
 Light:
   m_ObjectHideFlags: 0
@@ -174,8 +172,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.9964248, b: 0, a: 1}
-  m_Intensity: 0.5
-  m_Range: 3
+  m_Intensity: 1
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

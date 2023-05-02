@@ -5,10 +5,11 @@ public class ExperienceParticle : MonoBehaviour
 {
     [field: SerializeField] public Reference<float> Value { get; private set; }
 
-    [SerializeField] private Reference<float> attractionForce;
     [SerializeField] private Reference<float> startJumpImpulse;
     [SerializeField] private Rigidbody body;
     [SerializeField] private new Collider collider;
+    [SerializeField] private float relativeSpeed;
+    [SerializeField] private float acceleration;
 
     public bool IsAttracting { get; private set; }
 
@@ -33,8 +34,14 @@ public class ExperienceParticle : MonoBehaviour
     {
         if (target != null)
         {
-            var direction = (target.transform.position - transform.position).normalized;
-            body.AddForce(attractionForce * direction);
+            var movement = target.position - body.position;
+            var targetVelocity = relativeSpeed * movement;
+            var velocityError = targetVelocity - body.velocity;
+            body.AddForce(acceleration * velocityError);
+            if (body.position.y < 0)
+            {
+                body.AddForce(startJumpImpulse / 2 * Vector3.up, ForceMode.Impulse);
+            }
         }
     }
 }

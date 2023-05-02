@@ -16,7 +16,7 @@ public class TouchInputProvider : MonoBehaviour
         {
             return;
         }
-        var touch = Input.touches[0];
+        var touch = Input.GetTouch(0);
         if (touch.phase == TouchPhase.Began)
         {
             touchStartPosition = touch.position;

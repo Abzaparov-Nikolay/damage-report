@@ -20,9 +20,9 @@ public static class VectorExtensions
     public static void Yz(this ref Vector3 vector3, Vector2 vector2)
         => vector3 = new(vector3.x, vector2.x, vector2.y);
 
-    public static Vector3 ToXy(this Vector2 vector) => new(vector.x, vector.y);
-    public static Vector3 ToXz(this Vector2 vector) => new(vector.x, 0, vector.y);
-    public static Vector3 ToYz(this Vector2 vector) => new(0, vector.x, vector.y);
+    public static Vector3 AsXy(this Vector2 vector, float z = 0) => new(vector.x, vector.y, z);
+    public static Vector3 AsXz(this Vector2 vector, float y = 0) => new(vector.x, y, vector.y);
+    public static Vector3 AsYz(this Vector2 vector, float x = 0) => new(x, vector.x, vector.y);
 
 
     /// <summary>

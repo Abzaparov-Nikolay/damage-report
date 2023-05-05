@@ -2,6 +2,8 @@ using UnityEditor;
 using UnityEngine;
 
 [CustomPropertyDrawer(typeof(Reference<float>))]
+[CustomPropertyDrawer(typeof(Reference<int>))]
+[CustomPropertyDrawer(typeof(Reference<bool>))]
 public class ReferenceDrawer : PropertyDrawer
 {
     /// <summary>

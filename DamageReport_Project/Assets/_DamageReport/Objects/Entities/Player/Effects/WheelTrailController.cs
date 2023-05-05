@@ -1,12 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WheelTrailController : MonoBehaviour
 {
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private TrailRenderer trailRenderer;
+    [SerializeField] private List<TrailRenderer> renderers;
 
     private void FixedUpdate()
     {
-        trailRenderer.emitting = playerMovement.IsBraking || playerMovement.IsSkidding;
+        for (var i = 0; i < renderers.Count; i++)
+        {
+            renderers[i].emitting = playerMovement.IsBraking || playerMovement.IsSkidding;
+        }
     }
 }

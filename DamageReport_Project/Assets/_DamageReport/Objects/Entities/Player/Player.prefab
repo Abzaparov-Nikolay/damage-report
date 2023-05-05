@@ -4988,12 +4988,9 @@ Transform:
   - {fileID: 2809523818194931468}
   - {fileID: 8716711055920822084}
   - {fileID: 2532925083717327408}
-  - {fileID: 4364124313337437792}
-  - {fileID: 3310285205419357476}
-  - {fileID: 7965903405575202863}
-  - {fileID: 6978466988632974981}
+  - {fileID: 8066739669885883909}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8700906230630883966
 MonoBehaviour:
@@ -5162,6 +5159,60 @@ MonoBehaviour:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: 8aaedb9bbbf9c084cbbe3d6c53202370, type: 2}
+--- !u!1 &7654856002633626557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8066739669885883909}
+  - component: {fileID: 3101798627999199080}
+  m_Layer: 0
+  m_Name: WheelTrails
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8066739669885883909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7654856002633626557}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4364124313337437792}
+  - {fileID: 3310285205419357476}
+  - {fileID: 7965903405575202863}
+  - {fileID: 6978466988632974981}
+  m_Father: {fileID: 6892082122906891255}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3101798627999199080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7654856002633626557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6476a145c28a8994cbe9da5a43d9ae3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 8700906230630883966}
+  renderers:
+  - {fileID: 7781498539394094358}
+  - {fileID: 8835335255080681042}
+  - {fileID: 4170762822217868121}
+  - {fileID: 4014231749290880499}
 --- !u!1 &8668246979743675631
 GameObject:
   m_ObjectHideFlags: 0
@@ -5235,13 +5286,8 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6892082122906891255}
+    m_TransformParent: {fileID: 8066739669885883909}
     m_Modifications:
-    - target: {fileID: -8821163610516788817, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
-        type: 3}
-      propertyPath: playerMovement
-      value: 
-      objectReference: {fileID: 8700906230630883966}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_RootOrder
@@ -5275,12 +5321,12 @@ PrefabInstance:
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
@@ -5300,7 +5346,7 @@ PrefabInstance:
     - target: {fileID: 6939666611071878088, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_Name
-      value: FrontLeftWheelTrail
+      value: FrontLeft
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5313,19 +5359,20 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 118344757382574331}
   m_PrefabAsset: {fileID: 0}
+--- !u!96 &7781498539394094358 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7663189636669187565, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 118344757382574331}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1208218993166293951
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6892082122906891255}
+    m_TransformParent: {fileID: 8066739669885883909}
     m_Modifications:
-    - target: {fileID: -8821163610516788817, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
-        type: 3}
-      propertyPath: playerMovement
-      value: 
-      objectReference: {fileID: 8700906230630883966}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_RootOrder
@@ -5359,12 +5406,12 @@ PrefabInstance:
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
@@ -5384,7 +5431,7 @@ PrefabInstance:
     - target: {fileID: 6939666611071878088, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_Name
-      value: FrontRightWheelTrail
+      value: FrontRight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5394,6 +5441,12 @@ PrefabInstance:
 --- !u!4 &3310285205419357476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1208218993166293951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &8835335255080681042 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7663189636669187565, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
     type: 3}
   m_PrefabInstance: {fileID: 1208218993166293951}
   m_PrefabAsset: {fileID: 0}
@@ -5570,13 +5623,8 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6892082122906891255}
+    m_TransformParent: {fileID: 8066739669885883909}
     m_Modifications:
-    - target: {fileID: -8821163610516788817, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
-        type: 3}
-      propertyPath: playerMovement
-      value: 
-      objectReference: {fileID: 8700906230630883966}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_RootOrder
@@ -5610,12 +5658,12 @@ PrefabInstance:
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
@@ -5635,13 +5683,19 @@ PrefabInstance:
     - target: {fileID: 6939666611071878088, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_Name
-      value: BackLeftWheelTrail
+      value: BackLeft
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4599cb0f3c61b2408dcebc9793ce0f2, type: 3}
+--- !u!96 &4170762822217868121 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7663189636669187565, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6032739856896788148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7965903405575202863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
@@ -5654,13 +5708,8 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 6892082122906891255}
+    m_TransformParent: {fileID: 8066739669885883909}
     m_Modifications:
-    - target: {fileID: -8821163610516788817, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
-        type: 3}
-      propertyPath: playerMovement
-      value: 
-      objectReference: {fileID: 8700906230630883966}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_RootOrder
@@ -5694,12 +5743,12 @@ PrefabInstance:
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
@@ -5719,13 +5768,19 @@ PrefabInstance:
     - target: {fileID: 6939666611071878088, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
         type: 3}
       propertyPath: m_Name
-      value: BackRightWheelTrail
+      value: BackRight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4599cb0f3c61b2408dcebc9793ce0f2, type: 3}
+--- !u!96 &4014231749290880499 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7663189636669187565, guid: c4599cb0f3c61b2408dcebc9793ce0f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6767912838918621214}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6978466988632974981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4410161062638186139, guid: c4599cb0f3c61b2408dcebc9793ce0f2,

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4410161062638186139}
   - component: {fileID: 7663189636669187565}
-  - component: {fileID: -8821163610516788817}
   m_Layer: 0
   m_Name: WheelTrail
   m_TagString: Untagged
@@ -137,17 +136,3 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &-8821163610516788817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6939666611071878088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6476a145c28a8994cbe9da5a43d9ae3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMovement: {fileID: 0}
-  trailRenderer: {fileID: 7663189636669187565}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21eb4ca28c1e8b45a47bbcbc5d40a17, type: 3}
   m_Name: EnemyCap
   m_EditorClassIdentifier: 
-  initialValue: 3
-  value: 50
+  initialValue: 50
+  value: 0

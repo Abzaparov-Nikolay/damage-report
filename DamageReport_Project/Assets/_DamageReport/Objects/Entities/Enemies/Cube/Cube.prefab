@@ -205,6 +205,10 @@ MonoBehaviour:
     useLocal: 1
     localValue: 0
     variable: {fileID: 0}
+  InvincibilityState:
+    useLocal: 1
+    localValue: 0
+    variable: {fileID: 0}
   onDamaged:
     m_PersistentCalls:
       m_Calls: []

@@ -4965,6 +4965,7 @@ GameObject:
   - component: {fileID: 1141956539543221061}
   - component: {fileID: 2485929182617901771}
   - component: {fileID: 6734833521066696964}
+  - component: {fileID: 5005897864473282980}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4990,7 +4991,7 @@ Transform:
   - {fileID: 2532925083717327408}
   - {fileID: 8066739669885883909}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8700906230630883966
 MonoBehaviour:
@@ -5044,12 +5045,16 @@ MonoBehaviour:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: 6c1431ed24da26342a1d88230d779317, type: 2}
+  InvincibilityState:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: c3eacb627f75b8445b1ea4568a12c9a6, type: 2}
   onDamaged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3872955844431550833}
-        m_TargetAssemblyTypeName: Blinking, Assembly-CSharp
-        m_MethodName: StartBlinking
+      - m_Target: {fileID: 1141956539543221061}
+        m_TargetAssemblyTypeName: PrefabSpawner, Assembly-CSharp
+        m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5059,9 +5064,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1141956539543221061}
-        m_TargetAssemblyTypeName: PrefabSpawner, Assembly-CSharp
-        m_MethodName: Spawn
+      - m_Target: {fileID: 5005897864473282980}
+        m_TargetAssemblyTypeName: InvincibilityChanger, Assembly-CSharp
+        m_MethodName: StartInvisibilityState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5159,6 +5164,41 @@ MonoBehaviour:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: 8aaedb9bbbf9c084cbbe3d6c53202370, type: 2}
+--- !u!114 &5005897864473282980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6892082122906891254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6382535f2bed4744cb04438fa1e1d2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InvinsibilityState:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: c3eacb627f75b8445b1ea4568a12c9a6, type: 2}
+  InvincibilityDuration:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: e82f2dc85afb53b41ae3f385f4720c01, type: 2}
+  OnInvincibilityStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3872955844431550833}
+        m_TargetAssemblyTypeName: Blinking, Assembly-CSharp
+        m_MethodName: StartBlinking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7654856002633626557
 GameObject:
   m_ObjectHideFlags: 0

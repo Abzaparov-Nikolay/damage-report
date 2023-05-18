@@ -11,12 +11,12 @@ public class LookThroughWalls : MonoBehaviour
 
 	private void Update()
 	{
-		var hittedAmount = Physics.RaycastNonAlloc(gameObject.transform.position, player.Value.position.normalized, hits, raycastDistance, layer);
+		var hittedAmount = Physics.RaycastNonAlloc(gameObject.transform.position, (player.Value.position - gameObject.transform.position).normalized, hits, raycastDistance, layer);
 		for (var i = 0; i < hittedAmount; i++)
 		{
 			if(hits[i].collider.gameObject.TryGetComponent<TransparencyChanger>(out var changer))
 			{
-
+				changer.BecomeTransparent();
 			}
 		}
 	}

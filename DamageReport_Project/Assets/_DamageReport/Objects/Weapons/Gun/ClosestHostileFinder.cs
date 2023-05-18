@@ -23,6 +23,8 @@ public class ClosestHostileFinder : TargetSelector
     private void Awake()
     {
         sphereCollider = GetComponent<SphereCollider>();
+        if (!sphereCollider.isTrigger)
+            sphereCollider.isTrigger = true;
     }
 
     private void OnEnable()

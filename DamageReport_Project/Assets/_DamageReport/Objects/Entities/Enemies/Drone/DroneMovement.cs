@@ -5,22 +5,23 @@ using UnityEngine;
 public class DroneMovement : MonoBehaviour
 {
     [SerializeField] private Variable<Transform> target;
-    [SerializeField] private float hoveringHeight;
     [SerializeField] private float speed;
     [SerializeField] private float stopRadius;
     [SerializeField][Range(0.0f, 1.0f)] private float tiltSpeed;
+    private Rigidbody body;
     private Quaternion normalRotation;
     private Quaternion targetRotation;
     private bool movingToTarget = false;
-    // Start is called before the first frame update
+
     void Start()
     {
+        body = GetComponent<Rigidbody>();
         normalRotation = transform.rotation;
     }
 
     void Update()
     {
-        if ((transform.position.Xz() - target.Get().position.Xz()).magnitude > stopRadius)
+        if ((body.position.Xz() - target.Get().position.Xz()).magnitude > stopRadius)
         {
             var directionToTarget = (target.Get().position - transform.position);
             directionToTarget.y = 0;
@@ -35,7 +36,7 @@ public class DroneMovement : MonoBehaviour
             {
                 movingToTarget = true;
             }
-            transform.position += speed * Time.deltaTime * directionToTarget;
+            
         }
         else
         {
@@ -46,6 +47,18 @@ public class DroneMovement : MonoBehaviour
             {
                 transform.rotation = Quaternion.Lerp(transform.rotation, normalRotation, tiltSpeed * Time.deltaTime);
             }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        
+        if (movingToTarget)
+        {
+            var directionToTarget = (target.Get().position - transform.position);
+            directionToTarget.y = 0;
+            directionToTarget.Normalize();
+            body.position += speed * Time.fixedDeltaTime * directionToTarget;
         }
     }
 }

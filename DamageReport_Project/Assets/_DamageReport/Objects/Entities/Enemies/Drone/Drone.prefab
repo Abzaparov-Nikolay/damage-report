@@ -106,7 +106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 54901761106c29048b5a993c29434ede, type: 2}
-  hoveringHeight: 11
   speed: 5
   stopRadius: 8
   tiltSpeed: 1
@@ -173,7 +172,7 @@ Rigidbody:
   m_GameObject: {fileID: 6534776789744912605}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 20
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -187,9 +186,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &5293467642201343884
 MonoBehaviour:

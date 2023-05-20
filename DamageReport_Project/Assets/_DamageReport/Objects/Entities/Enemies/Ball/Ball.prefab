@@ -11,10 +11,12 @@ GameObject:
   - component: {fileID: 1131332022373574301}
   - component: {fileID: 1131332022373574298}
   - component: {fileID: 5408355462401032986}
+  - component: {fileID: 3823798407607988097}
   - component: {fileID: -8368497804515131432}
   - component: {fileID: -104757182037140963}
   - component: {fileID: 5183754097365942192}
   - component: {fileID: 7218174312781699029}
+  - component: {fileID: 1821859754190310384}
   - component: {fileID: 5290669911177327547}
   - component: {fileID: 3875326449079111402}
   - component: {fileID: -871761383988581836}
@@ -90,6 +92,46 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3823798407607988097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131332022373574297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70cf9e83cdb316b45b722214e125398d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -104757182037140963}
+        m_TargetAssemblyTypeName: DamageDealer, Assembly-CSharp
+        m_MethodName: Deal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3875326449079111402}
+        m_TargetAssemblyTypeName: KnockbackDealer, Assembly-CSharp
+        m_MethodName: Deal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  teamMember: {fileID: 5183754097365942192}
 --- !u!114 &-8368497804515131432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,8 +159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128350f623ea4f74c9dd4ead2eb30cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  teamMember: {fileID: 5183754097365942192}
+  damage:
+    useLocal: 1
+    localValue: 2
+    variable: {fileID: 0}
 --- !u!114 &5183754097365942192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,10 +202,34 @@ MonoBehaviour:
     variable: {fileID: 0}
   onDamaged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1821859754190310384}
+        m_TargetAssemblyTypeName: DamageTextSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onCurrentZero:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1821859754190310384}
+        m_TargetAssemblyTypeName: DamageTextSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5290669911177327547}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
         m_MethodName: Die
@@ -174,6 +242,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1821859754190310384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131332022373574297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089ee3b781c57744a9072878c913d8fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTextPrefab: {fileID: 2780402026286231682, guid: b124f25e6b982f44ebc41c4d29244dbc,
+    type: 3}
+  positionVariation:
+    useLocal: 0
+    localValue: {x: 0, y: 0, z: 0}
+    variable: {fileID: 11400000, guid: 50aa06f35c20b6c47bf2d504b0664409, type: 2}
+  velocityVariation:
+    useLocal: 0
+    localValue: {x: 0, y: 0, z: 0}
+    variable: {fileID: 11400000, guid: 01598d2d34b48ed45ba1693db9585a7a, type: 2}
 --- !u!114 &5290669911177327547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,8 +304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e048d5273750c334294f109186134571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamMember: {fileID: 5183754097365942192}
-  impulse: 50
+  impulse:
+    useLocal: 1
+    localValue: 1
+    variable: {fileID: 0}
 --- !u!114 &-871761383988581836
 MonoBehaviour:
   m_ObjectHideFlags: 0

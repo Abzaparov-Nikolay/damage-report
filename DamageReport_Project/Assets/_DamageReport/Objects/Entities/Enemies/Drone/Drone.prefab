@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8456492531140035695}
   - component: {fileID: 7437242582535116906}
   - component: {fileID: 5293467642201343884}
+  - component: {fileID: 1191542415603641214}
   - component: {fileID: 4868698981360780692}
   - component: {fileID: 575894677621743442}
   - component: {fileID: 3134726602569529187}
@@ -216,10 +217,34 @@ MonoBehaviour:
     variable: {fileID: 0}
   onDamaged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1191542415603641214}
+        m_TargetAssemblyTypeName: DamageTextSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onCurrentZero:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1191542415603641214}
+        m_TargetAssemblyTypeName: DamageTextSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 4868698981360780692}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
         m_MethodName: Die
@@ -232,6 +257,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1191542415603641214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534776789744912605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089ee3b781c57744a9072878c913d8fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTextPrefab: {fileID: 2780402026286231682, guid: b124f25e6b982f44ebc41c4d29244dbc,
+    type: 3}
+  positionVariation:
+    useLocal: 0
+    localValue: {x: 0, y: 0, z: 0}
+    variable: {fileID: 11400000, guid: 50aa06f35c20b6c47bf2d504b0664409, type: 2}
+  velocityVariation:
+    useLocal: 0
+    localValue: {x: 0, y: 0, z: 0}
+    variable: {fileID: 11400000, guid: 01598d2d34b48ed45ba1693db9585a7a, type: 2}
 --- !u!114 &4868698981360780692
 MonoBehaviour:
   m_ObjectHideFlags: 0

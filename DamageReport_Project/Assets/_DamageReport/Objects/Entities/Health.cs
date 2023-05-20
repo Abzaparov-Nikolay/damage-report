@@ -8,8 +8,8 @@ public class Health : MonoBehaviour
 	public Reference<float> Max;
 	public Reference<float> Current;
 	public Reference<bool> InvincibilityState;
-	[SerializeField] private UnityEvent onDamaged;
-	[SerializeField] private UnityEvent onCurrentZero;
+	[SerializeField] private UnityEvent<float> onDamaged;
+	[SerializeField] private UnityEvent<float> onCurrentZero;
 
 	public void TakeDamage(float damage)
 	{
@@ -19,11 +19,11 @@ public class Health : MonoBehaviour
 		Current.Set(Current - damage);
 		if (Current > 0)
 		{
-			onDamaged?.Invoke();
+			onDamaged?.Invoke(damage);
 		}
 		else
 		{
-			onCurrentZero.Invoke();
+			onCurrentZero.Invoke(damage);
 		}
 	}
 

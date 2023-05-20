@@ -24,7 +24,7 @@ public abstract class Variable<T> : ScriptableObject
         }
     }
 
-    public T Get() => value;
+    public virtual T Get() => value;
 
     public void Set(T newValue)
     {

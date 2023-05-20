@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 4969926135333340191}
   - component: {fileID: 5972834405022201123}
   - component: {fileID: -6631156090676336951}
-  - component: {fileID: -4554148328131708160}
-  - component: {fileID: -759387182391308273}
+  - component: {fileID: 269832959369738785}
   - component: {fileID: 2746674004572482875}
   - component: {fileID: -532185981479597260}
   - component: {fileID: -7248941245089709448}
+  - component: {fileID: -4554148328131708160}
   - component: {fileID: 4448244275647164840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DroneBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -139,7 +139,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-4554148328131708160
+--- !u!114 &269832959369738785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,27 +148,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 5456969732586207051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e048d5273750c334294f109186134571, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f4e0ae08b511ce449e6892e32b02643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamMember: {fileID: -532185981479597260}
-  impulse: 0
---- !u!114 &-759387182391308273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5456969732586207051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70cf9e83cdb316b45b722214e125398d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionsBeforeCall: 1
-  onCollision:
+  onTrigger:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 4448244275647164840}
+        m_TargetAssemblyTypeName: DamageDealer, Assembly-CSharp
+        m_MethodName: Deal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -4554148328131708160}
+        m_TargetAssemblyTypeName: KnockbackDealer, Assembly-CSharp
+        m_MethodName: Deal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2746674004572482875}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
         m_MethodName: Die
@@ -181,6 +190,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  teamMember: {fileID: -532185981479597260}
 --- !u!114 &2746674004572482875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +232,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34a70b1f9112744ba30bde1f0c00dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4554148328131708160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5456969732586207051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e048d5273750c334294f109186134571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impulse:
+    useLocal: 1
+    localValue: 0
+    variable: {fileID: 0}
 --- !u!114 &4448244275647164840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,5 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128350f623ea4f74c9dd4ead2eb30cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  teamMember: {fileID: -532185981479597260}
+  damage:
+    useLocal: 1
+    localValue: 2
+    variable: {fileID: 0}

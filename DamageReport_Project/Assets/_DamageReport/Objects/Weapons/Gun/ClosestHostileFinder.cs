@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-[RequireComponent(typeof(SphereCollider))]
+[RequireComponent(typeof(Collider))]
 public class ClosestHostileFinder : TargetSelector
 {
     [SerializeField] private Reference<float> range;
@@ -10,7 +10,7 @@ public class ClosestHostileFinder : TargetSelector
     [SerializeField] private bool shootBullets;
 
     private readonly HashSet<Transform> hostilesInRange = new();
-    private SphereCollider sphereCollider;
+    private new Collider collider;
 
     public override bool TryGetTarget(out Transform target)
     {
@@ -22,9 +22,9 @@ public class ClosestHostileFinder : TargetSelector
 
     private void Awake()
     {
-        sphereCollider = GetComponent<SphereCollider>();
-        if (!sphereCollider.isTrigger)
-            sphereCollider.isTrigger = true;
+        collider = GetComponent<Collider>();
+        if (!collider.isTrigger)
+            collider.isTrigger = true;
     }
 
     private void OnEnable()
@@ -40,7 +40,16 @@ public class ClosestHostileFinder : TargetSelector
 
     private void ChangeColliderRadius()
     {
-        sphereCollider.radius = range;
+        if (collider is SphereCollider)
+        {
+            var sphereCollider = collider as SphereCollider;
+            sphereCollider.radius = range;
+        }
+        else if (collider is CapsuleCollider)
+        {
+            var capsuleCollider = collider as CapsuleCollider;
+            capsuleCollider.radius = range;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

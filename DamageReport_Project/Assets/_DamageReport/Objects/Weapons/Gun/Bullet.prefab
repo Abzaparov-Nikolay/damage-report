@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 2928253359481219562}
   - component: {fileID: 2928253359481219563}
   - component: {fileID: 792684765480326135}
+  - component: {fileID: 1912510606077397343}
   - component: {fileID: 2220730631637228959}
-  - component: {fileID: 862955830875553970}
   - component: {fileID: 7262938451472395467}
-  - component: {fileID: 956977773429135669}
+  - component: {fileID: 8140035408275034017}
+  - component: {fileID: 8181998523036466169}
   - component: {fileID: 7263390039570777343}
-  - component: {fileID: 1585494718672165747}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -134,11 +134,27 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1912510606077397343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928253359481219560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128350f623ea4f74c9dd4ead2eb30cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage:
+    useLocal: 1
+    localValue: 2
+    variable: {fileID: 0}
 --- !u!114 &2220730631637228959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,20 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34a70b1f9112744ba30bde1f0c00dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &862955830875553970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2928253359481219560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 128350f623ea4f74c9dd4ead2eb30cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 2
-  teamMember: {fileID: 7262938451472395467}
 --- !u!114 &7262938451472395467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
---- !u!114 &956977773429135669
+--- !u!114 &8140035408275034017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,13 +189,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 2928253359481219560}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70cf9e83cdb316b45b722214e125398d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f4e0ae08b511ce449e6892e32b02643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionsBeforeCall: 1
-  onCollision:
+  onTrigger:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1912510606077397343}
+        m_TargetAssemblyTypeName: DamageDealer, Assembly-CSharp
+        m_MethodName: Deal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8181998523036466169}
+        m_TargetAssemblyTypeName: KnockbackDealer, Assembly-CSharp
+        m_MethodName: Deal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 7263390039570777343}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
         m_MethodName: Die
@@ -206,6 +231,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  teamMember: {fileID: 7262938451472395467}
+--- !u!114 &8181998523036466169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928253359481219560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e048d5273750c334294f109186134571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impulse:
+    useLocal: 1
+    localValue: 0
+    variable: {fileID: 0}
 --- !u!114 &7263390039570777343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,17 +264,3 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1585494718672165747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2928253359481219560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e048d5273750c334294f109186134571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teamMember: {fileID: 7262938451472395467}
-  impulse: 0

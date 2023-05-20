@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class KnockbackDealer : MonoBehaviour
 {
-    [SerializeField] private TeamMember teamMember;
-    [SerializeField] private float impulse;
+    [SerializeField] private Reference<float> impulse;
 
-    private void OnCollisionEnter(Collision other)
+    public void Deal(GameObject target)
     {
-        if (other.gameObject.TryGetComponentInParent<TeamMember>(out var otherTeamMember) 
-            && otherTeamMember.IsHostileTo(teamMember)
-            && otherTeamMember.TryGetComponent<Rigidbody>(out var otherBody))
+        if (target.TryGetComponent<Rigidbody>(out var otherBody))
         {
-            var impulseVector = (otherTeamMember.transform.position - transform.position).normalized * impulse;
+            var impulseVector = (otherBody.transform.position - transform.position).normalized * impulse;
             otherBody.AddForce(impulseVector, ForceMode.Impulse);
         }
     }

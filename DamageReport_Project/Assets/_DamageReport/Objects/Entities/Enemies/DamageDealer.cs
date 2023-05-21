@@ -9,7 +9,7 @@ public class DamageDealer : MonoBehaviour
         if (target.TryGetComponentInParent<Health>(out var health))
         {
             health.TakeDamage(damage);
-            Debug.Log(damage.Get().ToString());
+            //Debug.Log(damage.Get().ToString());
         }
     }
 }

@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 2780402026286231680}
   - component: {fileID: 2780402026286231683}
   - component: {fileID: 7435782280152117548}
+  - component: {fileID: 1399720415951652178}
   - component: {fileID: 3952765765570670183}
-  - component: {fileID: -1423375652600014527}
-  - component: {fileID: 8346882829083266906}
   m_Layer: 0
   m_Name: DamageText
   m_TagString: Untagged
@@ -206,6 +205,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1399720415951652178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780402026286231682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247411f7e34a44a488beb4c19750e10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  fadeSpeed: 1
 --- !u!114 &3952765765570670183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,32 +235,3 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-1423375652600014527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2780402026286231682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 247411f7e34a44a488beb4c19750e10f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 0}
---- !u!111 &8346882829083266906
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2780402026286231682}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 9697cd8b5df121247b1cc23fd0d6fcf2, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0

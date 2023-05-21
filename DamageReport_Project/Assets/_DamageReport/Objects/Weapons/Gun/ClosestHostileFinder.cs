@@ -6,7 +6,7 @@ using System.Linq;
 public class ClosestHostileFinder : TargetSelector
 {
     [SerializeField] private Reference<float> range;
-    [SerializeField] private TeamMember teamMember;
+    [SerializeField] private Team team;
     [SerializeField] private bool shootBullets;
 
     private readonly HashSet<Transform> hostilesInRange = new();
@@ -56,7 +56,7 @@ public class ClosestHostileFinder : TargetSelector
     {
         var otherTeamMember = other.GetComponentInParent<TeamMember>();
         if (otherTeamMember != null 
-            && teamMember.IsHostileTo(otherTeamMember)
+            && team.IsHostileTo(otherTeamMember.Team)
             && other.gameObject.activeInHierarchy
             && (shootBullets || other.GetComponent<Projectile>() == null))
         {

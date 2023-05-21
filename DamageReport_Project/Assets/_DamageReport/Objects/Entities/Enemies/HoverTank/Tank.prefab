@@ -646,7 +646,7 @@ MonoBehaviour:
     useLocal: 1
     localValue: 12
     variable: {fileID: 0}
-  teamMember: {fileID: 4024461436893589648}
+  team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
   shootBullets: 0
 --- !u!4 &6441911392351398400 stripped
 Transform:

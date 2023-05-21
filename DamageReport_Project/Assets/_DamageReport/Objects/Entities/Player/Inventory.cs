@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField]
-    private List<Item> items;
+    [SerializeField] private List<Item> items;
+    [SerializeField] private List<WeaponSlot> weaponSlots;
     private void Start()
     {
         if (items == null)
@@ -28,5 +28,38 @@ public class Inventory : MonoBehaviour
     {
         items.Remove(item);
         item.OnRemoveFromInventory(gameObject);
+    }
+
+    public void AddWeapon(Weapon weapon)
+    {
+        foreach (var slot in weaponSlots)
+        {
+            if (weapon.fittingSlots.Contains(slot.type) && slot.weapon == null) {
+                slot.weapon = weapon;
+                for (var i = 0; i < weapon.prefabs.Count; i++)
+                {
+                    Instantiate(weapon.prefabs[i], slot.attachPoints[i].transform);
+                }
+                break;
+            }
+        }
+    }
+    public void RemoveWeapon(Weapon weapon)
+    {
+        foreach (var slot in weaponSlots)
+        {
+            if (slot.weapon == weapon)
+            {
+                slot.weapon = null;
+                foreach (var attachPoint in slot.attachPoints)
+                {
+                    foreach (Transform child in attachPoint.transform)
+                    {
+                        Destroy(child.gameObject);
+                    }
+                }
+                break;
+            }
+        }
     }
 }

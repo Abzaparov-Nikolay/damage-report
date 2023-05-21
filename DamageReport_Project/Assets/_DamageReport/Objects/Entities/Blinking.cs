@@ -26,6 +26,8 @@ public class Blinking : MonoBehaviour
 
     private IEnumerator Blink(Renderer renderer)
     {
+        if (renderer == null)
+            yield break;
         var startColor = renderer.material.color;
         for (var i = 0; i < duration / interval; i++)
         {

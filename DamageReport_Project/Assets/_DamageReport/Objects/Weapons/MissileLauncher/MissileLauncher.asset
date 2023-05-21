@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97ad14f2b82bf645a1ab6b43a20b804, type: 3}
+  m_Name: MissileLauncher
+  m_EditorClassIdentifier: 
+  fittingSlots:
+  - {fileID: 11400000, guid: e2fd27a2927399e49843422e08b86bd6, type: 2}
+  prefabs:
+  - {fileID: 6273997315193458127, guid: 69d343a8825667445bbeb8d902fbcf51, type: 3}

@@ -83,7 +83,7 @@ MonoBehaviour:
     useLocal: 1
     localValue: 1
     variable: {fileID: 0}
-  launchImpulse: 1
+  launchImpulse: 5
   targetSelector: {fileID: 6850694478847107057}
   missileSpawnPoint: {fileID: 5416334708045547202}
   missilePrefab: {fileID: 2399435358161838675, guid: 04928f0fae8d62b4ba3d30daef203dea,

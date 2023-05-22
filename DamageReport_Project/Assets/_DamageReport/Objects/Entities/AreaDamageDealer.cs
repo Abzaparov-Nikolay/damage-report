@@ -12,7 +12,7 @@ public class AreaDamageDealer : MonoBehaviour
     {
         foreach(var entity in areaTracker)
         {
-            if (entity.gameObject.TryGetComponent<TeamMember>(out var otherTeamMember)
+            if (entity.gameObject.TryGetComponentInParent<TeamMember>(out var otherTeamMember)
                 && team.IsHostileTo(otherTeamMember.Team)
                 && entity.gameObject.TryGetComponentInParent<Health>(out var health))
             {

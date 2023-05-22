@@ -547,6 +547,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 441270484116508476}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 33e424507b152844caeab16779cd18a6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7216988150929227021}
     - targetCorrespondingSourceObject: {fileID: -242165637326713887, guid: 33e424507b152844caeab16779cd18a6,
         type: 3}
       insertIndex: -1
@@ -657,12 +661,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8cfe2194f1507146a1052627e94fc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
+  areaTracker: {fileID: 7216988150929227021}
+--- !u!114 &7216988150929227021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6243504974274632946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df497b30489893c40a7f6795f6cb343f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   range:
     useLocal: 1
     localValue: 12
     variable: {fileID: 0}
-  team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
-  shootBullets: 0
+  collider: {fileID: 4690138934383729012}
 --- !u!4 &6441911392351398400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -9006549272062162013, guid: 33e424507b152844caeab16779cd18a6,

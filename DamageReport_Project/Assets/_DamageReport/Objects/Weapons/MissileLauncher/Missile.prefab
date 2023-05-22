@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 2634860570051067439}
   - component: {fileID: 4340887254796365808}
   - component: {fileID: 3063099996155949663}
-  - component: {fileID: 9155397553351298773}
   - component: {fileID: 8108508365484764681}
   - component: {fileID: 7900335989710506051}
+  - component: {fileID: 6925934085413626622}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Untagged
@@ -61,6 +61,7 @@ MonoBehaviour:
   useForce: 0
   acceleration: 30
   topSpeed: 60
+  destroyOnTargetDeath: 0
 --- !u!54 &4823303976265169390
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -179,18 +180,6 @@ MonoBehaviour:
   onTrigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9155397553351298773}
-        m_TargetAssemblyTypeName: DamageDealer, Assembly-CSharp
-        m_MethodName: Deal
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 4548675475653885068}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
         m_MethodName: Die
@@ -204,22 +193,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   teamMember: {fileID: 2634860570051067439}
---- !u!114 &9155397553351298773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2399435358161838675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 128350f623ea4f74c9dd4ead2eb30cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage:
-    useLocal: 1
-    localValue: 5
-    variable: {fileID: 0}
 --- !u!114 &8108508365484764681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,8 +236,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAsChild: 0
-  prefab: {fileID: 8932500221245711673, guid: 63d8599d8f664014ba5d8c7dd3a6c697, type: 3}
+  prefab: {fileID: 4910481094690038209, guid: 175f58726520933478e6f7500c3fb0f1, type: 3}
   parent: {fileID: 2399435358161838675}
+--- !u!114 &6925934085413626622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2399435358161838675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548ac4737a63a8d4c8e2c31e47b08c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 15
+  autoRestart: 0
+  active: 1
+  elapsed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4548675475653885068}
+        m_TargetAssemblyTypeName: Death, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4420841981462865524
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6034582030897981253}
   - component: {fileID: 8202820721186622631}
   - component: {fileID: 4954998525163793709}
+  - component: {fileID: 6840694462741514739}
   - component: {fileID: 593348708137014137}
   m_Layer: 0
   m_Name: Gun
@@ -87,12 +88,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8cfe2194f1507146a1052627e94fc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
+  areaTracker: {fileID: 6840694462741514739}
+--- !u!114 &6840694462741514739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968288731302653478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df497b30489893c40a7f6795f6cb343f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   range:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: d2bd4f65255ff7249af3402a678e3012, type: 2}
-  team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
-  shootBullets: 0
+  collider: {fileID: 593348708137014137}
 --- !u!136 &593348708137014137
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -108,7 +122,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 128
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2

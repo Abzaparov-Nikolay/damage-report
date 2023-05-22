@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5813766542261143084}
   - component: {fileID: 6593052363583849057}
   - component: {fileID: 6850694478847107057}
+  - component: {fileID: 3700104476537192047}
   m_Layer: 0
   m_Name: MissileLauncher
   m_TagString: Untagged
@@ -103,7 +104,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -123,12 +124,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8cfe2194f1507146a1052627e94fc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
+  areaTracker: {fileID: 3700104476537192047}
+--- !u!114 &3700104476537192047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6273997315193458127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df497b30489893c40a7f6795f6cb343f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   range:
     useLocal: 1
     localValue: 15
     variable: {fileID: 0}
-  team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
-  shootBullets: 0
+  collider: {fileID: 6593052363583849057}
 --- !u!1001 &1428711379301697003
 PrefabInstance:
   m_ObjectHideFlags: 0

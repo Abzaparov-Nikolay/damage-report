@@ -16,7 +16,7 @@ public class LookThroughWalls : MonoBehaviour
 		{
 			if(hits[i].collider.gameObject.TryGetComponent<TransparencyChanger>(out var changer))
 			{
-				changer.BecomeTransparent();
+				changer.BecomeTransparentWithReset();
 			}
 		}
 	}

@@ -8,28 +8,51 @@ public class TransparencyChanger : MonoBehaviour
 	public float threshhold = 0.7f;
 	public float fadeSpeed = 3;
 	private float startAlpha = 1;
+	private IEnumerator resetter;
 
-	private void Update()
+	public void BecomeTransparentWithReset()
 	{
-		
+		Fade();
+		if(resetter != null )
+		{
+			StopCoroutine(resetter);
+		}
+		resetter = ResetTransperancy();
+		StartCoroutine(resetter);
 	}
 
-	public void BecomeTransparent()
+	public void BecomeTransperent()
 	{
-		var renderer = gameObject.GetComponent<Renderer>();
-		var startColor = renderer.material.color;
-		//startAlpha = startColor.a;
-		renderer.material.color = new Color(startColor.r, startColor.g, startColor.b,
-			Mathf.Lerp(startColor.a, threshhold, fadeSpeed));
-		StopCoroutine(ResetTransperancy());
-		StartCoroutine(ResetTransperancy());
+		Fade();
+		if (resetter != null)
+		{
+			StopCoroutine(resetter);
+		}
+	}
+
+	public void BecomeVisible()
+	{
+		if (resetter != null)
+		{
+			StopCoroutine(resetter);
+		}
+		resetter = ResetTransperancy();
+		StartCoroutine(resetter);
 	}
 
 	private IEnumerator ResetTransperancy()
 	{
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(fadeSpeed);
 		var renderer = gameObject.GetComponent<Renderer>();
 		var col = renderer.material.color;
 		renderer.material.color = new Color(col.r,col.g,col.b,startAlpha);
+	}
+
+	private void Fade()
+	{
+		var renderer = gameObject.GetComponent<Renderer>();
+		var startColor = renderer.material.color;
+		renderer.material.color = new Color(startColor.r, startColor.g, startColor.b,
+			Mathf.Lerp(startColor.a, threshhold, fadeSpeed));
 	}
 }

@@ -58,7 +58,7 @@ public class ClosestHostileFinder : TargetSelector
         if (otherTeamMember != null 
             && team.IsHostileTo(otherTeamMember.Team)
             && other.gameObject.activeInHierarchy
-            && (shootBullets || other.GetComponent<Projectile>() == null))
+            && (shootBullets || other.gameObject.layer != Layers.Projectile))
         {
             hostilesInRange.Add(other.transform);
         }

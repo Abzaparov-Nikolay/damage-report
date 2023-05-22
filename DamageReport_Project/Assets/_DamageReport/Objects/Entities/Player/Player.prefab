@@ -53,6 +53,77 @@ MonoBehaviour:
   movement: {fileID: 8700906230630883966}
   turnAngle: 30
   turnInertia: 0.95
+--- !u!1 &617316374094585911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4524980934079832110}
+  - component: {fileID: 5488313365493064515}
+  - component: {fileID: 4650570420451685466}
+  m_Layer: 0
+  m_Name: EnemyTeleporter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4524980934079832110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617316374094585911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6892082122906891255}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &5488313365493064515
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617316374094585911}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 50
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4650570420451685466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617316374094585911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67067b237a1942b4299d95ee90445898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: {fileID: 11400000, guid: 91f9ff2b3597b024daf25eb985b8a8c5, type: 2}
+  distanceRatio: 0.95
+  boundsSize: 2
+  castStepLength: 5
+  maxCastSteps: 10
 --- !u!1 &2177354439072429882
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,6 +5064,7 @@ Transform:
   - {fileID: 2532925083717327408}
   - {fileID: 8066739669885883909}
   - {fileID: 2197346432704121446}
+  - {fileID: 4524980934079832110}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5124,6 +5196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnAsChild: 1
   prefab: {fileID: 2409081197745396545, guid: b9327486b535340429788053b9717ace, type: 3}
+  parent: {fileID: 0}
 --- !u!54 &2485929182617901771
 Rigidbody:
   m_ObjectHideFlags: 0

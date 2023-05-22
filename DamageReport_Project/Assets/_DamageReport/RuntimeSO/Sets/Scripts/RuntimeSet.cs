@@ -34,6 +34,8 @@ public abstract class RuntimeSet<T> : ScriptableObject, IEnumerable<T> where T :
         }
     }
 
+    public bool Contains(T item) => items.Contains(item);
+
     public IEnumerator<T> GetEnumerator() => items.GetEnumerator();
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

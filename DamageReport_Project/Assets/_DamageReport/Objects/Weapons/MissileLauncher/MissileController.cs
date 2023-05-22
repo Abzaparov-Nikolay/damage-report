@@ -12,11 +12,14 @@ public class MissileController : MonoBehaviour
     [SerializeField] private bool useForce;
     [SerializeField] private float acceleration;
     [SerializeField] private float topSpeed;
+    [SerializeField] public bool destroyOnTargetDeath;
+    private Vector3 targetDirection;
     private bool motorOn = false;
     private float speed = 0;
     private Quaternion startRotation;
     private float rotationTime;
     private bool detachParticleSystem = true;
+
     private void Start()
     {
         startRotation = transform.rotation;
@@ -27,9 +30,17 @@ public class MissileController : MonoBehaviour
     {
         if (target == null)
         {
-            GetComponent<Death>().Die();
-            detachParticleSystem = false;
-            return;
+            if (destroyOnTargetDeath)
+            {
+                GetComponent<Death>().Die();
+                detachParticleSystem = false;
+                return;
+            }
+        }
+        else
+        {
+            targetDirection = target.transform.position - body.position;
+            targetDirection.Normalize();
         }
         if (motorOn)
         {
@@ -39,9 +50,7 @@ public class MissileController : MonoBehaviour
         }
         else
         {
-            var direction = target.transform.position - body.position;
-            direction.Normalize();
-            transform.rotation = Quaternion.Lerp(startRotation, Quaternion.LookRotation(direction, Vector3.up), rotationTime);
+            transform.rotation = Quaternion.Lerp(startRotation, Quaternion.LookRotation(targetDirection, Vector3.up), rotationTime);
             if (rotationTime >= 1)
             {
                 rotationTime = 1;
@@ -56,19 +65,25 @@ public class MissileController : MonoBehaviour
     {
         if (target == null)
         {
-            GetComponent<Death>().Die();
-            detachParticleSystem = false;
-            return;
+            if (destroyOnTargetDeath)
+            {
+                GetComponent<Death>().Die();
+                detachParticleSystem = false;
+                return;
+            }
+        }
+        else
+        {
+            targetDirection = target.transform.position - body.position;
+            targetDirection.Normalize();
         }
         if (motorOn)
         {
-            var direction = target.transform.position - body.position;
-            direction.Normalize();
             if (useForce)
-                body.AddForce(force * direction, ForceMode.Force);
+                body.AddForce(force * targetDirection, ForceMode.Force);
             else
-                body.position += speed * direction * Time.fixedDeltaTime;
-            transform.LookAt(target.transform);
+                body.position += speed * targetDirection * Time.fixedDeltaTime;
+            transform.rotation = Quaternion.LookRotation(targetDirection, Vector3.up);
             //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(direction), turnSpeed * Time.fixedDeltaTime);
         }
     }

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3063099996155949663}
   - component: {fileID: 9155397553351298773}
   - component: {fileID: 8108508365484764681}
+  - component: {fileID: 7900335989710506051}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Untagged
@@ -103,6 +104,18 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7900335989710506051}
+        m_TargetAssemblyTypeName: PrefabSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 780649542444381199}
         m_TargetAssemblyTypeName: MissileController, Assembly-CSharp
         m_MethodName: OnDeath
@@ -237,6 +250,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7900335989710506051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2399435358161838675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7c90a841c73b34aa7ed00ca1126910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnAsChild: 0
+  prefab: {fileID: 8932500221245711673, guid: 63d8599d8f664014ba5d8c7dd3a6c697, type: 3}
+  parent: {fileID: 2399435358161838675}
 --- !u!1 &4420841981462865524
 GameObject:
   m_ObjectHideFlags: 0

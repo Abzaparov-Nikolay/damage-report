@@ -6,19 +6,40 @@ public class TransparencyChanger : MonoBehaviour
 {
 	[Range(0f, 1f)]
 	public float threshhold = 0.7f;
-	public float fadeSpeed = 3;
+	public float fadeInterval = 2;
+	public float resetInterval = 2;
 	private float startAlpha = 1;
 	private IEnumerator resetter;
+	private IEnumerator fader;
+	private int stepsCount = 30;
 
-	public void BecomeTransparentWithReset()
+	private int calls;
+	private int lastUpdateCalls;
+
+	private void Update()
 	{
-		Fade();
-		if(resetter != null )
+		if (calls > 0)
 		{
-			StopCoroutine(resetter);
+			if (lastUpdateCalls == 0)
+			{
+				BecomeTransperent();
+				lastUpdateCalls = calls;
+			}
 		}
-		resetter = ResetTransperancy();
-		StartCoroutine(resetter);
+		else
+		{
+			if (lastUpdateCalls > 0)
+			{
+				BecomeVisible();
+				lastUpdateCalls = 0;
+			}
+		}
+		calls = 0;
+	}
+
+	public void Call()
+	{
+		calls++;
 	}
 
 	public void BecomeTransperent()
@@ -27,11 +48,17 @@ public class TransparencyChanger : MonoBehaviour
 		if (resetter != null)
 		{
 			StopCoroutine(resetter);
+			resetter = null;
 		}
 	}
 
 	public void BecomeVisible()
 	{
+		if (fader != null)
+		{
+			StopCoroutine(fader);
+			fader = null;
+		}
 		if (resetter != null)
 		{
 			StopCoroutine(resetter);
@@ -42,17 +69,36 @@ public class TransparencyChanger : MonoBehaviour
 
 	private IEnumerator ResetTransperancy()
 	{
-		yield return new WaitForSeconds(fadeSpeed);
 		var renderer = gameObject.GetComponent<Renderer>();
 		var col = renderer.material.color;
-		renderer.material.color = new Color(col.r,col.g,col.b,startAlpha);
+		for (float i = 1; i <= stepsCount; i++)
+		{
+			renderer.material.color = new Color(col.r, col.g, col.b, Mathf.Lerp(col.a, startAlpha, i / stepsCount));
+			yield return new WaitForSeconds(resetInterval / stepsCount);
+		}
+		resetter = null;
 	}
 
 	private void Fade()
 	{
+		if (fader != null)
+		{
+			return;
+		}
+		fader = FadeSlowly();
+		StartCoroutine(fader);
+	}
+
+	private IEnumerator FadeSlowly()
+	{
 		var renderer = gameObject.GetComponent<Renderer>();
 		var startColor = renderer.material.color;
-		renderer.material.color = new Color(startColor.r, startColor.g, startColor.b,
-			Mathf.Lerp(startColor.a, threshhold, fadeSpeed));
+		for (float i = 1; i <= stepsCount; i++)
+		{
+			renderer.material.color = new Color(startColor.r, startColor.g, startColor.b,
+			Mathf.Lerp(startColor.a, threshhold, i / stepsCount));
+			yield return new WaitForSeconds(fadeInterval / stepsCount);
+		}
+		fader = null;
 	}
 }

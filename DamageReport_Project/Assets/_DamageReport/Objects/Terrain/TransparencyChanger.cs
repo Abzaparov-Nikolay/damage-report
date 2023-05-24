@@ -11,7 +11,7 @@ public class TransparencyChanger : MonoBehaviour
 	private float startAlpha = 1;
 	private IEnumerator resetter;
 	private IEnumerator fader;
-	private int stepsCount = 30;
+	private int stepsCount = 15;
 
 	private int calls;
 	private int lastUpdateCalls;
@@ -45,6 +45,8 @@ public class TransparencyChanger : MonoBehaviour
 	public void BecomeTransperent()
 	{
 		Fade();
+		calls = 1;	
+		lastUpdateCalls = 1;
 		if (resetter != null)
 		{
 			StopCoroutine(resetter);
@@ -57,6 +59,8 @@ public class TransparencyChanger : MonoBehaviour
 		if (fader != null)
 		{
 			StopCoroutine(fader);
+			calls = 0;
+			lastUpdateCalls = 0;
 			fader = null;
 		}
 		if (resetter != null)

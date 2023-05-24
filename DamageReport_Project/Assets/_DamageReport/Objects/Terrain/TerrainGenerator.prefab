@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5572134162043036871
 MonoBehaviour:
@@ -44,10 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c2e71b77668994ba115e586ee16313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Width: 300
   xPos: 0
-  Length: 500
   zPos: 0
+  mapSize:
+    useLocal: 0
+    localValue: {x: 0, y: 0, z: 0}
+    variable: {fileID: 11400000, guid: 8ac3a8baa96bc8a448d25f261dd0c5ba, type: 2}
   pillarsSpawnAmount: 100
   raycastTries: 2
   raycastSphereRadius: 10
@@ -55,5 +57,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pillarPrefab: {fileID: 2974122424316578701, guid: 9435e29a4bbdea740b5c2721f51e5068,
+    type: 3}
+  fencePrefab: {fileID: 2747283816887637836, guid: 475364254fbfedb4a95a4b76b49c2473,
     type: 3}
   TerrainParent: {fileID: 0}

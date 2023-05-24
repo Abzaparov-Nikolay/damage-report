@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3154364987660874866}
   - component: {fileID: 3154364987660874862}
   - component: {fileID: 3154364987660874861}
-  - component: {fileID: 3154364987660874860}
+  - component: {fileID: 713160295239027014}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 28, y: -45, z: 0}
 --- !u!20 &3154364987660874864
 Camera:
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   providedCamera: {fileID: 3154364987660874864}
   cameraVariable: {fileID: 11400000, guid: b5c47aa90d014924aaf10545a366ad95, type: 2}
---- !u!114 &3154364987660874860
+--- !u!114 &713160295239027014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,14 +182,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3154364987660874867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d17bb0914b78abb4191350ee9d8ee7db, type: 3}
+  m_Script: {fileID: 11500000, guid: 72210ed4d55c2c94c8cf1bae0eda3a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player:
-    useLocal: 0
-    localValue: {fileID: 0}
-    variable: {fileID: 11400000, guid: 54901761106c29048b5a993c29434ede, type: 2}
-  layer:
-    serializedVersion: 2
-    m_Bits: 64
-  raycastDistance: 100
+  transformVariable: {fileID: 11400000, guid: 28976a1f21cd49e4b985dc17da7a21f5, type: 2}

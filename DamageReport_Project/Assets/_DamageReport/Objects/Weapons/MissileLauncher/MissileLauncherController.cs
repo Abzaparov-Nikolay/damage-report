@@ -5,6 +5,7 @@ using UnityEngine;
 public class MissileLauncherController : MonoBehaviour
 {
     [SerializeField] private Reference<float> fireRate;
+    [SerializeField] private Reference<float> playerFireRateMultiplier;
     [SerializeField] private float launchImpulse;
     [SerializeField] private TargetSelector targetSelector;
     [SerializeField] private GameObject missileSpawnPoint;
@@ -16,7 +17,7 @@ public class MissileLauncherController : MonoBehaviour
         if (cooldownTimeLeft <= 0)
         {
             if (targetSelector.TryGetTarget(out var target)) {
-                cooldownTimeLeft = 1 / fireRate;
+                cooldownTimeLeft = 1 / (fireRate * playerFireRateMultiplier);
                 Launch(target);
             }
         }

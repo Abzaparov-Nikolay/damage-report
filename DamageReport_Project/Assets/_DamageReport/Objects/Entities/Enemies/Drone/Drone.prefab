@@ -149,6 +149,10 @@ MonoBehaviour:
     useLocal: 1
     localValue: 4
     variable: {fileID: 0}
+  fireRateMultiplier:
+    useLocal: 1
+    localValue: 1
+    variable: {fileID: 0}
 --- !u!114 &8456492531140035695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +212,10 @@ MonoBehaviour:
     localValue: 10
     variable: {fileID: 0}
   Current:
+    useLocal: 1
+    localValue: 0
+    variable: {fileID: 0}
+  Regeneration:
     useLocal: 1
     localValue: 0
     variable: {fileID: 0}

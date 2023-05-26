@@ -245,7 +245,7 @@ public static class LinqExtensions
 
     public static TValue ChooseRandom<TValue>(this IList<TValue> source)
     {
-        var randomIndex = UnityEngine.Random.Range(0, source.Count - 1);
+        var randomIndex = UnityEngine.Random.Range(0, source.Count);
         return source[randomIndex];
     }
 }

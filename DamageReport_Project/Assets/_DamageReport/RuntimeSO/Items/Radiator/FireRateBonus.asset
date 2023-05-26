@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87ac6bc44e3bad74abe3d6534cb8d088, type: 3}
-  m_Name: DoubleDamage
+  m_Script: {fileID: 11500000, guid: a9c4523afda570d40ab037479032e238, type: 3}
+  m_Name: FireRateBonus
   m_EditorClassIdentifier: 
-  order: 1
-  multiplier:
+  order: 0
+  amount:
     useLocal: 1
-    localValue: 2
+    localValue: 0.2
     variable: {fileID: 0}

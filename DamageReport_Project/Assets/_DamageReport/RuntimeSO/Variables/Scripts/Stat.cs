@@ -8,7 +8,7 @@ using UnityEngine.XR;
 
 public class Stat : Variable<float>
 {
-    private List<StatBonus> bonuses = new List<StatBonus>();
+    private List<StatBonus> bonuses = new();
     private float calculatedValue;
     private bool valueUpToDate = false;
 
@@ -36,13 +36,19 @@ public class Stat : Variable<float>
     private void Recalculate()
     {
         bonuses = bonuses.OrderBy(x => x.order).ToList();
-        float result = value;
+        float result = initialValue;
         foreach (var bonus in bonuses)
         {
             result = bonus.Affect(result);
         }
         calculatedValue = result;
+        Set(calculatedValue);
         valueUpToDate = true;
+    }
+
+    private void OnEnable()
+    {
+        Set(initialValue);
     }
 
     public static implicit operator float(Stat v) => v.Get();

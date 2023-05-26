@@ -84,6 +84,10 @@ MonoBehaviour:
     useLocal: 1
     localValue: 1
     variable: {fileID: 0}
+  playerFireRateMultiplier:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: 9cc97da55cee03c4d8c720b75cc62422, type: 2}
   launchImpulse: 5
   targetSelector: {fileID: 6850694478847107057}
   missileSpawnPoint: {fileID: 5416334708045547202}

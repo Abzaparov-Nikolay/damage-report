@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = MenuNames.Manager + nameof(NewUpgradesSelector))]
@@ -13,9 +14,13 @@ public class NewUpgradesSelector : ScriptableObject
 
     public void OfferNewUpgrades()
     {
+        availableItems = new Item[availableItemCount];
         for (var i = 0; i < availableItems.Length; i++)
         {
-            availableItems[i] = items.List.ChooseRandom();
+            if (items.List.Count >= availableItems.Length)
+                availableItems[i] = items.List.Except(availableItems).ToArray().ChooseRandom();
+            else
+                availableItems[i] = items.List.ChooseRandom();
         }
         OnNewUpgradesAvailable?.Invoke(availableItems);
     }

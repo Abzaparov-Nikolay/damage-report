@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5248d8d7da6d146afc282866a9c329, type: 3}
+  m_Name: Engine2
+  m_EditorClassIdentifier: 
+  StatBonuses:
+  - stat: {fileID: 11400000, guid: d8b9eb148cdc9304ba63f9b447eb8ecd, type: 2}
+    statBonus: {fileID: 11400000, guid: 8fe36abe6e934f644890bfe6ca1dd14f, type: 2}
+  - stat: {fileID: 11400000, guid: b387e754d31e0be45a2d0ba8db0b2523, type: 2}
+    statBonus: {fileID: 11400000, guid: d24a4be0a54cda24f8805616ad315f60, type: 2}
+  Behaviours: []
+  Image: {fileID: 21300000, guid: 14e14a03b5023dc42b7e1deafcd81d47, type: 3}
+  Title: "\u0414\u0432\u0438\u0433\u0430\u0442\u0435\u043B\u044C C7U-8"
+  Description: "-50% \u0443\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u0435\n+100%
+    \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C"

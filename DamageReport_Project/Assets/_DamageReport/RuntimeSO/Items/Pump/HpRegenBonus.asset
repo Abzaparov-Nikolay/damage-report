@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9c4523afda570d40ab037479032e238, type: 3}
-  m_Name: CumPissItemStatEffect
+  m_Name: HpRegenBonus
   m_EditorClassIdentifier: 
+  order: 0
   amount:
     useLocal: 1
-    localValue: 5
+    localValue: 0.2
     variable: {fileID: 0}

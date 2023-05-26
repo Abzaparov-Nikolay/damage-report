@@ -5068,7 +5068,7 @@ Transform:
   - {fileID: 4524980934079832110}
   - {fileID: 5642731648127298684}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8700906230630883966
 MonoBehaviour:
@@ -5128,6 +5128,10 @@ MonoBehaviour:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: 6c1431ed24da26342a1d88230d779317, type: 2}
+  Regeneration:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: 64e4c8bcbc23a7448b08d3bc3a833d26, type: 2}
   InvincibilityState:
     useLocal: 0
     localValue: 0
@@ -5248,6 +5252,8 @@ MonoBehaviour:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: 8aaedb9bbbf9c084cbbe3d6c53202370, type: 2}
+  experienceMultiplier: {fileID: 11400000, guid: e9ecaf9a1c5be1b4d95104e02daedb4e,
+    type: 2}
 --- !u!114 &5005897864473282980
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,15 +7,17 @@ public class ShootAtTarget : MonoBehaviour
     [SerializeField] private Transform shootPoint;
     [SerializeField] private Reference<float> impulse;
     [SerializeField] private Reference<float> fireRate;
+    [SerializeField] private Reference<float> fireRateMultiplier;
 
     private float timeSinceLastShot;
 
     private void FixedUpdate()
     {
+        var totalFireInterval = 1 / (fireRate * fireRateMultiplier);
         timeSinceLastShot += Time.fixedDeltaTime;
-        while (timeSinceLastShot > 1 / fireRate)
+        while (timeSinceLastShot > totalFireInterval)
         {
-            timeSinceLastShot -= 1 / fireRate;
+            timeSinceLastShot -= totalFireInterval;
             Shoot(timeSinceLastShot);
         }
     }

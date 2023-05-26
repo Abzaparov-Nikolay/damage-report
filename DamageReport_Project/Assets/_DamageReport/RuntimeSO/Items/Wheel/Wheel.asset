@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5248d8d7da6d146afc282866a9c329, type: 3}
+  m_Name: Wheel
+  m_EditorClassIdentifier: 
+  StatBonuses:
+  - stat: {fileID: 11400000, guid: b387e754d31e0be45a2d0ba8db0b2523, type: 2}
+    statBonus: {fileID: 11400000, guid: 00cab4af124b1974db54bfc47c480ceb, type: 2}
+  Behaviours: []
+  Image: {fileID: 21300000, guid: ccb518fe01e92ab43869f41fe3d5a931, type: 3}
+  Title: "\u041A\u043E\u043B\u0435\u0441\u043E"
+  Description: "+25% \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F
+    \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C"

@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
 	public Reference<float> Max;
 	public Reference<float> Current;
+	public Reference<float> Regeneration;
 	public Reference<bool> InvincibilityState;
 	[SerializeField] private UnityEvent<float> onDamaged;
 	[SerializeField] private UnityEvent<float> onCurrentZero;
@@ -27,7 +28,15 @@ public class Health : MonoBehaviour
 		}
 	}
 
-	private void OnEnable()
+    private void Update()
+    {
+		if (Regeneration > 0)
+		{
+			Current.Value += Regeneration * Time.deltaTime;
+        }
+    }
+
+    private void OnEnable()
 	{
 		Current.Set(Max);
 	}

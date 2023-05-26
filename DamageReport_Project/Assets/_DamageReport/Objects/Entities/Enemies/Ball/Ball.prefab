@@ -196,6 +196,10 @@ MonoBehaviour:
     useLocal: 1
     localValue: 0
     variable: {fileID: 0}
+  Regeneration:
+    useLocal: 1
+    localValue: 0
+    variable: {fileID: 0}
   InvincibilityState:
     useLocal: 1
     localValue: 0

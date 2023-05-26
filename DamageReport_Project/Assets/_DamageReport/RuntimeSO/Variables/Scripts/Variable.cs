@@ -11,7 +11,7 @@ public abstract class Variable<T> : ScriptableObject
     public event Action OnChanged;
     public event Action<T> OnChangedWithOldValue;
 
-    public T Value
+    public virtual T Value
     {
         get => value;
 

@@ -5,8 +5,9 @@
     public const string Item = "Item/";
     public const string Set = RuntimeSO + "Set/";
     public const string Weapon = "Weapon/";
-    public const string Content = "ContentSO/";
+    public const string Manager = "Manager/";
 
+    public const string Content = "ContentSO/";
     private const string RuntimeSO = "RuntimeSO/";
 }
 

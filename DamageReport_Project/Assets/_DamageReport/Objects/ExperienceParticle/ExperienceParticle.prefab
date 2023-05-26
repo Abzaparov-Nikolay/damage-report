@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Value>k__BackingField:
     useLocal: 1
-    localValue: 5
+    localValue: 1
     variable: {fileID: 0}
   startJumpImpulse:
     useLocal: 0

@@ -5011,6 +5011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c137c7b0806401f438ab3f175e91fc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryVariable: {fileID: 11400000, guid: e9f9e360bec897143918e2dd0d90553a, type: 2}
   items: []
   weaponSlots:
   - weapon: {fileID: 11400000, guid: d980a38b525ebd94f9d5119f35e94d3e, type: 2}
@@ -5067,7 +5068,7 @@ Transform:
   - {fileID: 4524980934079832110}
   - {fileID: 5642731648127298684}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8700906230630883966
 MonoBehaviour:
@@ -5083,8 +5084,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 2485929182617901771}
   inputDirection: {fileID: 11400000, guid: b60fea03ba25558439c08e2a26161d53, type: 2}
-  acceleration: 15
-  maxSpeed: 10
+  acceleration:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: d8b9eb148cdc9304ba63f9b447eb8ecd, type: 2}
+  maxSpeed:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: b387e754d31e0be45a2d0ba8db0b2523, type: 2}
   brakingFriction: 0.03
   <MaxTurn>k__BackingField: 1
   skidThreshold: 3

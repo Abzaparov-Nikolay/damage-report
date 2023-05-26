@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField] private Variable<Inventory> inventoryVariable;
     [SerializeField] private List<Item> items;
     [SerializeField] private List<WeaponSlot> weaponSlots;
+
+    private void Awake()
+    {
+        inventoryVariable.Value = this;
+    }
+
     private void Start()
     {
         if (items == null)
@@ -18,6 +25,7 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+
     public void AddItem(Item item)
     {
         items.Add(item);

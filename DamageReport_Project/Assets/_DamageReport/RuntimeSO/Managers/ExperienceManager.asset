@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2419626af5953f46b3d78694a580616, type: 3}
+  m_Name: ExperienceManager
+  m_EditorClassIdentifier: 
+  currentExperience: {fileID: 11400000, guid: 8aaedb9bbbf9c084cbbe3d6c53202370, type: 2}
+  maxExperience: {fileID: 11400000, guid: 2b0cb37d795460d4fbd39c61baaad8c8, type: 2}
+  nextLevelMultiplier:
+    useLocal: 1
+    localValue: 1.5
+    variable: {fileID: 0}
+  onLevelUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 93631339d5736894d8bab84df4f919db, type: 2}
+        m_TargetAssemblyTypeName: NewUpgradesSelector, Assembly-CSharp
+        m_MethodName: OfferNewUpgrades
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

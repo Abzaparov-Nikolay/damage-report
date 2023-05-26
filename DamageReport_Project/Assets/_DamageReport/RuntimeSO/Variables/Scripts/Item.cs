@@ -7,21 +7,23 @@ using UnityEngine;
 [CreateAssetMenu(menuName = MenuNames.Item + "Item")]
 public class Item : ScriptableObject
 {
-    [SerializeField]
-    public List<StatAndBonus> statBonuses;
-    [SerializeField]
-    public List<GameObject> behaviours;
+    public List<StatAndBonus> StatBonuses;
+    public List<GameObject> Behaviours;
+    public Sprite Image;
+    public string Title;
+    [TextArea] public string Description;
+
     private List<GameObject> instantiatedBehaviours;
 
     public void OnAddToInventory(GameObject inventory)
     {
-        foreach(var statBonus in statBonuses)
+        foreach(var statBonus in StatBonuses)
         {
             var stat = statBonus.stat;
             var bonus = statBonus.statBonus;
             stat.AddBonus(bonus);
         }
-        foreach (var behaviour in behaviours)
+        foreach (var behaviour in Behaviours)
         {
             instantiatedBehaviours.Add(Instantiate(behaviour, inventory.transform));
         }
@@ -29,7 +31,7 @@ public class Item : ScriptableObject
 
     public void OnRemoveFromInventory(GameObject inventory)
     {
-        foreach (var statBonus in statBonuses)
+        foreach (var statBonus in StatBonuses)
         {
             var stat = statBonus.stat;
             var bonus = statBonus.statBonus;

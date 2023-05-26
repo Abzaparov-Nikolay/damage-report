@@ -11,6 +11,9 @@ public class Stat : Variable<float>
     private List<StatBonus> bonuses = new List<StatBonus>();
     private float calculatedValue;
     private bool valueUpToDate = false;
+
+    public override float Value => Get();
+
     public void AddBonus(StatBonus bonus)
     {
         bonuses.Add(bonus);
@@ -41,4 +44,6 @@ public class Stat : Variable<float>
         calculatedValue = result;
         valueUpToDate = true;
     }
+
+    public static implicit operator float(Stat v) => v.Get();
 }

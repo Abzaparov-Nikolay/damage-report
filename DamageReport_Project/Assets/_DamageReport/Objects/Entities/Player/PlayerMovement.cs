@@ -4,8 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody body;
     [SerializeField] private Variable<Vector2> inputDirection;
-    [SerializeField] private float acceleration;
-    [SerializeField] private float maxSpeed;
+    [SerializeField] private Reference<float> acceleration;
+    [SerializeField] private Reference<float> maxSpeed;
     [SerializeField] private float brakingFriction;
     [field: SerializeField] public float MaxTurn { get; private set; }
     [SerializeField] private float skidThreshold;

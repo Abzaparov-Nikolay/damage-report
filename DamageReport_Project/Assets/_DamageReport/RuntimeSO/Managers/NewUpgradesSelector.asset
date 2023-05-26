@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5c4b44f113195e40b1847f646ff946a, type: 3}
-  m_Name: PlayerMaxExperience
+  m_Script: {fileID: 11500000, guid: 1124ff24ff549b947ae48334097d97c1, type: 3}
+  m_Name: NewUpgradesSelector
   m_EditorClassIdentifier: 
-  initialValue: 5
-  value: 100
+  items: {fileID: 11400000, guid: 2ee586755c5cfd34c8b0db58c8909b80, type: 2}
+  availableItemCount:
+    useLocal: 1
+    localValue: 3
+    variable: {fileID: 0}

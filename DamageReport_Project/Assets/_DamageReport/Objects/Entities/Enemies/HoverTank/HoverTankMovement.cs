@@ -1,7 +1,3 @@
-using Mono.Cecil.Cil;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class HoverTankMovement : MonoBehaviour
@@ -12,12 +8,6 @@ public class HoverTankMovement : MonoBehaviour
     [SerializeField] private float stopRadius;
     [SerializeField][Range(0.0f, 1.0f)] private float rotationSpeed;
     
-
-
-    private void Start()
-    {
-        
-    }
     private void FixedUpdate()
     {
         

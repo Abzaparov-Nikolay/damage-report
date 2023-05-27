@@ -5068,7 +5068,7 @@ Transform:
   - {fileID: 4524980934079832110}
   - {fileID: 5642731648127298684}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8700906230630883966
 MonoBehaviour:
@@ -5229,8 +5229,8 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
+  m_ImplicitCom: 0
+  m_ImplicitTensor: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0

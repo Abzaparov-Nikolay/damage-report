@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     public float CurrentTurning { get; private set; }
 
-
     private void FixedUpdate()
     {
         CurrentTurning = 0;

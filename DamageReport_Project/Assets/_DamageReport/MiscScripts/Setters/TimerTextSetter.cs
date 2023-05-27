@@ -15,7 +15,13 @@ public class TimerTextSetter : MonoBehaviour
         if (newTimeInSeconds != currentTimeInSeconds)
         {
             currentTimeInSeconds = newTimeInSeconds;
-            var format = currentLevelTime.Value.Seconds >= 10 ? "{0}:{1}" : "{0}:0{1}";
+            var format = currentLevelTime.Value switch
+            {
+                { Seconds: < 10, Minutes: < 10 } => "0{0}:0{1}",
+                { Seconds: >= 10, Minutes: < 10 } => "0{0}:{1}",
+                { Seconds: < 10, Minutes: >= 10 } => "{0}:0{1}",
+                _ => "{0}:{1}",
+            };
             textField.SetText(format, currentLevelTime.Value.Minutes, currentLevelTime.Value.Seconds);
         }
     }

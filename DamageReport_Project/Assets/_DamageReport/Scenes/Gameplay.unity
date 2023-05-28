@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelTime: {fileID: 11400000, guid: 98c4d089a5cdb314390889eb6aff73d1, type: 2}
-  endTimeInMinutes: 0.2
+  endTimeInMinutes: 13
   onVictoryAchieved:
     m_PersistentCalls:
       m_Calls:
@@ -1609,7 +1609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &485151521
 RectTransform:
   m_ObjectHideFlags: 0

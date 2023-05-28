@@ -224,6 +224,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onTriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
   teamMember: {fileID: 8957707653639019221}
 --- !u!114 &839193893190957567
 MonoBehaviour:
@@ -239,7 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage:
     useLocal: 1
-    localValue: 2
+    localValue: 1
     variable: {fileID: 0}
 --- !u!114 &7312889260658391561
 MonoBehaviour:

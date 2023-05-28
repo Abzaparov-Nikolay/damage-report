@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: -6272541211277921676}
   - component: {fileID: 978888848708456661}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: LargeCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,8 +37,8 @@ Transform:
   m_GameObject: {fileID: 5310842452553766981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7577150375839999667}
   m_Father: {fileID: 0}
@@ -73,7 +73,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5310842452553766981}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -106,8 +106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 8435865612405913458}
   target: {fileID: 11400000, guid: 54901761106c29048b5a993c29434ede, type: 2}
-  interval: 2
-  impulse: 10
+  interval: 3.5
+  impulse: 35
   verticalAngle: 45
 --- !u!114 &2959017618848112037
 MonoBehaviour:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage:
     useLocal: 1
-    localValue: 2.3
+    localValue: 3
     variable: {fileID: 0}
 --- !u!114 &7184152199673339439
 MonoBehaviour:
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Max:
     useLocal: 1
-    localValue: 3
+    localValue: 11
     variable: {fileID: 0}
   Current:
     useLocal: 1

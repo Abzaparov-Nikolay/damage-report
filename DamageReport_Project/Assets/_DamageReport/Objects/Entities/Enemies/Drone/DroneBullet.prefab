@@ -253,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage:
     useLocal: 1
-    localValue: 2
+    localValue: 0.9
     variable: {fileID: 0}
 --- !u!114 &4176968344831557958
 MonoBehaviour:

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using static UnityEditor.Progress;
 using UnityEngine.SceneManagement;
 
 public abstract class Variable<T> : ScriptableObject

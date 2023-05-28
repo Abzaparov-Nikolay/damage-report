@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using static UnityEditor.Progress;
+using UnityEngine.SceneManagement;
 
 public abstract class Variable<T> : ScriptableObject
 {
@@ -49,6 +51,17 @@ public abstract class Variable<T> : ScriptableObject
     private void OnEnable()
     {
         Set(initialValue);
+        SceneManager.sceneUnloaded += OnSceneChanged;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneUnloaded -= OnSceneChanged;
+    }
+
+    private void OnSceneChanged(Scene scene)
+    {
+        initialized = false;
     }
 
     public static implicit operator T(Variable<T> v) => v.Get();

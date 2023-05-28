@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public abstract class RuntimeSet<T> : ScriptableObject, IEnumerable<T> where T : UnityEngine.Object
 {
     protected readonly HashSet<T> items = new();
+
+    [SerializeField, RuntimeRO] private int count;
 
     public event Action OnAdded;
     public event Action OnRemoved;
@@ -16,12 +19,14 @@ public abstract class RuntimeSet<T> : ScriptableObject, IEnumerable<T> where T :
     public virtual void Add(T item)
     {
         items.Add(item);
+        count = items.Count;
         OnAdded?.Invoke();
     }
 
     public virtual void Remove(T item)
     {
         items.Remove(item);
+        count = items.Count;
         OnRemoved?.Invoke();
     }
 
@@ -32,6 +37,21 @@ public abstract class RuntimeSet<T> : ScriptableObject, IEnumerable<T> where T :
             Remove(item);
             Destroy(item);
         }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneUnloaded += OnSceneChanged;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneUnloaded -= OnSceneChanged;
+    }
+
+    private void OnSceneChanged(Scene scene)
+    {
+        items.Clear();
     }
 
     public bool Contains(T item) => items.Contains(item);

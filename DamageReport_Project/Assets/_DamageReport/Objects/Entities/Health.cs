@@ -30,9 +30,9 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-		if (Regeneration > 0)
+		if (Regeneration > 0 && Current.Value < Max)
 		{
-			Current.Value += Regeneration * Time.deltaTime;
+			Current.Value += Mathf.Min(Regeneration * Time.deltaTime, Max - Current);
         }
     }
 

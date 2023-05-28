@@ -16,7 +16,7 @@ MonoBehaviour:
   maxExperience: {fileID: 11400000, guid: 2b0cb37d795460d4fbd39c61baaad8c8, type: 2}
   nextLevelMultiplier:
     useLocal: 1
-    localValue: 1.5
+    localValue: 1.2
     variable: {fileID: 0}
   onLevelUp:
     m_PersistentCalls:

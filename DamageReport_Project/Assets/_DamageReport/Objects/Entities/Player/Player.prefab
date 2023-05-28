@@ -5040,6 +5040,7 @@ GameObject:
   - component: {fileID: 2485929182617901771}
   - component: {fileID: 6734833521066696964}
   - component: {fileID: 5005897864473282980}
+  - component: {fileID: 6117163738418577488}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5068,7 +5069,7 @@ Transform:
   - {fileID: 4524980934079832110}
   - {fileID: 5642731648127298684}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8700906230630883966
 MonoBehaviour:
@@ -5165,7 +5166,19 @@ MonoBehaviour:
         m_CallState: 2
   onCurrentZero:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6117163738418577488}
+        m_TargetAssemblyTypeName: Death, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4853843265692967513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5289,6 +5302,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6117163738418577488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6892082122906891254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847ef026e024e3f4e9ac35dd364795ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnDeath: 0
+  DeactivateOnDeath: 1
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7530141657870719683
 GameObject:
   m_ObjectHideFlags: 0

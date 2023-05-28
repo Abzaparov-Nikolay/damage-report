@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR;
 
 [CreateAssetMenu(menuName = MenuNames.Stats + "Stat")]
@@ -55,6 +56,19 @@ public class Stat : Variable<float>
     private void OnEnable()
     {
         Set(initialValue);
+        SceneManager.sceneUnloaded += OnSceneChanged;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneUnloaded -= OnSceneChanged;
+    }
+
+    private void OnSceneChanged(Scene scene)
+    {
+        Set(initialValue);
+        bonuses = new();
+        valueUpToDate = false;
     }
 
     public static implicit operator float(Stat v) => v.Get();

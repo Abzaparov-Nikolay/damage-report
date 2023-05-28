@@ -147,6 +147,7 @@ MonoBehaviour:
     localValue: 15
     variable: {fileID: 0}
   collider: {fileID: 6593052363583849057}
+  team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
 --- !u!1001 &1428711379301697003
 PrefabInstance:
   m_ObjectHideFlags: 0

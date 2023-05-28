@@ -52,6 +52,19 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+
+    public bool CanAddWeapon(Weapon weapon)
+    {
+        foreach (var slot in weaponSlots)
+        {
+            if (weapon.fittingSlots.Contains(slot.type) && slot.weapon == null)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void RemoveWeapon(Weapon weapon)
     {
         foreach (var slot in weaponSlots)

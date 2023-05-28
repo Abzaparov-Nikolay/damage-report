@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: NewUpgradesSelector
   m_EditorClassIdentifier: 
   items: {fileID: 11400000, guid: 2ee586755c5cfd34c8b0db58c8909b80, type: 2}
-  availableItemCount:
+  weapons: {fileID: 11400000, guid: 6ae166ed54af7554285e0e6a6ff78229, type: 2}
+  availableUpgradeCount:
     useLocal: 1
     localValue: 3
     variable: {fileID: 0}
+  weaponChance: 0.2
+  inventory: {fileID: 11400000, guid: e9f9e360bec897143918e2dd0d90553a, type: 2}

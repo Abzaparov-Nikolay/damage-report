@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -35,14 +37,18 @@ public class Stat : Variable<float>
 
     private void Recalculate()
     {
-        bonuses = bonuses.OrderBy(x => x.order).ToList();
         float result = initialValue;
-        foreach (var bonus in bonuses)
+        for (var order = 0; order < 3; order++)
         {
-            result = bonus.Affect(result);
+            foreach (var bonus in bonuses)
+            {
+                if (bonus.order == order)
+                    result = bonus.Affect(result);
+            }
         }
+
         calculatedValue = result;
-        Set(calculatedValue);
+        //Set(calculatedValue);
         valueUpToDate = true;
     }
 

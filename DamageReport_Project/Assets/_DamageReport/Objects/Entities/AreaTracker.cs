@@ -7,7 +7,9 @@ public class AreaTracker : MonoBehaviour, IEnumerable<Transform>
 {
     [SerializeField] private Reference<float> range;
     [SerializeField] private new Collider collider;
+    [SerializeField] private Team team;
     private readonly HashSet<Transform> entitiesInRange = new();
+
     private void Start()
     {
         if (collider == null)
@@ -43,8 +45,9 @@ public class AreaTracker : MonoBehaviour, IEnumerable<Transform>
 
     private void OnTriggerEnter(Collider other)
     {
-        var otherTeamMember = other.GetComponentInParent<TeamMember>();
-        if (other.gameObject.activeInHierarchy)
+        if (other.gameObject.activeInHierarchy
+            && other.gameObject.TryGetComponentInParent<TeamMember>(out var otherTeamMember)
+            && team.IsHostileTo(otherTeamMember.Team))
         {
             entitiesInRange.Add(other.transform);
         }

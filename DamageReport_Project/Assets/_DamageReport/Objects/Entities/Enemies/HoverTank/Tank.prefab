@@ -713,6 +713,7 @@ MonoBehaviour:
     localValue: 12
     variable: {fileID: 0}
   collider: {fileID: 4690138934383729012}
+  team: {fileID: 11400000, guid: 22a3e67d6d8934d41b4d1878d8b78e99, type: 2}
 --- !u!4 &6441911392351398400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -9006549272062162013, guid: 33e424507b152844caeab16779cd18a6,

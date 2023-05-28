@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -6,27 +7,37 @@ using UnityEngine;
 public class NewUpgradesSelector : ScriptableObject
 {
     [SerializeField] private ItemList items;
-    [SerializeField] private Reference<int> availableItemCount;
+    [SerializeField] private WeaponPool weapons;
+    [SerializeField] private Reference<int> availableUpgradeCount;
+    [SerializeField, Range(0, 1)] private float weaponChance;
+    [SerializeField] private Variable<Inventory> inventory;
 
-    private Item[] availableItems;
+    private List<Item> availableItems = new();
+    private List<Weapon> availableWeapons = new();
 
-    public event Action<Item[]> OnNewUpgradesAvailable;
+    public event Action<List<Item>, List<Weapon>> OnNewUpgradesAvailable;
 
     public void OfferNewUpgrades()
     {
-        availableItems = new Item[availableItemCount];
-        for (var i = 0; i < availableItems.Length; i++)
-        {
-            if (items.List.Count >= availableItems.Length)
-                availableItems[i] = items.List.Except(availableItems).ToArray().ChooseRandom();
-            else
-                availableItems[i] = items.List.ChooseRandom();
-        }
-        OnNewUpgradesAvailable?.Invoke(availableItems);
-    }
+        availableItems.Clear();
+        availableWeapons.Clear();
 
-    private void OnEnable()
-    {
-        availableItems = new Item[availableItemCount];
+        for (var i = 0; i < availableUpgradeCount; i++)
+        {
+            if (UnityEngine.Random.value < weaponChance)
+            {
+                var weapon = weapons.List.ChooseRandom();
+                if (!availableWeapons.Contains(weapon) && inventory.Value.CanAddWeapon(weapon))
+                {
+                    availableWeapons.Add(weapon);
+                    continue;
+                }
+            }
+            if (items.List.Count >= availableUpgradeCount - i)
+                availableItems.Add(items.List.Except(availableItems).ToArray().ChooseRandom());
+            else
+                availableItems.Add(items.List.ChooseRandom());
+        }
+        OnNewUpgradesAvailable?.Invoke(availableItems, availableWeapons);
     }
 }

@@ -111,6 +111,7 @@ MonoBehaviour:
     localValue: 0
     variable: {fileID: 11400000, guid: d2bd4f65255ff7249af3402a678e3012, type: 2}
   collider: {fileID: 593348708137014137}
+  team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
 --- !u!136 &593348708137014137
 CapsuleCollider:
   m_ObjectHideFlags: 0

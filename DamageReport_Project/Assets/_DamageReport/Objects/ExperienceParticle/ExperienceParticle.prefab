@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 5859264945832613641}
   - component: {fileID: 5772582588157054031}
   - component: {fileID: 2665765644545843280}
+  - component: {fileID: 4275990306053699732}
+  - component: {fileID: 4990581441731621344}
   m_Layer: 0
   m_Name: ExperienceParticle
   m_TagString: Untagged
@@ -245,3 +247,49 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!114 &4275990306053699732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4417339959290809394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548ac4737a63a8d4c8e2c31e47b08c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 30
+  autoRestart: 0
+  active: 1
+  elapsed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4990581441731621344}
+        m_TargetAssemblyTypeName: Death, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4990581441731621344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4417339959290809394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847ef026e024e3f4e9ac35dd364795ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyOnDeath: 1
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []

@@ -11,23 +11,35 @@ public abstract class Variable<T> : ScriptableObject
     public event Action OnChanged;
     public event Action<T> OnChangedWithOldValue;
 
+    private bool initialized;
+
     public virtual T Value
     {
-        get => value;
+        get => Get();
 
         set
         {
-            var oldValue = this.value;
-            this.value = value;
-            OnChanged?.Invoke();
-            OnChangedWithOldValue?.Invoke(oldValue);
+            Set(value);
         }
     }
 
-    public virtual T Get() => value;
+    public virtual T Get()
+    {
+        if (!initialized)
+        {
+            value = initialValue;
+            initialized = true;
+        }
+        return value;
+    }
 
     public void Set(T newValue)
     {
+        if (!initialized)
+        {
+            value = initialValue;
+            initialized = true;
+        }
         var oldValue = value;
         value = newValue;
         OnChanged?.Invoke();

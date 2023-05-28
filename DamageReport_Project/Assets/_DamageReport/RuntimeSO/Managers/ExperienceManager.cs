@@ -26,7 +26,7 @@ public class ExperienceManager : ScriptableObject
 
     private void OnExperienceChanged()
     {
-        if (currentExperience < maxExperience)
+        if (currentExperience < maxExperience || currentExperience < 1)
             return;
 
         currentExperience.Value = 0;

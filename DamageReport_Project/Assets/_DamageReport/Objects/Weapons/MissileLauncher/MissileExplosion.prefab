@@ -72,6 +72,7 @@ MonoBehaviour:
     localValue: 2
     variable: {fileID: 0}
   collider: {fileID: 9188471486061583454}
+  team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
 --- !u!135 &9188471486061583454
 SphereCollider:
   m_ObjectHideFlags: 0

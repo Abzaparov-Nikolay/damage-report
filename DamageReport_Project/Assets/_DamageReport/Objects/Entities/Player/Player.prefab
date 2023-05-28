@@ -5191,7 +5191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6e75964276a844dba3f48f4e0ed9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 0.5
+  interval: 0.25
   duration: 3
   blinkingColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &1141956539543221061

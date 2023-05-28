@@ -5,10 +5,13 @@ public class NewUpgradesPanel : MonoBehaviour
 {
     [SerializeField] private NewUpgradesSelector selector;
     [SerializeField] private ItemPanel itemPanelPrefab;
+    [SerializeField] private WeaponPanel weaponPanelPrefab;
     [SerializeField] private GameObject panelContainer;
     [SerializeField] private List<GameObject> relatedPanels;
 
     private List<ItemPanel> itemPanels = new();
+    private List<WeaponPanel> weaponPanels = new();
+
 
     private void Awake()
     {
@@ -20,7 +23,7 @@ public class NewUpgradesPanel : MonoBehaviour
         selector.OnNewUpgradesAvailable -= OnNewUpgrades;
     }
 
-    private void OnNewUpgrades(Item[] items)
+    private void OnNewUpgrades(List<Item> items, List<Weapon> weapons)
     {
         Time.timeScale = 0;
 
@@ -29,22 +32,37 @@ public class NewUpgradesPanel : MonoBehaviour
             relatedPanel.SetActive(true);
         }
 
-        for (var i = 0; i < items.Length; i++)
+        for (var i = 0; i < items.Count; i++)
         {
-            var newItemPanel = Instantiate(itemPanelPrefab, panelContainer.transform);
-            newItemPanel.SetContent(items[i]);
-            newItemPanel.OnItemSelected += OnItemSelected;
-            itemPanels.Add(newItemPanel);
+            var newPanel = Instantiate(itemPanelPrefab, panelContainer.transform);
+            newPanel.SetContent(items[i]);
+            newPanel.OnItemSelected += OnUpgradeSelected;
+            itemPanels.Add(newPanel);
+        }
+
+        for (var i = 0; i < weapons.Count; i++)
+        {
+            var newPanel = Instantiate(weaponPanelPrefab, panelContainer.transform);
+            newPanel.SetContent(weapons[i]);
+            newPanel.OnSelected += OnUpgradeSelected;
+            weaponPanels.Add(newPanel);
         }
     }
 
-    private void OnItemSelected()
+    private void OnUpgradeSelected()
     {
         for (var i = itemPanels.Count - 1; i >= 0; i--)
         {
-            itemPanels[i].OnItemSelected -= OnItemSelected;
+            itemPanels[i].OnItemSelected -= OnUpgradeSelected;
             Destroy(itemPanels[i].gameObject);
             itemPanels.RemoveAt(i);
+        }
+
+        for (var i = weaponPanels.Count - 1; i >= 0; i--)
+        {
+            weaponPanels[i].OnSelected -= OnUpgradeSelected;
+            Destroy(weaponPanels[i].gameObject);
+            weaponPanels.RemoveAt(i);
         }
 
         foreach (var relatedPanel in relatedPanels)

@@ -30,7 +30,7 @@ public class ShootAtTarget : MonoBehaviour
         }
         var direction = (target.position - shootPoint.position).normalized;
         var spawnPosition = shootPoint.position + impulse / projectilePrefab.mass * elapsedTime * direction;
-        var newProjectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
+        var newProjectile = Instantiate(projectilePrefab, spawnPosition, shootPoint.rotation);
         newProjectile.AddForce(impulse * direction, ForceMode.Impulse);
     }
 }

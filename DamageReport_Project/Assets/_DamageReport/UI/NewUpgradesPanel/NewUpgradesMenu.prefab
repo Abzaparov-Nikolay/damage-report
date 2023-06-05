@@ -55,6 +55,8 @@ MonoBehaviour:
   selector: {fileID: 11400000, guid: 93631339d5736894d8bab84df4f919db, type: 2}
   itemPanelPrefab: {fileID: 8298181022542798267, guid: 80910df27f77ddc4f88ed18a830f849e,
     type: 3}
+  weaponPanelPrefab: {fileID: 2095667491317794521, guid: 2a82534aa1049044c9898e5c3a0ce37a,
+    type: 3}
   panelContainer: {fileID: 389813064564708641}
   relatedPanels:
   - {fileID: 389813065002137606}
@@ -70,7 +72,7 @@ Animator:
   m_GameObject: {fileID: 389813063969322806}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6dfb21716ce3ab4db6b7f52ed6aadb8, type: 2}
+  m_Controller: {fileID: 9100000, guid: e6b20919399001f4484d43fa5d5115a3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 2
   m_ApplyRootMotion: 0

@@ -37,7 +37,7 @@ public class TerrainFader : MonoBehaviour
 			return;
 		if (terrain.TryGetComponent<TransparencyChanger>(out var transparencyChanger))
 		{
-			transparencyChanger.BecomeVisible();
+			transparencyChanger.TriggerCall(false);
 		}
 	}
 
@@ -47,7 +47,7 @@ public class TerrainFader : MonoBehaviour
 			return;
 		if (terrain.TryGetComponent<TransparencyChanger>(out var transparencyChanger))
 		{
-			transparencyChanger.BecomeTransperent();
+			transparencyChanger.TriggerCall(true);
 		}
 	}
 }

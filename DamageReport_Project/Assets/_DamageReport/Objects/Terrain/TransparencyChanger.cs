@@ -16,8 +16,13 @@ public class TransparencyChanger : MonoBehaviour
 	private int calls;
 	private int lastUpdateCalls;
 
+	private bool inTrigger;
+
 	private void Update()
 	{
+		if (inTrigger)
+			calls = 1;
+
 		if (calls > 0)
 		{
 			if (lastUpdateCalls == 0)
@@ -42,11 +47,16 @@ public class TransparencyChanger : MonoBehaviour
 		calls++;
 	}
 
-	public void BecomeTransperent()
+	public void TriggerCall(bool state)
+	{
+		inTrigger = state;
+	}
+
+	private void BecomeTransperent()
 	{
 		Fade();
-		calls = 1;	
-		lastUpdateCalls = 1;
+		//calls = 1;	
+		//lastUpdateCalls = 1;
 		if (resetter != null)
 		{
 			StopCoroutine(resetter);
@@ -54,13 +64,13 @@ public class TransparencyChanger : MonoBehaviour
 		}
 	}
 
-	public void BecomeVisible()
+	private void BecomeVisible()
 	{
 		if (fader != null)
 		{
 			StopCoroutine(fader);
-			calls = 0;
-			lastUpdateCalls = 0;
+			//calls = 0;
+			//lastUpdateCalls = 0;
 			fader = null;
 		}
 		if (resetter != null)

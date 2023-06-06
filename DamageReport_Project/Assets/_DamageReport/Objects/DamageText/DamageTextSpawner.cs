@@ -18,7 +18,7 @@ public class DamageTextSpawner : MonoBehaviour
                                     Random.Range(-velocityVariation.Get().y, velocityVariation.Get().y),
                                     Random.Range(-velocityVariation.Get().z, velocityVariation.Get().z));
         var newText = Instantiate(damageTextPrefab, pos, Quaternion.Euler(0, -45, 0));
-        newText.GetComponent<TextMeshPro>().text = damage.ToString();
-        newText.GetComponent<DamageTextMoveAndFade>().velocity = velocity;
+        newText.GetComponent<DamageTextController>().number = damage;
+        newText.GetComponent<DamageTextController>().velocity = velocity;
     }
 }

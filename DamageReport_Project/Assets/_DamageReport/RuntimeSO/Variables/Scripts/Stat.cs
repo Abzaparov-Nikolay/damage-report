@@ -21,13 +21,15 @@ public class Stat : Variable<float>
     {
         bonuses.Add(bonus);
         Recalculate();
+        RaiseOnChanged();
     }
 
     public void RemoveBonus(StatBonus bonus)
     {
         bonuses.Remove(bonus);
         Recalculate();
-    }
+		RaiseOnChanged();
+	}
 
     public override float Get()
     {

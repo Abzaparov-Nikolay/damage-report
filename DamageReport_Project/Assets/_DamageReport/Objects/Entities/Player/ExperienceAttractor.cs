@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class ExperienceAttractor : MonoBehaviour
 {
-    [SerializeField] private Collider attractCollider;
+    [SerializeField] private SphereCollider attractCollider;
+    [SerializeField] private Stat attractRadius; 
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,4 +13,24 @@ public class ExperienceAttractor : MonoBehaviour
             experienceParticle.StartAttracting(transform);
         }
     }
+
+	private void Start()
+	{
+		SetColliderRadius();
+	}
+
+	private void OnEnable()
+	{
+        attractRadius.OnChanged += SetColliderRadius;
+
+	}
+	private void OnDisable()
+	{
+		attractRadius.OnChanged -= SetColliderRadius;
+	}
+
+	private void SetColliderRadius()
+	{
+		attractCollider.radius = attractRadius.Get();
+	}
 } 

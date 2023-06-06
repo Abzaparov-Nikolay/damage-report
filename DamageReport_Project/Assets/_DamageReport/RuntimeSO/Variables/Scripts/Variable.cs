@@ -64,4 +64,9 @@ public abstract class Variable<T> : ScriptableObject
     }
 
     public static implicit operator T(Variable<T> v) => v.Get();
+
+    protected void RaiseOnChanged()
+    {
+        OnChanged?.Invoke();
+    }
 }

@@ -665,7 +665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &300336986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5640,6 +5640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6315170653166778348, guid: 90f0e018488b3a043bd34f96d39888f1,
+        type: 3}
+      propertyPath: items.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6892082122906891254, guid: 90f0e018488b3a043bd34f96d39888f1,
         type: 3}

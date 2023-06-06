@@ -5535,6 +5535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attractCollider: {fileID: 5366623032435728873}
+  attractRadius: {fileID: 11400000, guid: e170993a4c4e97f48ae364e96fdc51ae, type: 2}
 --- !u!135 &5366623032435728873
 SphereCollider:
   m_ObjectHideFlags: 0

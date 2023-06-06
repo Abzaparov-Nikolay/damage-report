@@ -10,6 +10,6 @@ public class FlatStatBonus : StatBonus
 
     public override float Affect(float value)
     {
-        return value + amount;
+        return value + amount * level;
     }
 }

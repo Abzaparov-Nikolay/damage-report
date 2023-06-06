@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MaxSpeedBonus
   m_EditorClassIdentifier: 
   order: 1
-  multiplier:
+  percentage:
     useLocal: 1
-    localValue: 1.25
+    localValue: 25
     variable: {fileID: 0}

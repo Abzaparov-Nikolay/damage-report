@@ -31,6 +31,13 @@ public class Stat : Variable<float>
 		RaiseOnChanged();
 	}
 
+
+    public void BonusChanged()
+    {
+        Recalculate();
+        RaiseOnChanged();
+    }
+
     public override float Get()
     {
         if (!valueUpToDate)

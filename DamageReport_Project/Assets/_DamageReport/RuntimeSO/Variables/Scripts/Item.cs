@@ -21,6 +21,7 @@ public class Item : ScriptableObject
         {
             var stat = statBonus.stat;
             var bonus = statBonus.statBonus;
+            bonus.level = 1;
             stat.AddBonus(bonus);
         }
         foreach (var behaviour in Behaviours)
@@ -42,5 +43,16 @@ public class Item : ScriptableObject
             Destroy(behaviour);
         }
         instantiatedBehaviours.Clear();
+    }
+
+    public void LevelUp()
+    {
+        foreach (var statBonus in StatBonuses)
+        {
+            var stat = statBonus.stat;
+            var bonus = statBonus.statBonus;
+            bonus.level += 1;
+            stat.BonusChanged();
+        }
     }
 }

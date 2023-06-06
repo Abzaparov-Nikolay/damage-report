@@ -28,8 +28,15 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        items.Add(item);
-        item.OnAddToInventory(gameObject);
+        if (items.Contains(item))
+        {
+            item.LevelUp();
+        }
+        else
+        {
+            items.Add(item);
+            item.OnAddToInventory(gameObject);
+        }
     }
 
     public void RemoveItem(Item item)

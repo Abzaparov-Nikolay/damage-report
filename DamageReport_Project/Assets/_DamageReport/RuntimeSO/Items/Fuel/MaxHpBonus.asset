@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: MaxHpBonus
   m_EditorClassIdentifier: 
   order: 0
+  level: 1
+  persistentLevel: 0
   amount:
     useLocal: 1
     localValue: 5

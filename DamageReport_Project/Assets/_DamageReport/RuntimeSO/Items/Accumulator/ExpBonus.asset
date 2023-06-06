@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ExpBonus
   m_EditorClassIdentifier: 
   order: 1
-  multiplier:
+  percentage:
     useLocal: 1
-    localValue: 1.2
+    localValue: 20
     variable: {fileID: 0}

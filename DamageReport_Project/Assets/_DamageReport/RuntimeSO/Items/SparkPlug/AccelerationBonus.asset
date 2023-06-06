@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AccelerationBonus
   m_EditorClassIdentifier: 
   order: 1
-  multiplier:
+  percentage:
     useLocal: 1
-    localValue: 1.3
+    localValue: 30
     variable: {fileID: 0}

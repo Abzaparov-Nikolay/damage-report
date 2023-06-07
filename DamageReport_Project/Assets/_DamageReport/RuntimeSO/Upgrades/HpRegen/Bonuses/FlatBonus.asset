@@ -15,5 +15,5 @@ MonoBehaviour:
   order: 0
   amount:
     useLocal: 1
-    localValue: 0
+    localValue: 0.01
     variable: {fileID: 0}

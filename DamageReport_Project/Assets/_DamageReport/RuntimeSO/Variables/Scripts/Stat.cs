@@ -65,6 +65,7 @@ public class Stat : Variable<float>
     private void OnEnable()
     {
         Set(initialValue);
+        valueUpToDate = false;
         SceneManager.sceneUnloaded += OnSceneChanged;
     }
 

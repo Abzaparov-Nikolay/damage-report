@@ -6,10 +6,15 @@ using UnityEngine;
 
 public class FlatStatBonus : StatBonus
 {
-    public Reference<float> amount;
+	public Reference<float> amount;
 
-    public override float Affect(float value)
-    {
-        return value + amount * level;
-    }
+	public override float Affect(float value)
+	{
+		return value + amount * level;
+	}
+
+	public override string ToString()
+	{
+		return $"{amount * level}";
+	}
 }

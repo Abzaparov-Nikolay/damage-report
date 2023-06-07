@@ -15,5 +15,5 @@ MonoBehaviour:
   order: 1
   percentage:
     useLocal: 1
-    localValue: 0
+    localValue: 2
     variable: {fileID: 0}

@@ -11,4 +11,9 @@ public class PercentageStatBonus : StatBonus
     {
         return value * (percentage * level / 100f + 1f);
     }
+
+	public override string ToString()
+	{
+        return $"{(percentage * level)}";
+	}
 }

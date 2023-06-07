@@ -16,6 +16,7 @@ public class UpgradeStatPanel : MonoBehaviour
     {
         if (true) //can upgrade
         {
+            //upgrade.Level += 1;
             upgrade.bonus.level += 1;
             DisplayValues();
         }

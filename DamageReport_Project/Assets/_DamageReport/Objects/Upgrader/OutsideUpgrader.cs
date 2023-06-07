@@ -10,10 +10,11 @@ public class OutsideUpgrader : MonoBehaviour
 	{
 		foreach(var upgrade in upgradeList)
 		{
-			if(upgrade.bonus.level == 0)
-			{
-				upgrade.bonus.level = 1;
-			}
+			//upgrade.bonus.level = upgrade.Level;
+			//if (upgrade.bonus.level == 0)
+			//{
+			//	upgrade.bonus.level = 1;
+			//}
 			upgrade.stat.AddBonus(upgrade.bonus);
 		}
 	}

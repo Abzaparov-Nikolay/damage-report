@@ -145,7 +145,7 @@ MonoBehaviour:
   range:
     useLocal: 1
     localValue: 15
-    variable: {fileID: 0}
+    variable: {fileID: 11400000, guid: 7b0b60225e32e2c46b3f5411e24b573c, type: 2}
   collider: {fileID: 6593052363583849057}
   team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
 --- !u!1001 &1428711379301697003

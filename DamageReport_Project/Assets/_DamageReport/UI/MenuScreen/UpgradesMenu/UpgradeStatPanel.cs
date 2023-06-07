@@ -25,6 +25,17 @@ public class UpgradeStatPanel : MonoBehaviour
 
     private void SetCurrentBonus(StatBonus bonus)
     {
-        CurrentBonus.text = "big retard";
-    }
+        if(bonus is FlatStatBonus)
+        {
+            CurrentBonus.text = $"+{(bonus as FlatStatBonus).amount.Value}";
+        }
+        else if(bonus is PercentageStatBonus)
+        {
+            CurrentBonus.text = $"+{(bonus as PercentageStatBonus).percentage.Value}%";
+		}
+        else
+        {
+			CurrentBonus.text = "big retard";
+		}
+	}
 }

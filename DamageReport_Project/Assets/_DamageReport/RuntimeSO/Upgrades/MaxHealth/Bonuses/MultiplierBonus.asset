@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MultiplierBonus
   m_EditorClassIdentifier: 
   order: 1
-  multiplier:
+  percentage:
     useLocal: 1
-    localValue: 1
+    localValue: 0
     variable: {fileID: 0}

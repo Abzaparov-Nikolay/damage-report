@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &502810823234051558
+--- !u!1 &8709741976185274233
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 502810823234051559}
-  - component: {fileID: 502810823234051576}
+  - component: {fileID: 8709741976185274238}
+  - component: {fileID: 8709741976185274239}
   m_Layer: 0
-  m_Name: PlayerDataManager
+  m_Name: RewardGiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &502810823234051559
+--- !u!4 &8709741976185274238
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502810823234051558}
+  m_GameObject: {fileID: 8709741976185274233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 540, y: 1170, z: 0}
+  m_LocalPosition: {x: 490.43896, y: 223.37149, z: 5.7441406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &502810823234051576
+--- !u!114 &8709741976185274239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502810823234051558}
+  m_GameObject: {fileID: 8709741976185274233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596bc6b1c6860a2498310059d26b3394, type: 3}
+  m_Script: {fileID: 11500000, guid: 142f69fcc44f6f6468620f25f2b72f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: 8c6f4f1400ea7ce4da06ef4737effda8, type: 2}
-  upgradesList: {fileID: 11400000, guid: 9a5b3ada02bf6f4429835be277342a59, type: 2}
+  playerData: {fileID: 11400000, guid: 8c6f4f1400ea7ce4da06ef4737effda8, type: 2}
+  levelTimer: {fileID: 11400000, guid: 98c4d089a5cdb314390889eb6aff73d1, type: 2}

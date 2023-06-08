@@ -5,10 +5,12 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerData : MonoBehaviour
 {
-	private static PlayerData _instance;
+	//private static PlayerData _instance;
+	[SerializeField] private Variable<PlayerData> so;
 	[SerializeField] private UpgradeList upgradesList;
 
 	private Dictionary<string, Upgrade> AllUpgrades = new();
@@ -19,23 +21,23 @@ public class PlayerData : MonoBehaviour
 	public Action<object, int> MoneyChanged;
 	//public Action<object, string> UpgradesChanged;
 
-	public static PlayerData Instance
-	{
-		get
-		{
-			if (_instance == null)
-			{
-				Debug.Log("No instances of PlayerData has been created");
-			}
-			return _instance;
-		}
-	}
+	//public static PlayerData Instance
+	//{
+	//	get
+	//	{
+	//		if (_instance == null)
+	//		{
+	//			Debug.Log("No instances of PlayerData has been created");
+	//		}
+	//		return _instance;
+	//	}
+	//}
 
 	private void Awake()
 	{
-		if (_instance == null)
+		if (so.Value == null)
 		{
-			_instance = this;
+			so.Set(this);
 			DontDestroyOnLoad(gameObject);
 		}
 		else
@@ -48,6 +50,8 @@ public class PlayerData : MonoBehaviour
 			AllUpgrades.Add(upgrade.UID, upgrade);
 		}
 		gameSavePath = Application.persistentDataPath + "/game_save.json";
+
+		SceneManager.sceneUnloaded += OnSceneChange;
 	}
 
 	private void Start()
@@ -62,12 +66,13 @@ public class PlayerData : MonoBehaviour
 	{
 		if (!File.Exists(gameSavePath))
 		{
+			GiveStarterPack();
 			return;
 		}
 		PlayerDataSave save = JsonUtility.FromJson(File.ReadAllText(gameSavePath), typeof(PlayerDataSave)) as PlayerDataSave;
 		if (save == null)
 		{
-			Money = 0;
+			GiveStarterPack();
 			return;
 		}
 		Money = save.money;
@@ -132,14 +137,31 @@ public class PlayerData : MonoBehaviour
 		SaveData();
 	}
 
+	public void GetReward(Reward reward)
+	{
+		Money += reward.Money;
+		SaveData();
+		NotifyChanges();
+	}
+
 	private void NotifyChanges()
 	{
 		MoneyChanged?.Invoke(this, Money);
 	}
 
+	private void GiveStarterPack()
+	{
+		Money = 100;
+	}
+
 	public bool CanUpgrade(int moneyToSpent)
 	{
 		return moneyToSpent <= Money;
+	}
+
+	private void OnSceneChange(Scene scene)
+	{
+		so.Set(this);
 	}
 }
 

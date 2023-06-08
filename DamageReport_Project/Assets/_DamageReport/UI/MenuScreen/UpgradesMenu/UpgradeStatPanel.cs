@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,12 +13,13 @@ public class UpgradeStatPanel : MonoBehaviour
     [SerializeField] private Button SubmitButton;
     [SerializeField] private TextMeshProUGUI UpgradeCost;
 
+    public static Action<object, UpgradeChangeData> UpgradeChanged;
+
     public void OnSubmitUpgradeButtonClick()
     {
         if (true) //can upgrade
         {
-            //upgrade.Level += 1;
-            upgrade.bonus.level += 1;
+            NotifyChanges();
             DisplayValues();
         }
     }
@@ -50,4 +52,10 @@ public class UpgradeStatPanel : MonoBehaviour
 			CurrentBonus.text = "big retard";
 		}
 	}
+
+    private void NotifyChanges()
+    {
+        var data = new UpgradeChangeData(upgrade.UID, 1, 1);
+        UpgradeChanged?.Invoke(this, data);
+    }
 }

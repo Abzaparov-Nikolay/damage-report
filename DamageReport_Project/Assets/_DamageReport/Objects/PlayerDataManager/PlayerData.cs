@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -10,10 +11,13 @@ public class PlayerData : MonoBehaviour
 	private static PlayerData _instance;
 	[SerializeField] private UpgradeList upgradesList;
 
-	private Dictionary<string, Upgrade> AllUpgrades;
+	private Dictionary<string, Upgrade> AllUpgrades = new();
 	public int Money { get; private set; }
 
 	private string gameSavePath;
+
+	public Action<object, int> MoneyChanged;
+	//public Action<object, string> UpgradesChanged;
 
 	public static PlayerData Instance
 	{
@@ -39,23 +43,22 @@ public class PlayerData : MonoBehaviour
 			Destroy(gameObject);
 		}
 
-		gameSavePath = Application.persistentDataPath + "/game_save.json";
-		AllUpgrades = new Dictionary<string, Upgrade>();
-		foreach(var upgrade in upgradesList)
+		foreach (var upgrade in upgradesList)
 		{
 			AllUpgrades.Add(upgrade.UID, upgrade);
 		}
-		//AllUpgrades = Resources.LoadAll<Upgrade>("RuntimeSO/Upgrades").ToDictionary(i => i.guid);
+		gameSavePath = Application.persistentDataPath + "/game_save.json";
 	}
 
 	private void Start()
 	{
-		LoadUpgrades();
+		LoadData();
+		UpgradeStatPanel.UpgradeChanged += OnUpgradeSubmit;
 	}
 
-	
 
-	private void LoadUpgrades()
+
+	private void LoadData()
 	{
 		if (!File.Exists(gameSavePath))
 		{
@@ -81,15 +84,14 @@ public class PlayerData : MonoBehaviour
 		}
 	}
 
-	public void SaveUpgrades()
+	public void SaveData()
 	{
 		var save = GeneratePlayerSave();
 		var jsonSave = JsonUtility.ToJson(save);
 
-		if (!File.Exists(gameSavePath))
+		if (File.Exists(gameSavePath))
 		{
-			var file = File.Create(gameSavePath);
-			file.Close();
+			File.Delete(gameSavePath);
 		}
 		File.WriteAllText(gameSavePath, jsonSave);
 	}
@@ -98,15 +100,60 @@ public class PlayerData : MonoBehaviour
 	{
 		var save = new PlayerDataSave();
 		save.money = Money;
-		foreach( ( var guid, var upgrade) in AllUpgrades)
+		foreach ((var guid, var upgrade) in AllUpgrades)
 		{
 			save.AddUpgrade(upgrade);
 		}
 		return save;
 	}
 
-	private void CreateBasicSaves()
+	public void GetMoney(int amount)
 	{
+		Money += amount;
+		NotifyChanges();
+		SaveData();
+	}
 
+	public void OnUpgradeSubmit(object sender, UpgradeChangeData data)
+	{
+		if (!AllUpgrades.ContainsKey(data.UID))
+		{
+			Debug.Log("No such Upgrade to upgrade");
+			return;
+		}
+		if (!CanUpgrade(data.MoneySpent))
+		{
+			Debug.Log("Not enough money");
+			return;
+		}
+		AllUpgrades[data.UID].AddLevels(data.LevelsToAdd);
+		Money -= data.MoneySpent;
+		NotifyChanges();
+		SaveData();
+	}
+
+	private void NotifyChanges()
+	{
+		MoneyChanged?.Invoke(this, Money);
+	}
+
+	public bool CanUpgrade(int moneyToSpent)
+	{
+		return moneyToSpent <= Money;
+	}
+}
+
+[Serializable]
+public class UpgradeChangeData
+{
+	public string UID;
+	public int LevelsToAdd;
+	public int MoneySpent;
+
+	public UpgradeChangeData(string uID, int levelsToAdd, int moneySpent)
+	{
+		UID = uID;
+		this.LevelsToAdd = levelsToAdd;
+		this.MoneySpent = moneySpent;
 	}
 }

@@ -17,6 +17,5 @@ MonoBehaviour:
   Description: "\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435
     \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F"
   Cost: 0
-  Level: 0
   bonus: {fileID: 11400000, guid: 12835bb1ce79a114fa76a6106b99055f, type: 2}
   UID: e7ff64a6bb34b534b814cff6d0a1f5e8

@@ -27,7 +27,11 @@ public class DamageTextMeshCache : MonoBehaviour
         else
         {
             tmp.text = num.ToString();
-            meshes.Add(num, new MeshAndTime(tmp.mesh));
+            tmp.ForceMeshUpdate(true, true);
+            var newMesh = new Mesh();
+            var meshData = Mesh.AcquireReadOnlyMeshData(tmp.mesh);
+            Mesh.ApplyAndDisposeWritableMeshData(meshData, newMesh);
+            meshes.Add(num, new MeshAndTime(newMesh));
             return tmp.mesh;
         }
     }

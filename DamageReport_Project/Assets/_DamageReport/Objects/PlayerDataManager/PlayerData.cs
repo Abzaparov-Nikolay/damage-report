@@ -152,6 +152,10 @@ public class PlayerData : MonoBehaviour
 	private void GiveStarterPack()
 	{
 		Money = 100;
+		foreach((var uid, var upgrade) in AllUpgrades)
+		{
+			upgrade.SetLevel(0);
+		}
 	}
 
 	public bool CanUpgrade(int moneyToSpent)

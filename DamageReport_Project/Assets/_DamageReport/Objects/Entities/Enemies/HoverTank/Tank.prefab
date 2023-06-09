@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnDeath: 1
+  DeactivateOnDeath: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -708,9 +709,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df497b30489893c40a7f6795f6cb343f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range:
+  rangeMultiplier:
     useLocal: 1
-    localValue: 12
+    localValue: 1
+    variable: {fileID: 0}
+  baseRange:
+    useLocal: 1
+    localValue: 10
     variable: {fileID: 0}
   collider: {fileID: 4690138934383729012}
   team: {fileID: 11400000, guid: 22a3e67d6d8934d41b4d1878d8b78e99, type: 2}

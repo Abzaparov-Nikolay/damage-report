@@ -106,10 +106,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df497b30489893c40a7f6795f6cb343f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range:
+  rangeMultiplier:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: 7b0b60225e32e2c46b3f5411e24b573c, type: 2}
+  baseRange:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: 42bb5b8a373d23b45be257ba36b51d46, type: 2}
   collider: {fileID: 593348708137014137}
   team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
 --- !u!136 &593348708137014137

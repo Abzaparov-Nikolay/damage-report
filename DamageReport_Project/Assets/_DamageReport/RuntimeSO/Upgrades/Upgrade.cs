@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEditor;
 using UnityEngine.UIElements;
+using Unity.VisualScripting;
 
 [CreateAssetMenu(menuName = MenuNames.Upgrades + nameof(Upgrade))]
 public class Upgrade : ScriptableObject
@@ -13,7 +14,7 @@ public class Upgrade : ScriptableObject
 	public string Description;
 	public float Cost;
 	public StatBonus bonus;
-	public string UID;
+	[HideInInspector] public string UID;
 
 	private void OnValidate()
 	{
@@ -27,7 +28,7 @@ public class Upgrade : ScriptableObject
 	{
 		var path = AssetDatabase.GetAssetPath(this);
 		UID = AssetDatabase.AssetPathToGUID(path);
-		Debug.Log("CREATED GUID FOR UPGRADE");
+		Debug.Log("CREATED UID FOR UPGRADE");
 #if UNITY_EDITOR
 		UnityEditor.EditorUtility.SetDirty(this);
 #endif
@@ -41,5 +42,10 @@ public class Upgrade : ScriptableObject
 	public int GetLevel()
 	{
 		return bonus.level;
+	}
+
+	public void SetLevel(int newLevel)
+	{
+		bonus.level = newLevel;
 	}
 }

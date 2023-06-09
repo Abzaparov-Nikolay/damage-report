@@ -34,7 +34,7 @@ public class UpgradeStatPanel : MonoBehaviour
     {
 		StatBonusName.text = upgrade.Name;
 		SetCurrentBonus(upgrade.bonus);
-		UpgradeCost.text = "0";
+		UpgradeCost.text = "1";
 	}
 
     private void SetCurrentBonus(StatBonus bonus)

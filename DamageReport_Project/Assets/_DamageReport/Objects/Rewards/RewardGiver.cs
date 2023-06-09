@@ -17,7 +17,7 @@ public class RewardGiver : MonoBehaviour
 
 	private Reward CountReward()
 	{
-		return new Reward((int)(Math.Pow(levelTimer.Value.TotalSeconds, 2) / Math.Log(levelTimer.Value.TotalSeconds, 20)));
+		return new Reward((int)(Math.Pow(levelTimer.Value.TotalSeconds, 2) / Math.Log(levelTimer.Value.TotalSeconds, 2)));
 	}
 }
 

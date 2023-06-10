@@ -83,6 +83,114 @@ MonoBehaviour:
     m_Key: Settings_language_russian
     m_Metadata:
       m_Items: []
+  - m_Id: 104212970668032
+    m_Key: Items_accumulator_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104491736694784
+    m_Key: Items_accumulator_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104955152760832
+    m_Key: Items_engine1_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105158429704192
+    m_Key: Items_engine1_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105406732500992
+    m_Key: Items_engine2_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105555949060096
+    m_Key: Items_engine2_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105606582697984
+    m_Key: Items_fuel_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105655970627584
+    m_Key: Items_fuel_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105698890940416
+    m_Key: Items_magnet_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105746668257280
+    m_Key: Items_magnet_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105797238980608
+    m_Key: Items_pump_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105849281904640
+    m_Key: Items_pump_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105892432904192
+    m_Key: Items_radiator_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105954470854656
+    m_Key: Items_radiator_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105998901116928
+    m_Key: Items_sparkPlug_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106096305438720
+    m_Key: Items_sparkPlug_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106158787985408
+    m_Key: Items_wheel_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106217839591424
+    m_Key: Items_wheel_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111115352211456
+    m_Key: Weapons_missileLauncher_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111255911727104
+    m_Key: Weapons_missileLauncher_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111324257910784
+    m_Key: Weapons_missileLauncher_additionalDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112373102346240
+    m_Key: Weapons_tankTurret_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112465070850048
+    m_Key: Weapons_tankTurret_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112492992331776
+    m_Key: Weapons_tankTurret_additionalDescription
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112754750455808
+    m_Key: Weapons_smallMachinegun_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112892386541568
+    m_Key: Weapons_smallMachinegun_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112915912392704
+    m_Key: Weapons_smallMachinegun_additionalDescription
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

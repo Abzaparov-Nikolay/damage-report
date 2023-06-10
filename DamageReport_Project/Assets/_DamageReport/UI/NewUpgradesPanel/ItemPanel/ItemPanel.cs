@@ -21,8 +21,8 @@ public class ItemPanel : MonoBehaviour
     {
         this.item = item;
         image.sprite = item.Image;
-        title.text = item.Title;
-        description.text = item.Description;
+        title.text = item.Title.GetLocalizedString();
+        description.text = item.Description.GetLocalizedString();
         button.onClick.AddListener(addItemAction);
     }
 

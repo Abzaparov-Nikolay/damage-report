@@ -17,5 +17,24 @@ MonoBehaviour:
     statBonus: {fileID: 11400000, guid: 496505bf0b4be92409ffc969a0e684ff, type: 2}
   Behaviours: []
   Image: {fileID: 21300000, guid: 4ea3569a2632cf140a24a60c1b65d17e, type: 3}
-  Title: "\u0410\u043A\u043A\u0443\u043C\u0443\u043B\u044F\u0442\u043E\u0440"
-  Description: "+20% \u043A \u043E\u043F\u044B\u0442\u0443"
+  Title:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 104212970668032
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Description:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 104491736694784
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

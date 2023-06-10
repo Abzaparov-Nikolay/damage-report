@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Localization;
 
 [CreateAssetMenu(menuName = MenuNames.Item + "Item")]
 public class Item : ScriptableObject
@@ -10,8 +11,8 @@ public class Item : ScriptableObject
     public List<StatAndBonus> StatBonuses;
     public List<GameObject> Behaviours;
     public Sprite Image;
-    public string Title;
-    [TextArea] public string Description;
+    public LocalizedString Title;
+    public LocalizedString Description;
 
     private List<GameObject> instantiatedBehaviours;
 

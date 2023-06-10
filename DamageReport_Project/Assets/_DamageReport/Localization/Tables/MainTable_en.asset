@@ -86,6 +86,102 @@ MonoBehaviour:
     m_Localized: Russian
     m_Metadata:
       m_Items: []
+  - m_Id: 104212970668032
+    m_Localized: Accumulator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104491736694784
+    m_Localized: +20% experience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104955152760832
+    m_Localized: Engine V-1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105158429704192
+    m_Localized: '+5 base speed
+
+      +10 base acceleration'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106217839591424
+    m_Localized: +25% max speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106158787985408
+    m_Localized: Wheel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106096305438720
+    m_Localized: +30% acceleration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105998901116928
+    m_Localized: Spark Plug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105954470854656
+    m_Localized: +20% rate of fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105892432904192
+    m_Localized: Radiator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105849281904640
+    m_Localized: +0.2 base repair
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105797238980608
+    m_Localized: Pump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105746668257280
+    m_Localized: +90% Exp attraction radius
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105698890940416
+    m_Localized: Magnet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105655970627584
+    m_Localized: +5 max HP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105606582697984
+    m_Localized: Fuel A-92
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105555949060096
+    m_Localized: '-50% acceleration
+
+      +100% max speed'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105406732500992
+    m_Localized: Engine C7U-8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111324257910784
+    m_Localized: Missiles are guided towards enemies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111255911727104
+    m_Localized: 'Damage: 5
+
+      Rate of fire: 1
+
+      Missile speed: 30'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111115352211456
+    m_Localized: Missile Launcher ASM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112373102346240
+    m_Localized: Tank turret
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

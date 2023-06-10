@@ -5,7 +5,7 @@ public class WheelTurner : MonoBehaviour
 {
     [SerializeField] private List<Transform> frontWheels;
     [SerializeField] private List<Transform> backWheels;
-    [SerializeField] private PlayerMovement movement;
+    [SerializeField] private BasicPlayerMovement movement;
     [SerializeField] private float turnAngle;
     [SerializeField, Range(0, 1)] private float turnInertia;
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WheelTrailController : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private BasicPlayerMovement playerMovement;
     [SerializeField] private List<TrailRenderer> renderers;
 
     private void FixedUpdate()

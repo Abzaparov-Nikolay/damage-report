@@ -1,6 +1,7 @@
 ﻿public static class MenuNames
 {
     public const string Variable = RuntimeSO + "Variable/";
+    public const string GameEvent = RuntimeSO + "GameEvent/";
     public const string Stats = "Stats/";
     public const string Item = "Item/";
     public const string Set = RuntimeSO + "Set/";

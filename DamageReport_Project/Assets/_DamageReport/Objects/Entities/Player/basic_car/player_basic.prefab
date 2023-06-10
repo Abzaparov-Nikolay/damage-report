@@ -5041,8 +5041,10 @@ GameObject:
   - component: {fileID: 6734833521066696964}
   - component: {fileID: 5005897864473282980}
   - component: {fileID: 6117163738418577488}
+  - component: {fileID: 720834301144610776}
+  - component: {fileID: 3052204479979338370}
   m_Layer: 0
-  m_Name: Player
+  m_Name: player_basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5069,7 +5071,7 @@ Transform:
   - {fileID: 4524980934079832110}
   - {fileID: 5642731648127298684}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8700906230630883966
 MonoBehaviour:
@@ -5093,7 +5095,7 @@ MonoBehaviour:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: b387e754d31e0be45a2d0ba8db0b2523, type: 2}
-  brakingFriction: 0.03
+  brakingFriction: 3
   <MaxTurn>k__BackingField: 1
   skidThreshold: 3
 --- !u!114 &9102296611959165392
@@ -5318,7 +5320,66 @@ MonoBehaviour:
   DeactivateOnDeath: 1
   OnDeath:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: cc51db239301d4847b832bc9592cb488, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &720834301144610776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6892082122906891254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81dd6d309a93319409e14965700805fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEnable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3052204479979338370}
+        m_TargetAssemblyTypeName: ApplyBonusesToStats, Assembly-CSharp
+        m_MethodName: Apply
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDisable:
+    m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3052204479979338370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6892082122906891254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b53ef9ed813e734c855b20c9d54c6e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatBonuses:
+  - stat: {fileID: 11400000, guid: d8b9eb148cdc9304ba63f9b447eb8ecd, type: 2}
+    statBonus: {fileID: 11400000, guid: a043f0b432e40034b9219e77365022fc, type: 2}
+  - stat: {fileID: 11400000, guid: b387e754d31e0be45a2d0ba8db0b2523, type: 2}
+    statBonus: {fileID: 11400000, guid: f18ec535268ebb24f88af545d47eac4a, type: 2}
 --- !u!1 &7530141657870719683
 GameObject:
   m_ObjectHideFlags: 0

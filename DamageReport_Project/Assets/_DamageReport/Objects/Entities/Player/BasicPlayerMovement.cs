@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class BasicPlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody body;
     [SerializeField] private Variable<Vector2> inputDirection;
@@ -24,13 +24,13 @@ public class PlayerMovement : MonoBehaviour
         forwardVelocity = Vector3.ClampMagnitude(forwardVelocity, maxSpeed);
         var lateralVelocity = body.velocity - forwardVelocity;
         IsSkidding = lateralVelocity.magnitude > skidThreshold;
-        lateralVelocity *= 1 - brakingFriction;
+        lateralVelocity *= 1 - brakingFriction * Time.fixedDeltaTime;
         body.velocity = forwardVelocity + lateralVelocity;
 
         if (inputDirection == Vector2.zero)
         {
             IsBraking = true;
-            body.velocity *= 1 - brakingFriction;
+            body.velocity *= 1 - brakingFriction * Time.fixedDeltaTime;
             return;
         }
         IsBraking = false;

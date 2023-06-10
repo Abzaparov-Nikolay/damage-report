@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3154364987660874862}
   - component: {fileID: 3154364987660874861}
   - component: {fileID: 713160295239027014}
+  - component: {fileID: 8357980251878785609}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -156,9 +157,7 @@ PositionConstraint:
   m_AffectTranslationZ: 1
   m_Active: 1
   m_IsLocked: 1
-  m_Sources:
-  - sourceTransform: {fileID: 0}
-    weight: 1
+  m_Sources: []
 --- !u!114 &3154364987660874861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,3 +185,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transformVariable: {fileID: 11400000, guid: 28976a1f21cd49e4b985dc17da7a21f5, type: 2}
+--- !u!114 &8357980251878785609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3154364987660874867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c50be6141069ce46839bbb35bedf059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionConstraint: {fileID: 3154364987660874862}
+  source:
+    useLocal: 0
+    localValue: {fileID: 0}
+    variable: {fileID: 11400000, guid: 54901761106c29048b5a993c29434ede, type: 2}

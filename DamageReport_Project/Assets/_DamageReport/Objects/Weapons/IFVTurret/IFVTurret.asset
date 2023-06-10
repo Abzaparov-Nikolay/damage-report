@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97ad14f2b82bf645a1ab6b43a20b804, type: 3}
+  m_Name: IFVTurret
+  m_EditorClassIdentifier: 
+  fittingSlots:
+  - {fileID: 11400000, guid: 2125e7766dab6674eb412483babe63e3, type: 2}
+  prefabs:
+  - {fileID: 2694518543877346526, guid: 7a5ee91705f26ff428076e44ad6b32b3, type: 3}
+  Image: {fileID: 0}
+  Title: IFV turret
+  Info: 
+  AdditionalDescription: 

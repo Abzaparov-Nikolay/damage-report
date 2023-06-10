@@ -131,10 +131,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30fd1ca8d41c8384eb0030bc09cfe055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatBonusName: {fileID: 3103392078826333117}
+  StatBonusNameText: {fileID: 3103392078826333117}
+  StatBonusName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   CurrentBonus: {fileID: 3103392078525547389}
   SubmitButton: {fileID: 3103392078391352431}
   UpgradeCost: {fileID: 3103392078933644295}
+  references:
+    version: 2
+    RefIds: []
 --- !u!222 &5351560276762712994
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -453,6 +465,7 @@ GameObject:
   - component: {fileID: 3103392078826333116}
   - component: {fileID: 3103392078826333118}
   - component: {fileID: 3103392078826333117}
+  - component: {fileID: 5647392602086915593}
   m_Layer: 5
   m_Name: StatName
   m_TagString: Untagged
@@ -577,6 +590,34 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5647392602086915593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103392078826333059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &3103392078933644293
 GameObject:
   m_ObjectHideFlags: 0

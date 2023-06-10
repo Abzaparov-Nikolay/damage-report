@@ -5,14 +5,15 @@ using System;
 using UnityEditor;
 using UnityEngine.UIElements;
 using Unity.VisualScripting;
+using UnityEngine.Localization;
 
 [CreateAssetMenu(menuName = MenuNames.Upgrades + nameof(Upgrade))]
 public class Upgrade : ScriptableObject
 {
 	public Stat stat;
-	public string Name;
+	public LocalizedString Name;
 	public string Description;
-	public float Cost;
+	public int Cost = 1;
 	public StatBonus bonus;
 	[HideInInspector] public string UID;
 

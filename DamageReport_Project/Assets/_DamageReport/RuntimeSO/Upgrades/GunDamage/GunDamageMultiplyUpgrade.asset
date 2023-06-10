@@ -13,9 +13,20 @@ MonoBehaviour:
   m_Name: GunDamageMultiplyUpgrade
   m_EditorClassIdentifier: 
   stat: {fileID: 11400000, guid: 6a1856d26537fcc4e989a48c7e9583d0, type: 2}
-  Name: "\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u0443\u0440\u043E\u043D\u0430"
+  Name:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 77649059315712
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   Description: "\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u043D\u0430\u043D\u043E\u0441\u0438\u043C\u043E\u0433\u043E
     \u0443\u0440\u043E\u043D\u0430"
   Cost: 0
   bonus: {fileID: 11400000, guid: 3076817649b782a468520cbbcc36b0cf, type: 2}
   UID: 2bab1ab6f78f74743b7bc217eafcbe43
+  references:
+    version: 2
+    RefIds: []

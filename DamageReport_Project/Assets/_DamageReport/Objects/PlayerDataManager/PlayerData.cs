@@ -25,11 +25,11 @@ public class PlayerData : MonoBehaviour
 		if (so.Value == null)
 		{
 			so.Set(this);
-			DontDestroyOnLoad(gameObject);
+			
 		}
 		else
 		{
-			Destroy(gameObject);
+			Debug.Log("PlayerData exists");
 		}
 
 		foreach (var upgrade in upgradesList)

@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 public class UpgradeStatPanel : MonoBehaviour
 {
     private Upgrade upgrade;
-    [SerializeField] private TextMeshProUGUI StatBonusName;
+    [SerializeField] private TextMeshProUGUI StatBonusNameText;
+	//private LocalizedString StatBonusName;
     [SerializeField] private TextMeshProUGUI CurrentBonus;
     [SerializeField] private Button SubmitButton;
     [SerializeField] private TextMeshProUGUI UpgradeCost;
@@ -30,11 +32,17 @@ public class UpgradeStatPanel : MonoBehaviour
         DisplayValues();
     }
 
-    public void DisplayValues()
+	private void Start()
+	{
+		upgrade.Name.StringChanged += val => StatBonusNameText.text = val;
+	}
+
+	public void DisplayValues()
     {
-		StatBonusName.text = upgrade.Name;
+		StatBonusNameText.text = upgrade.Name.GetLocalizedString();
+		//StatBonusName = upgrade.Name;
 		SetCurrentBonus(upgrade.bonus);
-		UpgradeCost.text = "1";
+		UpgradeCost.text = upgrade.Cost.ToString();
 	}
 
     private void SetCurrentBonus(StatBonus bonus)
@@ -55,7 +63,7 @@ public class UpgradeStatPanel : MonoBehaviour
 
     private void NotifyChanges()
     {
-        var data = new UpgradeChangeData(upgrade.UID, 1, 1);
+        var data = new UpgradeChangeData(upgrade.UID, 1, upgrade.Cost);
         UpgradeChanged?.Invoke(this, data);
     }
 }

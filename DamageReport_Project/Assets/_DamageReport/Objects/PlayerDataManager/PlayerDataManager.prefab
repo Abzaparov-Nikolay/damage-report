@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 502810823234051559}
   - component: {fileID: 502810823234051576}
+  - component: {fileID: 3797235975616363215}
+  - component: {fileID: 3569626421784137591}
+  - component: {fileID: 7996852065515537415}
   m_Layer: 0
   m_Name: PlayerDataManager
   m_TagString: Untagged
@@ -30,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &502810823234051576
 MonoBehaviour:
@@ -46,3 +49,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: 8c6f4f1400ea7ce4da06ef4737effda8, type: 2}
   upgradesList: {fileID: 11400000, guid: 9a5b3ada02bf6f4429835be277342a59, type: 2}
+--- !u!114 &3797235975616363215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502810823234051558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b40dcf9221c6d24292b2950b093ee76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3569626421784137591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502810823234051558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11900037eed71f54993e297df9cbd471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  so: {fileID: 11400000, guid: 61b376ec1a6c6f94499e483950b8c556, type: 2}
+--- !u!114 &7996852065515537415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502810823234051558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026f1de4686da8e40804ea5ba012afe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  so: {fileID: 11400000, guid: b642b7b75725e324e896e6e144403a49, type: 2}
+  Mixer: {fileID: 24100000, guid: 340dde3ba74d4594da01e70245d0d80c, type: 2}

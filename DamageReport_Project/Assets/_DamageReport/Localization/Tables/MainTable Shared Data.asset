@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: MainTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: MainTable
+  m_TableCollectionNameGuidString: c607557022bf69a47a00fdbd5bc61d41
+  m_Entries:
+  - m_Id: 2758213697536
+    m_Key: YourMoney
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3565264896000
+    m_Key: MasterVolume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4141969113088
+    m_Key: MusicVolume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4512510705664
+    m_Key: EffectsVolume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76357607948288
+    m_Key: Upgrades_base_acceleration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76526164443136
+    m_Key: Upgrades_acceleration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76639544868864
+    m_Key: Upgrades_exp_radius
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77089912455168
+    m_Key: Upgrades_exp_increase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77298432278528
+    m_Key: Upgrades_firerate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77538585542656
+    m_Key: Upgrades_base_damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77649059315712
+    m_Key: Upgrades_damage_increase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77862356451328
+    m_Key: Upgrades_repair
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78029637877760
+    m_Key: Upgrades_max_hp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78149951488000
+    m_Key: Upgrades_max_speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78413076955136
+    m_Key: Upgrades_weapon_range
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91638191423488
+    m_Key: Settings_language_english
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91740284977152
+    m_Key: Settings_language_russian
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8334494089412608024
+  references:
+    version: 2
+    RefIds:
+    - rid: 8334494089412608024
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1686398568153

@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MainTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: c607557022bf69a47a00fdbd5bc61d41, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2758213697536
+    m_Localized: 'Your money:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3565264896000
+    m_Localized: Master volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4141969113088
+    m_Localized: Music Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4512510705664
+    m_Localized: SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76357607948288
+    m_Localized: Base Acceleration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76526164443136
+    m_Localized: Acceleration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76639544868864
+    m_Localized: Experience attraction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77089912455168
+    m_Localized: Experience increase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77298432278528
+    m_Localized: Rate of fire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77538585542656
+    m_Localized: Base Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77649059315712
+    m_Localized: Damage increase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77862356451328
+    m_Localized: Repair
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78029637877760
+    m_Localized: Max HP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78149951488000
+    m_Localized: Max speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78413076955136
+    m_Localized: Weapon range
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91638191423488
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91740284977152
+    m_Localized: Russian
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

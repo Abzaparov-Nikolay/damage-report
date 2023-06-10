@@ -3,32 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using static AudioController;
 using static UnityEngine.Rendering.DebugUI;
 
 public class AudioChanger : MonoBehaviour
 {
-	[SerializeField] private AudioMixer Mixer;
+	[SerializeField] private Variable<AudioController> controller;
 
 	[SerializeField] private Slider masterSlider;
 	[SerializeField] private Slider effectsSlider;
 	[SerializeField] private Slider musicSlider;
 
-	private string masterSave = "AudioMaster";
-	private string musicSave = "AudioBackground";
-	private string effectsSave = "AudioEffects";
-
 
 	private void Start()
 	{
-		
+
 	}
 
 	private void OnEnable()
 	{
+		LoadAudioValues();
 		musicSlider.onValueChanged.AddListener(onMusicSliderChange);
 		masterSlider.onValueChanged.AddListener(onAudioSliderChange);
 		effectsSlider.onValueChanged.AddListener(onSFXSliderChange);
-		LoadAudioValues();
 	}
 
 	private void OnDisable()
@@ -36,49 +33,32 @@ public class AudioChanger : MonoBehaviour
 		musicSlider.onValueChanged.RemoveListener(onMusicSliderChange);
 		masterSlider.onValueChanged.RemoveListener(onAudioSliderChange);
 		effectsSlider.onValueChanged.RemoveListener(onSFXSliderChange);
-		SaveAudioSettings();
-	}
-
-	public void LoadAudioSettings()
-	{
-		Mixer.SetFloat("MasterVolume", Mathf.Log10(PlayerPrefs.GetFloat(masterSave, 1)) * 20);
-		Mixer.SetFloat("EffectsVolume", Mathf.Log10(PlayerPrefs.GetFloat(effectsSave, 1)) * 20);
-		Mixer.SetFloat("BackgroundVolume", Mathf.Log10(PlayerPrefs.GetFloat(musicSave, 1)) * 20);
 	}
 
 	private void LoadAudioValues()
 	{
-		masterSlider.value = PlayerPrefs.GetFloat(masterSave, 1);
-		musicSlider.value = PlayerPrefs.GetFloat(musicSave, 1);
-		effectsSlider.value = PlayerPrefs.GetFloat(effectsSave, 1);
+		masterSlider.value = GetAudioGroupVolumePercentage(AudioGroup.Master);
+		musicSlider.value = GetAudioGroupVolumePercentage(AudioGroup.Background);
+		effectsSlider.value = GetAudioGroupVolumePercentage(AudioGroup.Effects);
 	}
 
-	private void SaveAudioSettings()
+	private float GetAudioGroupVolumePercentage(AudioGroup group)
 	{
-		PlayerPrefs.SetFloat(masterSave, musicSlider.value);
-		PlayerPrefs.SetFloat(musicSave, effectsSlider.value);
-		PlayerPrefs.SetFloat(effectsSave, masterSlider.value);
-		PlayerPrefs.Save();
+		return controller.Value.GetVolume(group);
 	}
 
 	private void onAudioSliderChange(float value)
 	{
-		Mixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20);
-		PlayerPrefs.SetFloat(masterSave, value);
+		controller.Value.ChangeVolume(value, AudioGroup.Master);
 	}
 
 	private void onSFXSliderChange(float value)
 	{
-		Mixer.SetFloat("EffectsVolume", Mathf.Log10(value) * 20);
-		PlayerPrefs.SetFloat(effectsSave, value);
-
+		controller.Value.ChangeVolume(value, AudioGroup.Effects);
 	}
 
 	private void onMusicSliderChange(float value)
 	{
-		Mixer.SetFloat("BackgroundVolume", Mathf.Log10(value) * 20);
-		PlayerPrefs.SetFloat(musicSave, value);
-
+		controller.Value.ChangeVolume(value, AudioGroup.Background);
 	}
-
 }

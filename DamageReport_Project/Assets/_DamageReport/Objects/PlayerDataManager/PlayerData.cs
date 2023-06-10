@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerData : MonoBehaviour
 {
-	//private static PlayerData _instance;
 	[SerializeField] private Variable<PlayerData> so;
 	[SerializeField] private UpgradeList upgradesList;
 
@@ -19,19 +18,7 @@ public class PlayerData : MonoBehaviour
 	private string gameSavePath;
 
 	public Action<object, int> MoneyChanged;
-	//public Action<object, string> UpgradesChanged;
-
-	//public static PlayerData Instance
-	//{
-	//	get
-	//	{
-	//		if (_instance == null)
-	//		{
-	//			Debug.Log("No instances of PlayerData has been created");
-	//		}
-	//		return _instance;
-	//	}
-	//}
+	
 
 	private void Awake()
 	{

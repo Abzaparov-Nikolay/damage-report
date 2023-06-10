@@ -5222,7 +5222,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAsChild: 1
-  prefab: {fileID: 2409081197745396545, guid: b9327486b535340429788053b9717ace, type: 3}
+  prefab:
+    useLocal: 1
+    localValue: {fileID: 2409081197745396545, guid: b9327486b535340429788053b9717ace,
+      type: 3}
+    variable: {fileID: 0}
   parent: {fileID: 0}
 --- !u!54 &2485929182617901771
 Rigidbody:

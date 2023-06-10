@@ -3,23 +3,23 @@ using UnityEngine;
 public class PrefabSpawner : MonoBehaviour
 {
     [SerializeField] private bool spawnAsChild;
-    [SerializeField] private GameObject prefab;
+    [SerializeField] private Reference<GameObject> prefab;
     [SerializeField] private GameObject parent;
     public void Spawn()
     {
         if (spawnAsChild)
         {
             if (parent == null)
-                Instantiate(prefab, transform);
+                Instantiate(prefab.Value, transform);
             else
-                Instantiate(prefab, parent.transform);
+                Instantiate(prefab.Value, parent.transform);
         }
         else
         {
             if (parent == null)
-                Instantiate(prefab);
+                Instantiate(prefab.Value);
             else
-                Instantiate(prefab, parent.transform.position, Quaternion.identity);
+                Instantiate(prefab.Value, parent.transform.position, Quaternion.identity);
         }
     }
 }

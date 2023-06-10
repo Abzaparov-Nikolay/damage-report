@@ -76,5 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAsChild: 0
-  prefab: {fileID: 6892082122906891254, guid: 90f0e018488b3a043bd34f96d39888f1, type: 3}
+  prefab:
+    useLocal: 0
+    localValue: {fileID: 0}
+    variable: {fileID: 11400000, guid: 2293c08231a01f748b7a38aa168622d0, type: 2}
   parent: {fileID: 0}

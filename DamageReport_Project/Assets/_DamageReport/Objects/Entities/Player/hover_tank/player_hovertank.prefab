@@ -46,7 +46,7 @@ Transform:
   - {fileID: 7119688013952749227}
   - {fileID: 1318079284073956089}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5547868790173826922
 MonoBehaviour:
@@ -195,7 +195,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAsChild: 1
-  prefab: {fileID: 2409081197745396545, guid: b9327486b535340429788053b9717ace, type: 3}
+  prefab:
+    useLocal: 0
+    localValue: {fileID: 0}
+    variable: {fileID: 0}
   parent: {fileID: 0}
 --- !u!54 &9113609724507157582
 Rigidbody:
@@ -839,6 +842,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 806e3e26baebec442900e764c87b9d5a,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 806e3e26baebec442900e764c87b9d5a,
         type: 3}

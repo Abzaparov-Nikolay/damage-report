@@ -18,5 +18,5 @@ MonoBehaviour:
     useLocal: 1
     localValue: 3
     variable: {fileID: 0}
-  weaponChance: 0.2
+  weaponChance: 1
   inventory: {fileID: 11400000, guid: e9f9e360bec897143918e2dd0d90553a, type: 2}

@@ -7,10 +7,9 @@ using UnityEngine;
 public class FlatStatBonus : StatBonus
 {
 	public Reference<float> amount;
-
-	public override float Affect(float value)
+    public override float GetValue()
 	{
-		return value + amount * level;
+		return amount * level;
 	}
 
 	public override string ToString()

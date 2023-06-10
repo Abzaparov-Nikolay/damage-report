@@ -29,7 +29,7 @@ public class Stat : Variable<float>
         bonuses.Remove(bonus);
         Recalculate();
 		RaiseOnChanged();
-	}
+    }
 
 
     public void BonusChanged()
@@ -48,15 +48,22 @@ public class Stat : Variable<float>
     private void Recalculate()
     {
         float result = initialValue;
-        for (var order = 0; order < 3; order++)
+        float totalFlatBonus = 0;
+        float totalPercentageBonus = 0;
+        foreach (var bonus in bonuses)
         {
-            foreach (var bonus in bonuses)
+            switch(bonus)
             {
-                if (bonus.order == order)
-                    result = bonus.Affect(result);
+                case FlatStatBonus fBonus:
+                    totalFlatBonus += fBonus.GetValue();
+                    break;
+                case PercentageStatBonus pBonus:
+                    totalPercentageBonus += pBonus.GetValue();
+                    break;
             }
         }
-
+        result += totalFlatBonus;
+        result *= (totalPercentageBonus / 100f) + 1f;
         calculatedValue = result;
         //Set(calculatedValue);
         valueUpToDate = true;

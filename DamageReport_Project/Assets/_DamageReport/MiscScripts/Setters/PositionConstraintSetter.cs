@@ -7,7 +7,7 @@ public class PositionConstraintSetter : MonoBehaviour
 {
     [SerializeField] private PositionConstraint positionConstraint;
     [SerializeField] private Reference<Transform> source;
-    private void OnEnable()
+    private void Start()
     {
         Set();
         source.OnChanged += Set;

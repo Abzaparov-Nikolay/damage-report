@@ -15,7 +15,7 @@ public class PersistentDataManager : MonoBehaviour
 		}
 		else
 		{
-			Destroy(this);
+			Destroy(gameObject);
 		}
 	}
 }

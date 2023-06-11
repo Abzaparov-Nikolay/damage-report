@@ -52,7 +52,8 @@ MonoBehaviour:
   targetSelector: {fileID: 4188483750446505943}
   projectilePrefab: {fileID: 792684765480326135, guid: 95d024da14566e7498d60631a03489de,
     type: 3}
-  shootPoint: {fileID: 1700628871871003800}
+  projectileSpawnPoints:
+  - {fileID: 1700628871871003800}
   impulse:
     useLocal: 1
     localValue: 15

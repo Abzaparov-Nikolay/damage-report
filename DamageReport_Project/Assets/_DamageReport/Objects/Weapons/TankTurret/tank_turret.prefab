@@ -52,7 +52,9 @@ MonoBehaviour:
   targetSelector: {fileID: 4188483750446505943}
   projectilePrefab: {fileID: 792684765480326135, guid: a64bee75ef2841a4eabe8fb46fb20445,
     type: 3}
-  shootPoint: {fileID: 5313913445610086817}
+  projectileSpawnPoints:
+  - {fileID: 5313913445610086817}
+  - {fileID: 5885057008918386905}
   impulse:
     useLocal: 1
     localValue: 15
@@ -256,6 +258,12 @@ Transform:
 --- !u!4 &5313913445610086817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7477713218656638648, guid: 7c20902863c8ab6499a93950d78c6126,
+    type: 3}
+  m_PrefabInstance: {fileID: 3348704027457582873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5885057008918386905 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9210724050950139840, guid: 7c20902863c8ab6499a93950d78c6126,
     type: 3}
   m_PrefabInstance: {fileID: 3348704027457582873}
   m_PrefabAsset: {fileID: 0}

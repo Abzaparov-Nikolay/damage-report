@@ -416,6 +416,10 @@ MonoBehaviour:
     m_Localized: Hover tank description
     m_Metadata:
       m_Items: []
+  - m_Id: 467294217633792
+    m_Localized: Choose an upgrade
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

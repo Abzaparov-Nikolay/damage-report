@@ -383,6 +383,10 @@ MonoBehaviour:
     m_Key: car_hovertank_description
     m_Metadata:
       m_Items: []
+  - m_Id: 467294217633792
+    m_Key: select_selectitem
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

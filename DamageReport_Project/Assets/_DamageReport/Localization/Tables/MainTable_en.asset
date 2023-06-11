@@ -182,6 +182,50 @@ MonoBehaviour:
     m_Localized: Tank turret
     m_Metadata:
       m_Items: []
+  - m_Id: 112465070850048
+    m_Localized: Tank turret info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112492992331776
+    m_Localized: Tank turret description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112754750455808
+    m_Localized: Small machinegun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112892386541568
+    m_Localized: Small machinegun info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112915912392704
+    m_Localized: Small machinegun description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339282381832192
+    m_Localized: Gun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339367673004032
+    m_Localized: Gun info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339584094896128
+    m_Localized: Gun description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339779314581504
+    m_Localized: IFV Turret
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339781160075264
+    m_Localized: IFV Turret info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339782841991168
+    m_Localized: IFV Turret info
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

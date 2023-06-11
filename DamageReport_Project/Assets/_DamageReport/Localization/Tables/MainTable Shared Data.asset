@@ -191,6 +191,30 @@ MonoBehaviour:
     m_Key: Weapons_smallMachinegun_additionalDescription
     m_Metadata:
       m_Items: []
+  - m_Id: 339282381832192
+    m_Key: Weapons_gun_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339367673004032
+    m_Key: Weapons_gun_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339584094896128
+    m_Key: Weapons_gun_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339779314581504
+    m_Key: Weapons_ifvturret_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339781160075264
+    m_Key: Weapons_ifvturret_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339782841991168
+    m_Key: Weapons_ifvturret_description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

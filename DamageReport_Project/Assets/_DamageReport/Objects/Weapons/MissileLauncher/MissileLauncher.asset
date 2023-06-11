@@ -17,9 +17,33 @@ MonoBehaviour:
   prefabs:
   - {fileID: 6273997315193458127, guid: 69d343a8825667445bbeb8d902fbcf51, type: 3}
   Image: {fileID: 21300000, guid: 5a7a965e886781946a03c6e17d978e88, type: 3}
-  Title: "\u0420\u0430\u043A\u0435\u0442\u043D\u0438\u0446\u0430 ASM"
-  Info: "\u0423\u0440\u043E\u043D: 5\n\u0421\u043A\u043E\u0440\u043E\u0441\u0442\u0440\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C:
-    1\n\u0421\u043A\u043E\u0440\u043E\u0441\u0442\u044C \u0440\u0430\u043A\u0435\u0442\u044B:
-    30"
-  AdditionalDescription: "\u0420\u0430\u043A\u0435\u0442\u044B \u043D\u0430\u0432\u043E\u0434\u044F\u0442\u0441\u044F
-    \u043D\u0430 \u0432\u0440\u0430\u0433\u043E\u0432"
+  Title:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 111115352211456
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Info:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 111255911727104
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  AdditionalDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 111324257910784
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

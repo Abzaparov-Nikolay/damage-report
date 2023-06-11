@@ -17,6 +17,33 @@ MonoBehaviour:
   prefabs:
   - {fileID: 2694518543877346526, guid: 7a5ee91705f26ff428076e44ad6b32b3, type: 3}
   Image: {fileID: 0}
-  Title: IFV turret
-  Info: 
-  AdditionalDescription: 
+  Title:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 339779314581504
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Info:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 339781160075264
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  AdditionalDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 339782841991168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

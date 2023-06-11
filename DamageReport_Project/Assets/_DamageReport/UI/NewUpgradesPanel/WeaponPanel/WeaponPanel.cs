@@ -22,9 +22,9 @@ public class WeaponPanel : MonoBehaviour
     {
         this.weapon = weapon;
         image.sprite = weapon.Image;
-        title.text = weapon.Title;
-        info.text = weapon.Info;
-        additionalDescription.text = weapon.AdditionalDescription;
+        title.text = weapon.Title.GetLocalizedString();
+        info.text = weapon.Info.GetLocalizedString();
+        additionalDescription.text = weapon.AdditionalDescription.GetLocalizedString();
         button.onClick.AddListener(addWeaponAction);
     }
 

@@ -1204,7 +1204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
     m_TableEntryReference:
       m_KeyId: 0
       m_Key: 
@@ -2554,7 +2554,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: car_hovertank_name
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1330716041}
@@ -2567,7 +2567,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: car_hovertank_description
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &753927856
@@ -3895,7 +3895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
     m_TableEntryReference:
       m_KeyId: 0
       m_Key: 
@@ -5110,7 +5110,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: car_basic_name
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1330716041}
@@ -5123,7 +5123,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: car_basic_description
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &1672510468
@@ -5583,7 +5583,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: car_ifv_name
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1330716041}
@@ -5596,6 +5596,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: car_ifv_description
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1330716041}
+        m_TargetAssemblyTypeName: UnityEngine.Localization.Components.LocalizeStringEvent,
+          Unity.Localization
+        m_MethodName: RefreshString
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: car_ifv_description
           m_BoolArgument: 1
         m_CallState: 2

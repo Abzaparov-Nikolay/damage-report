@@ -12,23 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5248d8d7da6d146afc282866a9c329, type: 3}
   m_Name: WheelHub
   m_EditorClassIdentifier: 
-  StatBonuses: []
+  StatBonuses:
+  - stat: {fileID: 11400000, guid: d8b9eb148cdc9304ba63f9b447eb8ecd, type: 2}
+    statBonus: {fileID: 11400000, guid: 27c120570ebf2f94a845cf3bceb6717a, type: 2}
+  - stat: {fileID: 11400000, guid: b387e754d31e0be45a2d0ba8db0b2523, type: 2}
+    statBonus: {fileID: 11400000, guid: d648d7dfd3670bc4aa822f58d924fff0, type: 2}
   Behaviours: []
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 88d4e427a735993489931b8b1b37d8dd, type: 3}
   Title:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 457847407706112
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   Description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 457851027390464
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

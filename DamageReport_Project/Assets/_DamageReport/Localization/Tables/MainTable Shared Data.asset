@@ -359,6 +359,30 @@ MonoBehaviour:
     m_Key: Items_starter_description
     m_Metadata:
       m_Items: []
+  - m_Id: 460201515352064
+    m_Key: car_basic_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460205667713024
+    m_Key: car_basic_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460209593581568
+    m_Key: car_ifv_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460213183905792
+    m_Key: car_ifv_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460216237359104
+    m_Key: car_hovertank_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460219727020032
+    m_Key: car_hovertank_description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

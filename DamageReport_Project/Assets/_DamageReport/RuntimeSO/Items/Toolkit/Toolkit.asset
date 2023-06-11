@@ -13,26 +13,26 @@ MonoBehaviour:
   m_Name: Toolkit
   m_EditorClassIdentifier: 
   StatBonuses:
-  - stat: {fileID: 0}
-    statBonus: {fileID: 0}
-  - stat: {fileID: 0}
-    statBonus: {fileID: 0}
+  - stat: {fileID: 11400000, guid: 9cc97da55cee03c4d8c720b75cc62422, type: 2}
+    statBonus: {fileID: 11400000, guid: c2abbd768243d9f4180a206b25f2f2fc, type: 2}
+  - stat: {fileID: 11400000, guid: d8b9eb148cdc9304ba63f9b447eb8ecd, type: 2}
+    statBonus: {fileID: 11400000, guid: 3f7eeb8d7ddebd44ba1d8f4f4ac23951, type: 2}
   Behaviours: []
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 32b5bca9a4475524baa3cfa16522acdc, type: 3}
   Title:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 456838816006144
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   Description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 456841903013888
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

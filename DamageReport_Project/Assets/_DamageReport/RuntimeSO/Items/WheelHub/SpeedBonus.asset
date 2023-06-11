@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SpeedBonus
   m_EditorClassIdentifier: 
   percentage:
-    useLocal: 0
-    localValue: 0
+    useLocal: 1
+    localValue: -50
     variable: {fileID: 0}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FirerateBonus
   m_EditorClassIdentifier: 
   percentage:
-    useLocal: 0
-    localValue: 0
+    useLocal: 1
+    localValue: 60
     variable: {fileID: 0}

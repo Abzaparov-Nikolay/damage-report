@@ -392,6 +392,30 @@ MonoBehaviour:
       +50% regen'
     m_Metadata:
       m_Items: []
+  - m_Id: 460201515352064
+    m_Localized: Basic car
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460205667713024
+    m_Localized: Basic car description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460209593581568
+    m_Localized: IFVehicle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460213183905792
+    m_Localized: IFVehicle description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460216237359104
+    m_Localized: Hover tank
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460219727020032
+    m_Localized: Hover tank description
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StatBonuses:
   - stat: {fileID: 11400000, guid: b79e38f7ae6fd624ea6c4b6e3bac3f26, type: 2}
-    statBonus: {fileID: 0}
+    statBonus: {fileID: 11400000, guid: 264563da00b489445aeceb37e01c7265, type: 2}
   - stat: {fileID: 11400000, guid: e170993a4c4e97f48ae364e96fdc51ae, type: 2}
     statBonus: {fileID: 11400000, guid: 5ec3a14891a80fe4c8550204dc6e7081, type: 2}
   Behaviours: []

@@ -67,6 +67,50 @@ MonoBehaviour:
     useLocal: 0
     localValue: 0
     variable: {fileID: 11400000, guid: 9cc97da55cee03c4d8c720b75cc62422, type: 2}
+  fireEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2317225074640990641}
+        m_TargetAssemblyTypeName: AnimationPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LeftBarrelRecoil
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2317225074640990641}
+        m_TargetAssemblyTypeName: AnimationPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RightBarrelRecoil
+          m_BoolArgument: 0
+        m_CallState: 2
+  fireRateChangedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2317225074640990641}
+        m_TargetAssemblyTypeName: AnimationPlayer, Assembly-CSharp
+        m_MethodName: SetSpeed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6464450213133356115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +291,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -4372553788291677092, guid: 7c20902863c8ab6499a93950d78c6126,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2063881512894970308}
+    - targetCorrespondingSourceObject: {fileID: -4372553788291677092, guid: 7c20902863c8ab6499a93950d78c6126,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2317225074640990641}
   m_SourcePrefab: {fileID: 100100000, guid: 7c20902863c8ab6499a93950d78c6126, type: 3}
 --- !u!4 &3022555194332942578 stripped
 Transform:
@@ -273,3 +325,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3348704027457582873}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7865939089140314949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4372553788291677092, guid: 7c20902863c8ab6499a93950d78c6126,
+    type: 3}
+  m_PrefabInstance: {fileID: 3348704027457582873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &2063881512894970308
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7865939089140314949}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 717f2fcc9f5aafc4582b8df9546d5896, type: 2}
+  - {fileID: 7400000, guid: f5ac7b7f19cd91548bc0a924819e317a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &2317225074640990641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7865939089140314949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8c5e3285cbd6e40820912523084993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation: {fileID: 2063881512894970308}

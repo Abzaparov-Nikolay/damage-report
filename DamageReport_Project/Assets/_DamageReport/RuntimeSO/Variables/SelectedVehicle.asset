@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialValue: {fileID: 6892082122906891254, guid: 90f0e018488b3a043bd34f96d39888f1,
     type: 3}
-  value: {fileID: 0}
+  value: {fileID: 6892082122906891254, guid: 90f0e018488b3a043bd34f96d39888f1, type: 3}
+  resetBetweenScenes: 0

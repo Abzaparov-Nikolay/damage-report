@@ -8,12 +8,11 @@ public abstract class Variable<T> : ScriptableObject
 
     [Header(Headers.Runtime)]
     [SerializeField, RuntimeRW] protected T value;
-
+    [SerializeField] private bool resetBetweenScenes = true;
     public event Action OnChanged;
     public event Action<T> OnChangedWithOldValue;
 
     private bool initialized;
-
     public virtual T Value
     {
         get => Get();
@@ -60,7 +59,8 @@ public abstract class Variable<T> : ScriptableObject
 
     private void OnSceneChanged(Scene scene)
     {
-        initialized = false;
+        if (resetBetweenScenes)
+            initialized = false;
     }
 
     public static implicit operator T(Variable<T> v) => v.Get();

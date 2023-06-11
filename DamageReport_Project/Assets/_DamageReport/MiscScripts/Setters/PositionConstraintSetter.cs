@@ -15,7 +15,7 @@ public class PositionConstraintSetter : MonoBehaviour
 
     public void Set()
     {
-        if (source.Value != null)
+        if (source.Value != null && positionConstraint != null)
         {
             var constraintSource = new ConstraintSource();
             constraintSource.sourceTransform = source.Value;

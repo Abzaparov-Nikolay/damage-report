@@ -35,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 8379847329493005035}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5704962672769051829
 MonoBehaviour:
@@ -415,7 +415,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: c2c078aec8722c749af9333cdbe520a7, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &5029700240522813341

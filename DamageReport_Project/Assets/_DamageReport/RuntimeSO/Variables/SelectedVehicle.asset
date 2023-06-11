@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35ca95c9c89a4764f9ee4e6b36df340e, type: 3}
   m_Name: SelectedVehicle
   m_EditorClassIdentifier: 
-  initialValue: {fileID: 6892082122906891254, guid: c8b20ce5497a09b41a62785f70415faf,
+  initialValue: {fileID: 6892082122906891254, guid: 90f0e018488b3a043bd34f96d39888f1,
     type: 3}
   value: {fileID: 0}

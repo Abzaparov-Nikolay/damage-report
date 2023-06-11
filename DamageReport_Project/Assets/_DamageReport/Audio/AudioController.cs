@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioController : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class AudioController : MonoBehaviour
 		if (so.Value == null)
 		{
 			so.Set(this);
+			SceneManager.sceneUnloaded += OnSceneChange;
 		}
 		else
 		{
@@ -27,6 +29,11 @@ public class AudioController : MonoBehaviour
 		GroupNames.Add(AudioGroup.Master, masterName);
 		GroupNames.Add(AudioGroup.Background, musicName);
 		GroupNames.Add(AudioGroup.Effects, effectsName);
+	}
+
+	private void OnSceneChange(Scene scene)
+	{
+		so.Set(this);
 	}
 
 	private void Start()

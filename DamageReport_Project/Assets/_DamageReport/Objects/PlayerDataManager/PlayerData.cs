@@ -30,6 +30,7 @@ public class PlayerData : MonoBehaviour
 		else
 		{
 			Debug.Log("PlayerData exists");
+			return;
 		}
 
 		foreach (var upgrade in upgradesList)

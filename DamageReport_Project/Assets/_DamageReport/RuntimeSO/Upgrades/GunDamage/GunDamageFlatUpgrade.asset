@@ -24,7 +24,7 @@ MonoBehaviour:
     m_LocalVariables: []
   Description: "\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u0431\u0430\u0437\u043E\u0432\u043E\u0433\u043E
     \u0443\u0440\u043E\u043D\u0430"
-  Cost: 0
+  Cost: 4
   bonus: {fileID: 11400000, guid: 1b0e69e8566b28e43b1ec2ce9859bedc, type: 2}
   UID: 82c4badfacbc92948a3c32a7abbd8c2e
   references:

@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
+using UnityEngine.SceneManagement;
 
 public class LocaleChanger : MonoBehaviour
 {
@@ -19,6 +21,12 @@ public class LocaleChanger : MonoBehaviour
 		{
 			Debug.Log("Locale Changer Already Exists");
 		}
+		SceneManager.sceneUnloaded += OnSceneChange;
+	}
+
+	private void OnSceneChange(Scene scene)
+	{
+		so.Set(this);
 	}
 
 	private void OnEnable()
@@ -28,7 +36,7 @@ public class LocaleChanger : MonoBehaviour
 
 	private void Start()
 	{
-		
+
 	}
 
 	public int GetCurrentID()
@@ -41,6 +49,11 @@ public class LocaleChanger : MonoBehaviour
 		StartCoroutine(SetLocale(id));
 		PlayerPrefs.SetInt(localeIDSave, id);
 		PlayerPrefs.Save();
+	}
+
+	public void ChangeLocale()
+	{
+		ChangeLocale((GetCurrentID() + 1) % LocalizationSettings.AvailableLocales.Locales.Count);
 	}
 
 

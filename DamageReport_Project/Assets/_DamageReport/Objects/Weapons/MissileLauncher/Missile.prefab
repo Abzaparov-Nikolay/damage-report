@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnDeath: 1
+  DeactivateOnDeath: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -192,6 +193,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onTriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
   teamMember: {fileID: 2634860570051067439}
 --- !u!114 &8108508365484764681
 MonoBehaviour:
@@ -236,7 +240,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAsChild: 0
-  prefab: {fileID: 4910481094690038209, guid: 175f58726520933478e6f7500c3fb0f1, type: 3}
+  prefab:
+    useLocal: 1
+    localValue: {fileID: 4910481094690038209, guid: 175f58726520933478e6f7500c3fb0f1,
+      type: 3}
+    variable: {fileID: 0}
   parent: {fileID: 2399435358161838675}
 --- !u!114 &6925934085413626622
 MonoBehaviour:
@@ -5141,6 +5149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnDeath: 1
+  DeactivateOnDeath: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls: []

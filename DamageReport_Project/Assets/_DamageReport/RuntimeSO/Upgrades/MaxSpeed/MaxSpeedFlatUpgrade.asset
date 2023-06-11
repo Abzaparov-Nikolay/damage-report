@@ -23,7 +23,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   Description: "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u044F \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C"
-  Cost: 0
+  Cost: 10
   bonus: {fileID: 11400000, guid: 3eb21a96b30500443b531086ae5a98e8, type: 2}
   UID: 32802bd26c6ee1445ba5ea1832a9c372
   references:

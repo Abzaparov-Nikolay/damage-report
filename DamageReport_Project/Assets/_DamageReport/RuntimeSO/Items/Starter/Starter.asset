@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5248d8d7da6d146afc282866a9c329, type: 3}
+  m_Name: Starter
+  m_EditorClassIdentifier: 
+  StatBonuses:
+  - stat: {fileID: 11400000, guid: b0764448ba2a5554c8e0dabafb1779a8, type: 2}
+    statBonus: {fileID: 11400000, guid: fbbc075556c15e345bf5baff4a72d7b0, type: 2}
+  - stat: {fileID: 11400000, guid: 64e4c8bcbc23a7448b08d3bc3a833d26, type: 2}
+    statBonus: {fileID: 11400000, guid: dd434002840eb3941ace0f924227751e, type: 2}
+  - stat: {fileID: 11400000, guid: 64e4c8bcbc23a7448b08d3bc3a833d26, type: 2}
+    statBonus: {fileID: 11400000, guid: 233f8a93adff84e44b02a99d13ffecaf, type: 2}
+  Behaviours: []
+  Image: {fileID: 21300000, guid: beb6b8b7d3f6cc642b1708a0012b3971, type: 3}
+  Title:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

@@ -234,6 +234,164 @@ MonoBehaviour:
     m_Localized: 'Cost:'
     m_Metadata:
       m_Items: []
+  - m_Id: 434445489864704
+    m_Localized: Body kit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 434456315363328
+    m_Localized: +30% acceleration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 435745938014208
+    m_Localized: Brake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 435750232981504
+    m_Localized: +25% weapon range
+    m_Metadata:
+      m_Items: []
+  - m_Id: 437038421180416
+    m_Localized: Carburetor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 437053084467200
+    m_Localized: +5 max speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 437804166873088
+    m_Localized: Car repair
+    m_Metadata:
+      m_Items: []
+  - m_Id: 437806213693440
+    m_Localized: '+10% regen
+
+      +0.001 regen'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438697587179520
+    m_Localized: Diagnostics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438699596251136
+    m_Localized: '+20% fire rate
+
+      +10% experience'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 440497581129728
+    m_Localized: Piston
+    m_Metadata:
+      m_Items: []
+  - m_Id: 440498650677248
+    m_Localized: +30% acceleraton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 442328847810560
+    m_Localized: Instrument
+    m_Metadata:
+      m_Items: []
+  - m_Id: 442331192426496
+    m_Localized: '+50% damage
+
+      +3 exp attraction radius'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443413968781312
+    m_Localized: Lift jack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443415537451008
+    m_Localized: +25% weapon range
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444899322822656
+    m_Localized: Lights
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444901529026560
+    m_Localized: '+3 max speed
+
+      +20% max speed'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446210621636608
+    m_Localized: Lubricator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 446212534239232
+    m_Localized: '+10% damage
+
+      +15% experience'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447687356383232
+    m_Localized: N2O gas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 447689399009280
+    m_Localized: '+5% acceleration
+
+      +3 acceleration'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448630365945856
+    m_Localized: Neon lights
+    m_Metadata:
+      m_Items: []
+  - m_Id: 448632379211776
+    m_Localized: +0.002 regen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449519159934976
+    m_Localized: Paint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 449522108530688
+    m_Localized: +30% max hp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450721444593664
+    m_Localized: Rims and tires
+    m_Metadata:
+      m_Items: []
+  - m_Id: 450723357196288
+    m_Localized: '+200% max speed
+
+      -45% fire rate'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452044495847424
+    m_Localized: Silent block
+    m_Metadata:
+      m_Items: []
+  - m_Id: 452046639136768
+    m_Localized: '-30% regen
+
+      +60% experience'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453456063692800
+    m_Localized: Spoilers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 453457506533376
+    m_Localized: '+25% fire rate
+
+      -2 max speed'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 454525640572928
+    m_Localized: Starter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 454528127795200
+    m_Localized: '-50% max hp
+
+      +0.1 regen
+
+      +50% regen'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

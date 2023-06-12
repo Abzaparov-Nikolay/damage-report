@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1238717388832529918}
   - component: {fileID: 5704962672769051829}
+  - component: {fileID: 5605821589317293483}
   - component: {fileID: 6464450213133356115}
   - component: {fileID: 4188483750446505943}
   - component: {fileID: 4761418568517331410}
@@ -50,8 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSelector: {fileID: 4188483750446505943}
-  projectilePrefab: {fileID: 792684765480326135, guid: a64bee75ef2841a4eabe8fb46fb20445,
-    type: 3}
+  projectileSource: {fileID: 5605821589317293483}
   projectileSpawnPoints:
   - {fileID: 5313913445610086817}
   - {fileID: 5885057008918386905}
@@ -183,6 +183,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5605821589317293483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2694518543877346526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c233b40ae73dade429516527b4695cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool:
+    useLocal: 0
+    localValue: {fileID: 0}
+    variable: {fileID: 11400000, guid: eee20a91c3ea78f40b552cc7cc84e908, type: 2}
+  prefab: {fileID: 2928253359481219560, guid: a64bee75ef2841a4eabe8fb46fb20445, type: 3}
+  usePrefab: 0
 --- !u!114 &6464450213133356115
 MonoBehaviour:
   m_ObjectHideFlags: 0

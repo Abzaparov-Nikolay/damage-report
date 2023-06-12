@@ -572,6 +572,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 33e424507b152844caeab16779cd18a6,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1862406209200814774}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 33e424507b152844caeab16779cd18a6,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 4690138934383729012}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 33e424507b152844caeab16779cd18a6,
         type: 3}
@@ -647,8 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSelector: {fileID: 441270484116508476}
-  projectilePrefab: {fileID: 5468276614774058497, guid: c86f70bc2059f7b4292707830d1c4353,
-    type: 3}
+  projectileSource: {fileID: 1862406209200814774}
   projectileSpawnPoints:
   - {fileID: 5431939985253928902}
   impulse:
@@ -667,6 +670,24 @@ MonoBehaviour:
   fireRateChangedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1862406209200814774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6243504974274632946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c233b40ae73dade429516527b4695cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool:
+    useLocal: 0
+    localValue: {fileID: 0}
+    variable: {fileID: 11400000, guid: 7edb694f9bf93174d88e9a705d28e821, type: 2}
+  prefab: {fileID: 9096689625490407251, guid: c86f70bc2059f7b4292707830d1c4353, type: 3}
+  usePrefab: 0
 --- !u!135 &4690138934383729012
 SphereCollider:
   m_ObjectHideFlags: 0

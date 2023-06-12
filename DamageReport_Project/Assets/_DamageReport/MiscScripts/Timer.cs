@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     [SerializeField] public bool autoRestart;
     [SerializeField] private bool active;
     [SerializeField] public UnityEvent elapsed;
+    [SerializeField] private bool restartOnEnable;
     private float timeLeft;
 
     void Start()
@@ -36,5 +37,11 @@ public class Timer : MonoBehaviour
     {
         timeLeft = interval;
         active = true;
+    }
+
+    private void OnEnable()
+    {
+        if (restartOnEnable)
+            Restart();
     }
 }

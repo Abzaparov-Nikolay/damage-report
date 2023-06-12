@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5781857696332897887}
   - component: {fileID: 4320589322771595185}
   - component: {fileID: 8582935071508962129}
+  - component: {fileID: 4531269442763372649}
   - component: {fileID: 8456492531140035695}
   - component: {fileID: 7437242582535116906}
   - component: {fileID: 5293467642201343884}
@@ -138,9 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSelector: {fileID: 8456492531140035695}
-  projectilePrefab: {fileID: -6631156090676336951, guid: 13d2fecf54508544ba94e6ed80a6fba5,
-    type: 3}
-  shootPoint: {fileID: 7351226690705228013}
+  projectileSource: {fileID: 4531269442763372649}
+  projectileSpawnPoints: []
   impulse:
     useLocal: 1
     localValue: 30
@@ -153,6 +153,28 @@ MonoBehaviour:
     useLocal: 1
     localValue: 1
     variable: {fileID: 0}
+  fireEvents: []
+  fireRateChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4531269442763372649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534776789744912605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c233b40ae73dade429516527b4695cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool:
+    useLocal: 0
+    localValue: {fileID: 0}
+    variable: {fileID: 11400000, guid: 302baaccfefae7946bd14e2af22768e8, type: 2}
+  prefab: {fileID: 5456969732586207051, guid: 13d2fecf54508544ba94e6ed80a6fba5, type: 3}
+  usePrefab: 0
 --- !u!114 &8456492531140035695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,6 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnDeath: 1
+  DeactivateOnDeath: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls:

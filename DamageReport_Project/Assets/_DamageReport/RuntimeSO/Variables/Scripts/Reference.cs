@@ -84,5 +84,17 @@ public class Reference<T>
     }
 
     public static implicit operator T(Reference<T> v) => v.Get();
+
+    public bool IsValid()
+    {
+        if (useLocal)
+        {
+            return localValue != null;
+        }
+        else
+        {
+            return variable != null;
+        }
+    }
 }
 

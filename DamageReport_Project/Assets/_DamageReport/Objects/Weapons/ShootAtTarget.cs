@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -5,7 +6,7 @@ using UnityEngine.Events;
 public class ShootAtTarget : MonoBehaviour
 {
     [SerializeField] private TargetSelector targetSelector;
-    [SerializeField] private Rigidbody projectilePrefab;
+    [SerializeField] private PooledObjectSource projectileSource;
     [SerializeField] private List<Transform> projectileSpawnPoints;
     [SerializeField] private Reference<float> impulse;
     [SerializeField] private Reference<float> fireRate;
@@ -35,9 +36,12 @@ public class ShootAtTarget : MonoBehaviour
         }
         var spawnPoint = projectileSpawnPoints[currentShootPoint];
         var direction = (target.position - spawnPoint.position).normalized;
-        var spawnPosition = spawnPoint.position + impulse / projectilePrefab.mass * elapsedTime * direction;
-        var newProjectile = Instantiate(projectilePrefab, spawnPosition, spawnPoint.rotation);
-        newProjectile.AddForce(impulse * direction, ForceMode.Impulse);
+        var newProjectile = projectileSource.Get();
+        var body = newProjectile.GetComponent<Rigidbody>();
+        var spawnPosition = spawnPoint.position + impulse / body.mass * elapsedTime * direction;
+        newProjectile.transform.position = spawnPosition;
+        newProjectile.transform.rotation = spawnPoint.rotation;
+        body.AddForce(impulse * direction, ForceMode.Impulse);
         if (fireEvents.Count > 0)
             fireEvents[currentShootPoint]?.Invoke();
         currentShootPoint++;

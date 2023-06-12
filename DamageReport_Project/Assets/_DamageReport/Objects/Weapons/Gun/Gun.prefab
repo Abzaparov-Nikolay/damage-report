@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7706189141335559787}
   - component: {fileID: 6034582030897981253}
+  - component: {fileID: 6691233511047344613}
   - component: {fileID: 8202820721186622631}
   - component: {fileID: 4954998525163793709}
   - component: {fileID: 6840694462741514739}
@@ -35,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 632781733407806431}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6034582030897981253
 MonoBehaviour:
@@ -50,8 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSelector: {fileID: 4954998525163793709}
-  projectilePrefab: {fileID: 792684765480326135, guid: 2a5d53b82d1d80d478c2fa64dc09de34,
-    type: 3}
+  projectileSource: {fileID: 6691233511047344613}
   projectileSpawnPoints:
   - {fileID: 3712016195456184682}
   impulse:
@@ -132,6 +132,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6691233511047344613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968288731302653478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c233b40ae73dade429516527b4695cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool:
+    useLocal: 0
+    localValue: {fileID: 0}
+    variable: {fileID: 11400000, guid: 0b2f9dc6827d48d48b33776cf21865b8, type: 2}
+  prefab: {fileID: 0}
+  usePrefab: 0
 --- !u!114 &8202820721186622631
 MonoBehaviour:
   m_ObjectHideFlags: 0

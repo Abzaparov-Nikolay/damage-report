@@ -14,11 +14,12 @@ GameObject:
   - component: {fileID: 5972834405022201123}
   - component: {fileID: -6631156090676336951}
   - component: {fileID: 269832959369738785}
-  - component: {fileID: 2746674004572482875}
+  - component: {fileID: 1434032201561577794}
   - component: {fileID: -532185981479597260}
   - component: {fileID: -4554148328131708160}
   - component: {fileID: 4448244275647164840}
   - component: {fileID: 4176968344831557958}
+  - component: {fileID: 6982724411338336820}
   m_Layer: 7
   m_Name: DroneBullet
   m_TagString: Untagged
@@ -178,9 +179,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2746674004572482875}
-        m_TargetAssemblyTypeName: Death, Assembly-CSharp
-        m_MethodName: Die
+      - m_Target: {fileID: 1434032201561577794}
+        m_TargetAssemblyTypeName: ReturnToPool, Assembly-CSharp
+        m_MethodName: Return
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -194,7 +195,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   teamMember: {fileID: -532185981479597260}
---- !u!114 &2746674004572482875
+--- !u!114 &1434032201561577794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,13 +204,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5456969732586207051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 847ef026e024e3f4e9ac35dd364795ee, type: 3}
+  m_Script: {fileID: 11500000, guid: e740293059879204e957a4ac47701d3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyOnDeath: 1
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
+  pool:
+    useLocal: 0
+    localValue: {fileID: 0}
+    variable: {fileID: 11400000, guid: 302baaccfefae7946bd14e2af22768e8, type: 2}
 --- !u!114 &-532185981479597260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,9 +274,9 @@ MonoBehaviour:
   elapsed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2746674004572482875}
-        m_TargetAssemblyTypeName: Death, Assembly-CSharp
-        m_MethodName: Die
+      - m_Target: {fileID: 1434032201561577794}
+        m_TargetAssemblyTypeName: ReturnToPool, Assembly-CSharp
+        m_MethodName: Return
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -285,3 +286,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  restartOnEnable: 1
+--- !u!114 &6982724411338336820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5456969732586207051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb868d48977a646a413ac7f14642c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: -6631156090676336951}

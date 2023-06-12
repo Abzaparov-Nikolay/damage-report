@@ -17,10 +17,11 @@ GameObject:
   - component: {fileID: 7262938451472395467}
   - component: {fileID: 8140035408275034017}
   - component: {fileID: 8181998523036466169}
-  - component: {fileID: 7263390039570777343}
   - component: {fileID: 3782206693317629008}
+  - component: {fileID: 5126366693395124350}
+  - component: {fileID: 4774711696407082357}
   m_Layer: 7
-  m_Name: Bullet
+  m_Name: IFVBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,9 +208,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7263390039570777343}
-        m_TargetAssemblyTypeName: Death, Assembly-CSharp
-        m_MethodName: Die
+      - m_Target: {fileID: 4774711696407082357}
+        m_TargetAssemblyTypeName: ReturnToPool, Assembly-CSharp
+        m_MethodName: Return
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -219,6 +220,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onTriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
   teamMember: {fileID: 7262938451472395467}
 --- !u!114 &8181998523036466169
 MonoBehaviour:
@@ -236,22 +240,6 @@ MonoBehaviour:
     useLocal: 1
     localValue: 0
     variable: {fileID: 0}
---- !u!114 &7263390039570777343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2928253359481219560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 847ef026e024e3f4e9ac35dd364795ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyOnDeath: 1
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &3782206693317629008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,9 +258,9 @@ MonoBehaviour:
   elapsed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7263390039570777343}
-        m_TargetAssemblyTypeName: Death, Assembly-CSharp
-        m_MethodName: Die
+      - m_Target: {fileID: 4774711696407082357}
+        m_TargetAssemblyTypeName: ReturnToPool, Assembly-CSharp
+        m_MethodName: Return
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -282,3 +270,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  restartOnEnable: 1
+--- !u!114 &5126366693395124350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928253359481219560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb868d48977a646a413ac7f14642c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 792684765480326135}
+--- !u!114 &4774711696407082357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928253359481219560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e740293059879204e957a4ac47701d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool:
+    useLocal: 0
+    localValue: {fileID: 0}
+    variable: {fileID: 11400000, guid: f93faade94d7bf64598794027d8ce5a0, type: 2}

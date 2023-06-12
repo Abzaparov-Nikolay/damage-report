@@ -140,7 +140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetSelector: {fileID: 8456492531140035695}
   projectileSource: {fileID: 4531269442763372649}
-  projectileSpawnPoints: []
+  projectileSpawnPoints:
+  - {fileID: 7351226690705228013}
   impulse:
     useLocal: 1
     localValue: 30

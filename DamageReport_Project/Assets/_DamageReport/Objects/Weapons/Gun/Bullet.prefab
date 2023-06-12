@@ -70,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 7daaa3c6028600c4fa3a1d24abeaa933, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -287,7 +287,6 @@ MonoBehaviour:
     useLocal: 0
     localValue: {fileID: 0}
     variable: {fileID: 11400000, guid: 0b2f9dc6827d48d48b33776cf21865b8, type: 2}
-  poolMember: {fileID: 4279286919196007337}
 --- !u!114 &4279286919196007337
 MonoBehaviour:
   m_ObjectHideFlags: 0

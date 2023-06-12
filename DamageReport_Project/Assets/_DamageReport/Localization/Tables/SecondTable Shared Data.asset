@@ -13,8 +13,24 @@ MonoBehaviour:
   m_Name: SecondTable Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: SecondTable
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: 72f7e6059779b3546bab2b61f04734e6
+  m_Entries:
+  - m_Id: 7542996992
+    m_Key: items_wheelhub_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69249597440
+    m_Key: items_wheelhub_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 679604715520
+    m_Key: items_toolkit_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683497029632
+    m_Key: items_toolkit_description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

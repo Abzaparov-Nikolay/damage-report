@@ -17,7 +17,27 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 72f7e6059779b3546bab2b61f04734e6, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 7542996992
+    m_Localized: Wheel Hub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69249597440
+    m_Localized: '+50% acceleration
+
+      -50% max speed'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 679604715520
+    m_Localized: Toolkit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 683497029632
+    m_Localized: '+60% rate of fire
+
+      -60% acceleration'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

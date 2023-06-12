@@ -649,7 +649,8 @@ MonoBehaviour:
   targetSelector: {fileID: 441270484116508476}
   projectilePrefab: {fileID: 5468276614774058497, guid: c86f70bc2059f7b4292707830d1c4353,
     type: 3}
-  shootPoint: {fileID: 5431939985253928902}
+  projectileSpawnPoints:
+  - {fileID: 5431939985253928902}
   impulse:
     useLocal: 1
     localValue: 30
@@ -662,6 +663,10 @@ MonoBehaviour:
     useLocal: 1
     localValue: 1
     variable: {fileID: 0}
+  fireEvents: []
+  fireRateChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &4690138934383729012
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff9243189b183a24ebce661d5fe50f27, type: 2}
   prefabs:
   - {fileID: 3968288731302653478, guid: 0e79180d4b85ef14db7369ae27f257f3, type: 3}
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 611903339ab60744f9cc130b1936c913, type: 3}
   Title:
     m_TableReference:
       m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41

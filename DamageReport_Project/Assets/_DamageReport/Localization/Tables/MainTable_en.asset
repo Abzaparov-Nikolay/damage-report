@@ -191,15 +191,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112754750455808
-    m_Localized: Small machinegun
+    m_Localized: Small plazma gun
     m_Metadata:
       m_Items: []
   - m_Id: 112892386541568
-    m_Localized: Small machinegun info
+    m_Localized: Small plazma gun info
     m_Metadata:
       m_Items: []
   - m_Id: 112915912392704
-    m_Localized: Small machinegun description
+    m_Localized: Small plazma gun description
     m_Metadata:
       m_Items: []
   - m_Id: 339282381832192

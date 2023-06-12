@@ -27,8 +27,9 @@ public class Upgrade : ScriptableObject
 
 	private void AssignGUID()
 	{
-		var path = AssetDatabase.GetAssetPath(this);
-		UID = AssetDatabase.AssetPathToGUID(path);
+		UID = System.Guid.NewGuid().ToString();
+		//var path = AssetDatabase.GetAssetPath(this);
+		//UID = AssetDatabase.AssetPathToGUID(path);
 		Debug.Log("CREATED UID FOR UPGRADE");
 #if UNITY_EDITOR
 		UnityEditor.EditorUtility.SetDirty(this);

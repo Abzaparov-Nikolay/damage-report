@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 575894677621743442}
   - component: {fileID: 3134726602569529187}
   - component: {fileID: 9051394915101578502}
+  - component: {fileID: 769966761776175873}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -126,6 +127,7 @@ MonoBehaviour:
   targetSelector: {fileID: 8456492531140035695}
   gunBase: {fileID: 8119139987131241920}
   barrel: {fileID: 8119139987131241920}
+  resetRotationWhenNoTarget: 0
 --- !u!114 &8582935071508962129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +341,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 769966761776175873}
+        m_TargetAssemblyTypeName: PrefabSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &575894677621743442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,6 +402,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   set: {fileID: 11400000, guid: 91f9ff2b3597b024daf25eb985b8a8c5, type: 2}
+--- !u!114 &769966761776175873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534776789744912605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7c90a841c73b34aa7ed00ca1126910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnAsChild: 0
+  prefab:
+    useLocal: 1
+    localValue: {fileID: 7110490641420825801, guid: 2389ab3efc884e0409dc855382e8ebce,
+      type: 3}
+    variable: {fileID: 0}
+  parent: {fileID: 6534776789744912605}
+  sizeMultiplier: {x: 0.25, y: 0.25, z: 0.25}
 --- !u!1001 &8335799981165125219
 PrefabInstance:
   m_ObjectHideFlags: 0

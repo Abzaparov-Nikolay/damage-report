@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 2156762044266965343}
   - component: {fileID: -6272541211277921676}
   - component: {fileID: 978888848708456661}
+  - component: {fileID: -8682693624780087350}
   m_Layer: 0
   m_Name: LargeCube
   m_TagString: Untagged
@@ -297,6 +298,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -8682693624780087350}
+        m_TargetAssemblyTypeName: PrefabSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2156762044266965343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +368,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   set: {fileID: 11400000, guid: 91f9ff2b3597b024daf25eb985b8a8c5, type: 2}
+--- !u!114 &-8682693624780087350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5310842452553766981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7c90a841c73b34aa7ed00ca1126910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnAsChild: 0
+  prefab:
+    useLocal: 1
+    localValue: {fileID: 7110490641420825801, guid: 2389ab3efc884e0409dc855382e8ebce,
+      type: 3}
+    variable: {fileID: 0}
+  parent: {fileID: 5310842452553766981}
+  sizeMultiplier: {x: 0.75, y: 0.75, z: 0.75}
 --- !u!1001 &7975254138773848408
 PrefabInstance:
   m_ObjectHideFlags: 0

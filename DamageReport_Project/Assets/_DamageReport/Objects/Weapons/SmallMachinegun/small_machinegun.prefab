@@ -103,6 +103,7 @@ MonoBehaviour:
   targetSelector: {fileID: 4954998525163793709}
   gunBase: {fileID: 7740140601716131779}
   barrel: {fileID: 6795566960128018330}
+  resetRotationWhenNoTarget: 1
 --- !u!114 &4954998525163793709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +154,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0

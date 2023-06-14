@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 1403490649730146592}
   - component: {fileID: 4166043110332950389}
   - component: {fileID: 8836457511810029347}
+  - component: {fileID: 1320619357325153348}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -98,7 +99,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &1056307254548273875
 BoxCollider:
@@ -220,6 +221,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1320619357325153348}
+        m_TargetAssemblyTypeName: PrefabSpawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &815682375115800146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +308,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   set: {fileID: 11400000, guid: 91f9ff2b3597b024daf25eb985b8a8c5, type: 2}
+--- !u!114 &1320619357325153348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4024461436893589660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7c90a841c73b34aa7ed00ca1126910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnAsChild: 0
+  prefab:
+    useLocal: 1
+    localValue: {fileID: 7110490641420825801, guid: 2389ab3efc884e0409dc855382e8ebce,
+      type: 3}
+    variable: {fileID: 0}
+  parent: {fileID: 0}
+  sizeMultiplier: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &5059678729596398113
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +671,7 @@ MonoBehaviour:
   targetSelector: {fileID: 441270484116508476}
   gunBase: {fileID: 6768543128878466632}
   barrel: {fileID: 6441911392351398400}
+  resetRotationWhenNoTarget: 0
 --- !u!114 &5401917512075942963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +690,7 @@ MonoBehaviour:
   - {fileID: 5431939985253928902}
   impulse:
     useLocal: 1
-    localValue: 30
+    localValue: 25
     variable: {fileID: 0}
   fireRate:
     useLocal: 1
@@ -723,6 +757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: {fileID: 11400000, guid: 22a3e67d6d8934d41b4d1878d8b78e99, type: 2}
   areaTracker: {fileID: 7216988150929227021}
+  direction: {fileID: 0}
 --- !u!114 &7216988150929227021
 MonoBehaviour:
   m_ObjectHideFlags: 0

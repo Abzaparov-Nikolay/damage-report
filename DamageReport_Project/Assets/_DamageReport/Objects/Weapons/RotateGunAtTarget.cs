@@ -5,11 +5,15 @@ public class RotateGunAtTarget : MonoBehaviour
     [SerializeField] private TargetSelector targetSelector;
     [SerializeField] private Transform gunBase;
     [SerializeField] private Transform barrel;
-
+    [SerializeField] private bool resetRotationWhenNoTarget;
     private void FixedUpdate()
     {
         if (!targetSelector.TryGetTarget(out var target))
         {
+            if (resetRotationWhenNoTarget)
+            {
+                gunBase.localRotation = Quaternion.identity;
+            }
             return;
         }
 

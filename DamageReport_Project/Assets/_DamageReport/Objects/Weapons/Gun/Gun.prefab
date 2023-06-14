@@ -55,13 +55,13 @@ MonoBehaviour:
   projectileSpawnPoints:
   - {fileID: 3712016195456184682}
   impulse:
-    useLocal: 1
+    useLocal: 0
     localValue: 15
-    variable: {fileID: 0}
+    variable: {fileID: 11400000, guid: 63ea410a1b9a7e84ebbf26e53e945f00, type: 2}
   fireRate:
-    useLocal: 1
+    useLocal: 0
     localValue: 5
-    variable: {fileID: 0}
+    variable: {fileID: 11400000, guid: 6dba6353aaeea924883fafd26a3ea0f3, type: 2}
   fireRateMultiplier:
     useLocal: 0
     localValue: 0

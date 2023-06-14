@@ -161,9 +161,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128350f623ea4f74c9dd4ead2eb30cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage:
+  baseDamage:
     useLocal: 1
-    localValue: 2.3
+    localValue: 2
+    variable: {fileID: 0}
+  multiplier:
+    useLocal: 1
+    localValue: 1
     variable: {fileID: 0}
 --- !u!114 &7184152199673339439
 MonoBehaviour:
@@ -277,6 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyOnDeath: 1
+  DeactivateOnDeath: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls:

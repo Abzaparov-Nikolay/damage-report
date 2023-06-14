@@ -81,9 +81,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate:
-    useLocal: 1
+    useLocal: 0
     localValue: 1
-    variable: {fileID: 0}
+    variable: {fileID: 11400000, guid: 0a37ba7fb7fe85146b399ed6ab02b474, type: 2}
   playerFireRateMultiplier:
     useLocal: 0
     localValue: 0

@@ -56,13 +56,13 @@ MonoBehaviour:
   - {fileID: 5313913445610086817}
   - {fileID: 5885057008918386905}
   impulse:
-    useLocal: 1
+    useLocal: 0
     localValue: 15
-    variable: {fileID: 0}
+    variable: {fileID: 11400000, guid: c8af3e3e12809bb4c9ee878402540b51, type: 2}
   fireRate:
-    useLocal: 1
+    useLocal: 0
     localValue: 5
-    variable: {fileID: 0}
+    variable: {fileID: 11400000, guid: cf383d2c3e46e6a409dc167cdef7420f, type: 2}
   fireRateMultiplier:
     useLocal: 0
     localValue: 0

@@ -5,7 +5,8 @@ using UnityEngine;
 public class AreaDamageDealer : MonoBehaviour
 {
     [SerializeField] private AreaTracker areaTracker;
-    [SerializeField] private Reference<float> damage;
+    [SerializeField] private Reference<float> baseDamage;
+    [SerializeField] private Reference<float> multiplier;
     [SerializeField] private Team team;
 
     public void Deal()
@@ -16,7 +17,7 @@ public class AreaDamageDealer : MonoBehaviour
                 && team.IsHostileTo(otherTeamMember.Team)
                 && entity.gameObject.TryGetComponentInParent<Health>(out var health))
             {
-                health.TakeDamage(damage);
+                health.TakeDamage(baseDamage * multiplier);
             }
         }
     }

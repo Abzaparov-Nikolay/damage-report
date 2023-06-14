@@ -50,10 +50,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaTracker: {fileID: 5763729628622536251}
-  damage:
-    useLocal: 1
-    localValue: 5
-    variable: {fileID: 0}
+  baseDamage:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: a83cd6a281bb749488f29f45b24e9ff8, type: 2}
+  multiplier:
+    useLocal: 0
+    localValue: 0
+    variable: {fileID: 11400000, guid: 6a1856d26537fcc4e989a48c7e9583d0, type: 2}
   team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
 --- !u!114 &5763729628622536251
 MonoBehaviour:

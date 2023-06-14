@@ -25,7 +25,7 @@ MonoBehaviour:
   Description: "\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0438\u0435 \u043D\u0430\u043D\u043E\u0441\u0438\u043C\u043E\u0433\u043E
     \u0443\u0440\u043E\u043D\u0430"
   Cost: 6
-  bonus: {fileID: 11400000, guid: 3076817649b782a468520cbbcc36b0cf, type: 2}
+  bonus: {fileID: 11400000, guid: e264366c062a8144c916d7b9e90f07a3, type: 2}
   UID: 2bab1ab6f78f74743b7bc217eafcbe43
   references:
     version: 2

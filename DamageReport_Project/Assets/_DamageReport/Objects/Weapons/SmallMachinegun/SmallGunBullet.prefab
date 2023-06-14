@@ -152,9 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128350f623ea4f74c9dd4ead2eb30cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage:
+  baseDamage:
     useLocal: 0
-    localValue: 2
+    localValue: 0
+    variable: {fileID: 11400000, guid: e602608a13cac6d48924f8c897f4f82b, type: 2}
+  multiplier:
+    useLocal: 0
+    localValue: 0
     variable: {fileID: 11400000, guid: 6a1856d26537fcc4e989a48c7e9583d0, type: 2}
 --- !u!114 &7262938451472395467
 MonoBehaviour:

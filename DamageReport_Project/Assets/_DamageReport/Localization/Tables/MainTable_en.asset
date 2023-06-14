@@ -420,6 +420,10 @@ MonoBehaviour:
     m_Localized: Choose an upgrade
     m_Metadata:
       m_Items: []
+  - m_Id: 1429948391247872
+    m_Localized: Choose your vehicle
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

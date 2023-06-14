@@ -387,6 +387,10 @@ MonoBehaviour:
     m_Key: select_selectitem
     m_Metadata:
       m_Items: []
+  - m_Id: 1429948391247872
+    m_Key: Vehicle_select_menu_top_text
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

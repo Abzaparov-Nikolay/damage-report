@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lubricator
   m_EditorClassIdentifier: 
   StatBonuses:
-  - stat: {fileID: 11400000, guid: b79e38f7ae6fd624ea6c4b6e3bac3f26, type: 2}
+  - stat: {fileID: 11400000, guid: 6a1856d26537fcc4e989a48c7e9583d0, type: 2}
     statBonus: {fileID: 11400000, guid: 36eac56976ba26a46925d75edc4baf4f, type: 2}
   - stat: {fileID: 11400000, guid: e9ecaf9a1c5be1b4d95104e02daedb4e, type: 2}
     statBonus: {fileID: 11400000, guid: 195973d00e538c7428ff3c898ca90984, type: 2}

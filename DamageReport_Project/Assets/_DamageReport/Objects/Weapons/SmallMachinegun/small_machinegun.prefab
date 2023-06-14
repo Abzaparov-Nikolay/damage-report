@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
   areaTracker: {fileID: 6840694462741514739}
+  direction: {fileID: 7706189141335559787}
 --- !u!114 &6840694462741514739
 MonoBehaviour:
   m_ObjectHideFlags: 0

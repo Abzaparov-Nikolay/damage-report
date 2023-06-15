@@ -183,11 +183,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112465070850048
-    m_Localized: Tank turret info
+    m_Localized: 'Damage: 4
+
+      Fire rate: 2.5'
     m_Metadata:
       m_Items: []
   - m_Id: 112492992331776
-    m_Localized: Tank turret description
+    m_Localized: Pretty Slow, but hurts a lot
     m_Metadata:
       m_Items: []
   - m_Id: 112754750455808
@@ -195,11 +197,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112892386541568
-    m_Localized: Small plasma gun info
+    m_Localized: 'Damage: 1
+
+      Fire rate: 7.5'
     m_Metadata:
       m_Items: []
   - m_Id: 112915912392704
-    m_Localized: Small plasma gun description
+    m_Localized: Doing it`s small job
     m_Metadata:
       m_Items: []
   - m_Id: 339282381832192
@@ -207,11 +211,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 339367673004032
-    m_Localized: Gun info
+    m_Localized: 'Damage: 2
+
+      Fire rate: 5'
     m_Metadata:
       m_Items: []
   - m_Id: 339584094896128
-    m_Localized: Gun description
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 339779314581504
@@ -219,11 +225,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 339781160075264
-    m_Localized: IFV Turret info
+    m_Localized: 'Damage: 3
+
+      Fire rate: 4'
     m_Metadata:
       m_Items: []
   - m_Id: 339782841991168
-    m_Localized: IFV Turret info
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 384050692423680

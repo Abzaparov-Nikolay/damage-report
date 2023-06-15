@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb21381f5afb9249bccb0ecfe311292, type: 3}
   m_Name: GunDamageMultiplyUpgrade
   m_EditorClassIdentifier: 
-  stat: {fileID: 11400000, guid: 6a1856d26537fcc4e989a48c7e9583d0, type: 2}
+  stat: {fileID: 11400000, guid: b79e38f7ae6fd624ea6c4b6e3bac3f26, type: 2}
   Name:
     m_TableReference:
       m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41

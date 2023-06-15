@@ -16,7 +16,7 @@ MonoBehaviour:
   - stat: {fileID: 11400000, guid: e170993a4c4e97f48ae364e96fdc51ae, type: 2}
     statBonus: {fileID: 11400000, guid: 635cd4a70ea587b449e4ee4f1a0f2936, type: 2}
   Behaviours: []
-  Image: {fileID: 21300000, guid: 01af9f6b3988a0843993ffa54c8ebd33, type: 3}
+  Image: {fileID: 21300000, guid: 5b81db93c0f74264983ca6164887ed89, type: 3}
   Title:
     m_TableReference:
       m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41

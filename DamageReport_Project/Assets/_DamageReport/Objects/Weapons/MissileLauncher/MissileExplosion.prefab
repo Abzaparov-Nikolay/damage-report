@@ -57,7 +57,7 @@ MonoBehaviour:
   multiplier:
     useLocal: 0
     localValue: 0
-    variable: {fileID: 11400000, guid: 6a1856d26537fcc4e989a48c7e9583d0, type: 2}
+    variable: {fileID: 11400000, guid: b79e38f7ae6fd624ea6c4b6e3bac3f26, type: 2}
   team: {fileID: 11400000, guid: f99a77b8a2f69cd4dbab40974aa36897, type: 2}
 --- !u!114 &5763729628622536251
 MonoBehaviour:
@@ -121,6 +121,7 @@ MonoBehaviour:
       type: 3}
     variable: {fileID: 0}
   parent: {fileID: 4910481094690038209}
+  sizeMultiplier: {x: 1, y: 1, z: 1}
 --- !u!114 &5620403386846014015
 MonoBehaviour:
   m_ObjectHideFlags: 0

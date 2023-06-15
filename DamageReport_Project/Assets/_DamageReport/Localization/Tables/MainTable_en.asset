@@ -397,7 +397,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 460205667713024
-    m_Localized: Basic car description
+    m_Localized: 'Acceleration: 15
+
+      Max speed: 10
+
+      Fire rate: 5/s
+
+      Damage:
+      2'
     m_Metadata:
       m_Items: []
   - m_Id: 460209593581568
@@ -405,7 +412,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 460213183905792
-    m_Localized: IFVehicle description
+    m_Localized: 'Acceleration: 15
+
+      Max speed: 10
+
+      Fire rate: 4/s
+
+      Damage:
+      3'
     m_Metadata:
       m_Items: []
   - m_Id: 460216237359104
@@ -413,7 +427,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 460219727020032
-    m_Localized: Hover tank description
+    m_Localized: 'Acceleration: 30
+
+      Max speed: 10
+
+      Fire rate: 2.5/s
+
+      Damage:
+      4'
     m_Metadata:
       m_Items: []
   - m_Id: 467294217633792

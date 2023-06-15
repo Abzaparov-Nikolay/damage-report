@@ -453,6 +453,18 @@ MonoBehaviour:
     m_Localized: Choose your vehicle
     m_Metadata:
       m_Items: []
+  - m_Id: 1798668418568192
+    m_Localized: Spikes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1798928826126336
+    m_Localized: 'Damage: 15'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1799129519378432
+    m_Localized: Deals damage on impact
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

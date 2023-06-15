@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97ad14f2b82bf645a1ab6b43a20b804, type: 3}
+  m_Name: MeleeWeapon
+  m_EditorClassIdentifier: 
+  fittingSlots:
+  - {fileID: 11400000, guid: 797f13b342b224041bfed43dd9b6689e, type: 2}
+  prefabs:
+  - {fileID: 3727081227399228918, guid: e8ca3081f534ff941abce8d790c17410, type: 3}
+  Image: {fileID: 21300000, guid: 24e18000ea8f07846ba4bfb625285586, type: 3}
+  Title:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 1798668418568192
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Info:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 1798928826126336
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  AdditionalDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:c607557022bf69a47a00fdbd5bc61d41
+    m_TableEntryReference:
+      m_KeyId: 1799129519378432
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

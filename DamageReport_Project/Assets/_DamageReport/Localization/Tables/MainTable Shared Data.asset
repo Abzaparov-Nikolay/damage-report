@@ -391,6 +391,18 @@ MonoBehaviour:
     m_Key: Vehicle_select_menu_top_text
     m_Metadata:
       m_Items: []
+  - m_Id: 1798668418568192
+    m_Key: melee_weapon_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1798928826126336
+    m_Key: melee_weapon_info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1799129519378432
+    m_Key: melee_weapon_description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -1,5 +1,5 @@
 # Damage Report
-Souls-like игра с машинками  
+Survivors-like игра с машинками  
 
 ## Видео
 [![Gameplay Video](Screenshots/fakeThumbnail.png)](https://www.youtube.com/watch?v=GBuZRCHmI0U)
